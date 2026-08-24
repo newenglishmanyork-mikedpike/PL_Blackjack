@@ -1,5 +1,30 @@
 {
-  "updatedAt": null,
-  "season": null,
-  "goals": {}
+  "updatedAt": "2026-08-24T13:02:43.332Z",
+  "season": "2026",
+  "scorersReturned": 23,
+  "goals": {
+    "jack hinshelwood": 2,
+    "kai havertz": 1,
+    "bukayo saka": 1,
+    "martin ødegaard": 1,
+    "semi ajayi": 1,
+    "nobel mendy": 1,
+    "emersonn": 1,
+    "nilson angulo": 1,
+    "jack clarke": 1,
+    "anton stach": 1,
+    "kiernan dewsbury hall": 1,
+    "thierno barry": 1,
+    "keane lewis-potter": 1,
+    "vitaly janelt": 1,
+    "michael kayode": 1,
+    "marcus tavernier": 1,
+    "marc guéhi": 1,
+    "joško gvardiol": 1,
+    "maxim de cuyper": 1,
+    "anthony elanga": 1,
+    "cody gakpo": 1,
+    "joe willock": 1,
+    "dominik szoboszlai": 1
+  }
 }
