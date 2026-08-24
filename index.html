@@ -273,7 +273,7 @@ body {
   border-radius: 12px;
   margin-bottom: 22px;
 }
-.plbj-lb-table { width: 100%; border-collapse: collapse; font-size: 13.5px; min-width: 420px; }
+.plbj-lb-table { width: 100%; border-collapse: collapse; font-size: 13.5px; table-layout: fixed; }
 .plbj-lb-table th {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 10.5px;
@@ -284,12 +284,22 @@ body {
   padding: 10px 14px;
   background: var(--felt-dark);
   border-bottom: 1px solid var(--felt-line);
+  white-space: nowrap;
 }
 .plbj-lb-table th.plbj-lb-num, .plbj-lb-table td.plbj-lb-num { text-align: right; }
+.plbj-lb-table th:first-child, .plbj-lb-table td:first-child { width: 28px; }
 .plbj-lb-table td {
   padding: 10px 14px;
   border-bottom: 1px solid rgba(245,241,230,0.06);
   vertical-align: middle;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@media (max-width: 480px) {
+  .plbj-lb-table { font-size: 12px; }
+  .plbj-lb-table th, .plbj-lb-table td { padding: 8px 6px; }
+  .plbj-lb-name { font-size: 15px; }
 }
 .plbj-lb-table tr:last-child td { border-bottom: none; }
 .plbj-lb-table tr.is-leader td { background: var(--gold-soft); }
@@ -443,8 +453,8 @@ body {
         <tr class="${rowCls}">
           <td class="plbj-lb-rank">${idx + 1}</td>
           <td class="plbj-lb-name">${escapeHtml(r.entry.name)}</td>
-          <td class="plbj-lb-num plbj-lb-valid ${validCls}">${validCount}/${r.entry.players.length}</td>
           <td class="plbj-lb-num plbj-lb-goals">${r.stats.total}</td>
+          <td class="plbj-lb-num plbj-lb-valid ${validCls}">${validCount}/${r.entry.players.length}</td>
         </tr>
       `;
     }).join('');
@@ -456,8 +466,8 @@ body {
             <tr>
               <th>#</th>
               <th>Team</th>
-              <th class="plbj-lb-num">Valid Players</th>
-              <th class="plbj-lb-num">Total Goals</th>
+              <th class="plbj-lb-num">Goals</th>
+              <th class="plbj-lb-num">Valid</th>
             </tr>
           </thead>
           <tbody>${rows}</tbody>
