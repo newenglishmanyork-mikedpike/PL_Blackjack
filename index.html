@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Premier League Blackjack</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@500;600&family=Inter:wght@400;500;600;700&display=swap');
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #05140f;
+  min-height: 100vh;
+  padding: 24px 16px 60px;
+}
+
+.plbj {
+  --felt: #0b3d2e;
+  --felt-dark: #072a20;
+  --felt-line: rgba(245, 241, 230, 0.14);
+  --chalk: #f5f1e6;
+  --gold: #d4af37;
+  --gold-soft: rgba(212, 175, 55, 0.18);
+  --card-red: #b3282d;
+  --card-red-soft: rgba(179, 40, 45, 0.16);
+  --steel: #9fb3ab;
+  --charcoal: #0e1512;
+
+  font-family: 'Inter', sans-serif;
+  color: var(--chalk);
+  background:
+    radial-gradient(ellipse at top left, rgba(255,255,255,0.05), transparent 55%),
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.025) 0 2px, transparent 2px 160px),
+    var(--felt);
+  border-radius: 18px;
+  padding: 28px 24px 32px;
+  max-width: 980px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.plbj * { box-sizing: border-box; }
+
+/* ---------- header ---------- */
+.plbj-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding-bottom: 18px;
+  margin-bottom: 22px;
+  border-bottom: 2px solid var(--gold);
+}
+.plbj-title-block { display: flex; flex-direction: column; gap: 2px; }
+.plbj-eyebrow {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.plbj-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(30px, 5vw, 44px);
+  letter-spacing: 0.03em;
+  line-height: 1;
+  margin: 2px 0;
+}
+.plbj-sub { font-size: 13px; color: var(--steel); }
+.plbj-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.plbj-btn {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  border: 1.5px solid var(--gold);
+  background: transparent;
+  color: var(--gold);
+  padding: 9px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.plbj-btn:hover { background: var(--gold); color: var(--felt-dark); }
+.plbj-btn.primary { background: var(--gold); color: var(--felt-dark); }
+.plbj-btn.primary:hover { background: #e6c968; }
+.plbj-btn.ghost { border-color: var(--felt-line); color: var(--steel); }
+.plbj-btn.ghost:hover { background: rgba(245,241,230,0.08); color: var(--chalk); }
+.plbj-btn:disabled { opacity: 0.45; cursor: not-allowed; }
+.plbj-btn:disabled:hover { background: transparent; color: var(--gold); }
+.plbj-spin {
+  display: inline-block; width: 11px; height: 11px; border-radius: 50%;
+  border: 2px solid currentColor; border-top-color: transparent;
+  animation: plbj-spin 0.7s linear infinite;
+}
+@keyframes plbj-spin { to { transform: rotate(360deg); } }
+
+/* ---------- panels ---------- */
+.plbj-panel {
+  background: var(--felt-dark);
+  border: 1px solid var(--felt-line);
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 22px;
+}
+.plbj-panel h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.03em;
+  margin: 0 0 12px;
+  color: var(--gold);
+}
+.plbj-panel p.plbj-hint { font-size: 12.5px; color: var(--steel); line-height: 1.5; margin: 6px 0 0; }
+.plbj-panel a { color: var(--gold); }
+.plbj-form-row { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+.plbj-form-row label {
+  display: flex; flex-direction: column; gap: 5px;
+  font-size: 11px; color: var(--steel); text-transform: uppercase; letter-spacing: 0.06em;
+  flex: 1; min-width: 140px;
+}
+.plbj-input {
+  font-family: 'Inter', sans-serif;
+  background: var(--charcoal);
+  border: 1px solid var(--felt-line);
+  border-radius: 7px;
+  padding: 9px 10px;
+  color: var(--chalk);
+  font-size: 14px;
+  width: 100%;
+}
+.plbj-input:focus { outline: 2px solid var(--gold); outline-offset: 1px; }
+.plbj-player-form-block {
+  border: 1px solid var(--felt-line); border-radius: 9px; padding: 10px; display: flex; flex-direction: column; gap: 8px;
+}
+.plbj-players-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 12px; }
+@media (max-width: 560px) { .plbj-players-grid { grid-template-columns: 1fr; } }
+
+.plbj-json-out {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  background: var(--charcoal);
+  border: 1px solid var(--felt-line);
+  border-radius: 7px;
+  padding: 12px;
+  color: var(--chalk);
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-height: 260px;
+  overflow: auto;
+  margin: 10px 0 0;
+}
+
+.plbj-status-banner {
+  font-size: 12.5px; padding: 8px 12px; border-radius: 7px; margin-bottom: 12px; line-height: 1.5;
+}
+.plbj-status-banner.ok { background: var(--gold-soft); color: var(--gold); }
+.plbj-status-banner.err { background: var(--card-red-soft); color: #e8a2a5; }
+
+.plbj-empty {
+  text-align: center;
+  color: var(--steel);
+  font-size: 14px;
+  padding: 40px 20px;
+  border: 1px dashed var(--felt-line);
+  border-radius: 12px;
+}
+
+/* ---------- leaderboard ---------- */
+.plbj-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+.plbj-card {
+  background: linear-gradient(160deg, rgba(255,255,255,0.04), rgba(0,0,0,0.12)), var(--felt-dark);
+  border: 1px solid var(--felt-line);
+  border-radius: 14px;
+  padding: 16px 16px 14px;
+  position: relative;
+  overflow: hidden;
+}
+.plbj-card.is-leader { border-color: var(--gold); box-shadow: 0 0 0 1px var(--gold-soft), 0 8px 24px rgba(212,175,55,0.12); }
+.plbj-card.is-bust { border-color: rgba(179,40,45,0.5); }
+.plbj-rank-tag {
+  position: absolute; top: 0; left: 0;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  background: var(--gold);
+  color: var(--felt-dark);
+  padding: 3px 10px 3px 8px;
+  border-radius: 0 0 8px 0;
+  font-weight: 600;
+}
+.plbj-card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; margin-bottom: 10px; margin-top: 6px; }
+.plbj-entry-name { font-family: 'Bebas Neue', sans-serif; font-size: 21px; letter-spacing: 0.02em; line-height: 1.1; }
+.plbj-owner { font-size: 11.5px; color: var(--steel); margin-top: 2px; }
+.plbj-status {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border-radius: 5px;
+  white-space: nowrap;
+  font-weight: 600;
+}
+.plbj-status.leading { background: var(--gold-soft); color: var(--gold); }
+.plbj-status.inplay { background: rgba(159,179,171,0.15); color: var(--steel); }
+.plbj-status.notqualified { background: rgba(159,179,171,0.1); color: var(--steel); }
+.plbj-status.bust { background: var(--card-red-soft); color: #e8a2a5; }
+.plbj-status.blackjack { background: var(--gold); color: var(--felt-dark); }
+
+.plbj-score-row { display: flex; align-items: baseline; gap: 10px; margin-bottom: 12px; }
+.plbj-flip { display: flex; gap: 3px; }
+.plbj-digit {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  font-size: 26px;
+  background: var(--charcoal);
+  border: 1px solid rgba(245,241,230,0.12);
+  border-radius: 5px;
+  width: 30px;
+  height: 38px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--chalk);
+  box-shadow: inset 0 -3px 0 rgba(0,0,0,0.35), inset 0 2px 0 rgba(255,255,255,0.05);
+}
+.plbj-card.is-leader .plbj-digit { color: var(--gold); }
+.plbj-card.is-bust .plbj-digit { color: #e8a2a5; }
+.plbj-of21 { font-size: 12px; color: var(--steel); font-family: 'IBM Plex Mono', monospace; }
+
+.plbj-bar-track { height: 5px; background: rgba(245,241,230,0.08); border-radius: 3px; overflow: hidden; margin-bottom: 14px; }
+.plbj-bar-fill { height: 100%; border-radius: 3px; background: var(--gold); transition: width 0.3s ease; }
+.plbj-card.is-bust .plbj-bar-fill { background: var(--card-red); }
+
+.plbj-players { display: flex; flex-direction: column; gap: 6px; }
+.plbj-player-row {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  font-size: 13px; padding: 5px 0; border-bottom: 1px solid rgba(245,241,230,0.06);
+}
+.plbj-player-row:last-child { border-bottom: none; }
+.plbj-player-name { display: flex; align-items: center; gap: 6px; overflow: hidden; min-width: 0; }
+.plbj-player-name .dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; background: var(--steel); }
+.plbj-player-name.scored .dot { background: var(--gold); }
+.plbj-player-name .nm { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.plbj-team-tag {
+  font-family: 'IBM Plex Mono', monospace; font-size: 9.5px; letter-spacing: 0.03em;
+  color: var(--steel); background: rgba(245,241,230,0.07); border-radius: 4px; padding: 1px 5px; flex-shrink: 0;
+}
+.plbj-player-goals { font-family: 'IBM Plex Mono', monospace; font-weight: 600; flex-shrink: 0; }
+
+.plbj-foot-note { text-align: center; font-size: 11.5px; color: var(--steel); margin-top: 22px; }
+.plbj-loading { text-align: center; padding: 60px 20px; color: var(--steel); font-size: 14px; }
+</style>
+</head>
+<body>
+<div class="plbj" id="plbj-root">
+  <div class="plbj-header">
+    <div class="plbj-title-block">
+      <span class="plbj-eyebrow">Fantasy Pool &middot; Race to 21</span>
+      <div class="plbj-title">Premier League Blackjack</div>
+      <div class="plbj-sub" id="plbj-subtitle">Loading entries&hellip;</div>
+    </div>
+    <div class="plbj-actions">
+      <button class="plbj-btn ghost" id="plbj-refresh-btn">&#8635; Reload data</button>
+      <button class="plbj-btn ghost" id="plbj-toggle-manage">Add an entry</button>
+    </div>
+  </div>
+
+  <div id="plbj-status-slot"></div>
+  <div id="plbj-panel-slot"></div>
+  <div id="plbj-board"><div class="plbj-loading">Loading entries&hellip;</div></div>
+  <div class="plbj-foot-note">Each entry needs all 4 players to score at least once to qualify. 21 exactly wins the round; over 21 busts. Goals update automatically every few hours from live Premier League data.</div>
+</div>
+
+<script>
+(function () {
+  let entries = [];
+  let scores = { updatedAt: null, goals: {} };
+  let dataReady = false;
+  let loadError = null;
+  let manageMode = false;
+  let statusMsg = null; // { type: 'ok'|'err', text }
+  let refreshing = false;
+
+  const board = document.getElementById('plbj-board');
+  const panelSlot = document.getElementById('plbj-panel-slot');
+  const statusSlot = document.getElementById('plbj-status-slot');
+  const subtitle = document.getElementById('plbj-subtitle');
+  const toggleManageBtn = document.getElementById('plbj-toggle-manage');
+  const refreshBtn = document.getElementById('plbj-refresh-btn');
+
+  function escapeHtml(str) {
+    const div = document.createElement('div');
+    div.textContent = str == null ? '' : String(str);
+    return div.innerHTML;
+  }
+  function timeAgo(ts) {
+    if (!ts) return null;
+    const diff = Date.now() - new Date(ts).getTime();
+    const mins = Math.round(diff / 60000);
+    if (mins < 1) return 'just now';
+    if (mins < 60) return `${mins}m ago`;
+    const hrs = Math.round(mins / 60);
+    if (hrs < 24) return `${hrs}h ago`;
+    return `${Math.round(hrs / 24)}d ago`;
+  }
+
+  /* ---------------- data loading ---------------- */
+  async function loadAll() {
+    statusMsg = null;
+    loadError = null;
+    try {
+      const [entriesRes, scoresRes] = await Promise.all([
+        fetch('./data/entries.json', { cache: 'no-store' }),
+        fetch('./data/scores.json', { cache: 'no-store' }),
+      ]);
+      if (!entriesRes.ok) throw new Error(`Couldn't load data/entries.json (status ${entriesRes.status}).`);
+      if (!scoresRes.ok) throw new Error(`Couldn't load data/scores.json (status ${scoresRes.status}).`);
+      entries = await entriesRes.json();
+      scores = await scoresRes.json();
+    } catch (err) {
+      loadError = err.message || 'Failed to load data. If you opened this file directly, serve it with a local web server instead (fetch of local JSON is blocked from file:// URLs).';
+      entries = [];
+      scores = { updatedAt: null, goals: {} };
+    }
+    dataReady = true;
+    render();
+  }
+
+  /* ---------------- stats / ranking ---------------- */
+  function goalsFor(player) {
+    const key = (player.name || '').trim().toLowerCase();
+    const val = scores.goals ? scores.goals[key] : undefined;
+    return Number(val) || 0;
+  }
+  function entryStats(entry) {
+    const total = entry.players.reduce((s, p) => s + goalsFor(p), 0);
+    const qualified = entry.players.every(p => goalsFor(p) >= 1);
+    const bust = total > 21;
+    const blackjack = total === 21 && qualified;
+    let category;
+    if (bust) category = 2;
+    else if (!qualified) category = 1;
+    else category = 0;
+    return { total, qualified, bust, blackjack, category };
+  }
+  function sortedEntries() {
+    return entries
+      .map(e => ({ entry: e, stats: entryStats(e) }))
+      .sort((a, b) => a.stats.category !== b.stats.category ? a.stats.category - b.stats.category : b.stats.total - a.stats.total);
+  }
+  function statusLabel(stats) {
+    if (stats.bust) return { text: 'Bust', cls: 'bust' };
+    if (stats.blackjack) return { text: '21 — Blackjack', cls: 'blackjack' };
+    if (!stats.qualified) return { text: 'Not qualified', cls: 'notqualified' };
+    return { text: 'In play', cls: 'inplay' };
+  }
+  function digitBoxes(total) {
+    return String(total).padStart(2, '0').split('').map(d => `<div class="plbj-digit">${d}</div>`).join('');
+  }
+
+  /* ---------------- render ---------------- */
+  function render() {
+    renderHeader();
+    renderStatus();
+    renderPanel();
+    renderBoard();
+  }
+
+  function renderHeader() {
+    if (!dataReady) { subtitle.textContent = 'Loading entries…'; return; }
+    const countTxt = entries.length ? `${entries.length} ${entries.length === 1 ? 'entry' : 'entries'} on the board` : 'No entries yet';
+    const ago = timeAgo(scores.updatedAt);
+    subtitle.textContent = ago ? `${countTxt} · scores refreshed ${ago}` : countTxt;
+    toggleManageBtn.textContent = manageMode ? 'Close' : 'Add an entry';
+    refreshBtn.innerHTML = refreshing ? '<span class="plbj-spin"></span> Reloading…' : '&#8635; Reload data';
+    refreshBtn.disabled = refreshing;
+  }
+
+  function renderStatus() {
+    if (loadError) {
+      statusSlot.innerHTML = `<div class="plbj-status-banner err">${escapeHtml(loadError)}</div>`;
+      return;
+    }
+    if (!statusMsg) { statusSlot.innerHTML = ''; return; }
+    statusSlot.innerHTML = `<div class="plbj-status-banner ${statusMsg.type}">${escapeHtml(statusMsg.text)}</div>`;
+  }
+
+  function renderPanel() {
+    if (!manageMode) { panelSlot.innerHTML = ''; return; }
+    panelSlot.innerHTML = `
+      <div class="plbj-panel">
+        <h3>Add an entry</h3>
+        <p class="plbj-hint">Entries live in <code>data/entries.json</code> in the repo, so a new pick needs a commit — there's no live "save" button on the page itself. Fill this in, click Generate, then paste the result into that file (as a new item in the array) and commit/push.</p>
+        <div class="plbj-form-row">
+          <label>Entry name
+            <input type="text" class="plbj-input" id="plbj-input-entryname" placeholder="e.g. Dave's XI" />
+          </label>
+          <label>Owner (optional)
+            <input type="text" class="plbj-input" id="plbj-input-owner" placeholder="e.g. Dave" />
+          </label>
+        </div>
+        <div class="plbj-players-grid">
+          ${[0, 1, 2, 3].map(i => `
+            <div class="plbj-player-form-block">
+              <label style="margin:0;">Player ${i + 1}
+                <input type="text" class="plbj-input" id="plbj-input-player-${i}" placeholder="Player name (exactly as in the Premier League)" />
+              </label>
+              <label style="margin:0;">Team (optional, just for display)
+                <input type="text" class="plbj-input" id="plbj-input-player-team-${i}" placeholder="e.g. Arsenal" />
+              </label>
+            </div>
+          `).join('')}
+        </div>
+        <button class="plbj-btn primary" id="plbj-generate-json">Generate JSON</button>
+        <div id="plbj-json-out-slot"></div>
+      </div>
+    `;
+    document.getElementById('plbj-generate-json').addEventListener('click', () => {
+      const name = document.getElementById('plbj-input-entryname').value.trim();
+      const owner = document.getElementById('plbj-input-owner').value.trim();
+      const players = [0, 1, 2, 3].map(i => ({
+        name: document.getElementById(`plbj-input-player-${i}`).value.trim(),
+        team: document.getElementById(`plbj-input-player-team-${i}`).value.trim(),
+      }));
+      if (!name || players.some(p => !p.name)) {
+        alert('Please give the entry a name and fill in all 4 player names.');
+        return;
+      }
+      const snippet = JSON.stringify({ name, owner, players }, null, 2);
+      document.getElementById('plbj-json-out-slot').innerHTML = `<pre class="plbj-json-out">${escapeHtml(snippet + ',')}</pre>`;
+    });
+  }
+
+  function renderBoard() {
+    if (!dataReady) { board.innerHTML = '<div class="plbj-loading">Loading entries…</div>'; return; }
+    if (!entries.length) {
+      board.innerHTML = `<div class="plbj-empty">No entries on the board yet.<br>Click <strong>Add an entry</strong> to get the JSON for the first pick.</div>`;
+      return;
+    }
+    const ranked = sortedEntries();
+    board.innerHTML = `<div class="plbj-grid">${ranked.map((r, idx) => cardHtml(r.entry, r.stats, idx)).join('')}</div>`;
+  }
+
+  function cardHtml(entry, stats, idx) {
+    const status = statusLabel(stats);
+    const isLeader = idx === 0 && stats.category === 0 && stats.total > 0;
+    const pct = Math.min(100, (stats.total / 21) * 100);
+    const rankTag = stats.category === 0 && stats.total > 0 ? `<div class="plbj-rank-tag">#${idx + 1}</div>` : '';
+
+    const playersHtml = entry.players.map(p => {
+      const g = goalsFor(p);
+      return `
+      <div class="plbj-player-row">
+        <div class="plbj-player-name ${g > 0 ? 'scored' : ''}">
+          <span class="dot"></span><span class="nm">${escapeHtml(p.name)}</span>
+          ${p.team ? `<span class="plbj-team-tag">${escapeHtml(p.team)}</span>` : ''}
+        </div>
+        <div class="plbj-player-goals">${g} ⚽</div>
+      </div>
+    `;
+    }).join('');
+
+    return `
+      <div class="plbj-card ${isLeader ? 'is-leader' : ''} ${stats.bust ? 'is-bust' : ''}">
+        ${rankTag}
+        <div class="plbj-card-top">
+          <div>
+            <div class="plbj-entry-name">${escapeHtml(entry.name)}</div>
+            ${entry.owner ? `<div class="plbj-owner">${escapeHtml(entry.owner)}</div>` : ''}
+          </div>
+          <div class="plbj-status ${status.cls}">${status.text}</div>
+        </div>
+        <div class="plbj-score-row">
+          <div class="plbj-flip">${digitBoxes(stats.total)}</div>
+          <div class="plbj-of21">/ 21 goals</div>
+        </div>
+        <div class="plbj-bar-track"><div class="plbj-bar-fill" style="width:${pct}%"></div></div>
+        <div class="plbj-players">${playersHtml}</div>
+      </div>
+    `;
+  }
+
+  toggleManageBtn.addEventListener('click', () => { manageMode = !manageMode; render(); });
+  refreshBtn.addEventListener('click', async () => {
+    refreshing = true; render();
+    await loadAll();
+    refreshing = false; render();
+  });
+
+  loadAll();
+})();
+</script>
+</body>
+</html>

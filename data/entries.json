@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Example Entry — edit or remove me",
+    "owner": "Your name here",
+    "players": [
+      { "name": "Erling Haaland", "team": "Manchester City" },
+      { "name": "Mohamed Salah", "team": "Liverpool" },
+      { "name": "Bukayo Saka", "team": "Arsenal" },
+      { "name": "Cole Palmer", "team": "Chelsea" }
+    ]
+  }
+]
