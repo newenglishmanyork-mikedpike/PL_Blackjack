@@ -25,11 +25,21 @@ if (!res.ok) {
 const json = await res.json();
 const scorers = Array.isArray(json.scorers) ? json.scorers : [];
 
+// Matches the normalization in index.html: case/accent/punctuation-insensitive,
+// so "Kiernan Dewsbury-Hall" and "kiernan dewsbury hall" land on the same key.
+function normalizeName(name) {
+  return (name || '')
+    .normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .replace(/ø/gi, 'o').replace(/æ/gi, 'ae').replace(/đ/gi, 'd').replace(/ł/gi, 'l')
+    .toLowerCase()
+    .replace(/[^a-z0-9]/g, '');
+}
+
 const goals = {};
 for (const s of scorers) {
   const name = s.player && s.player.name;
   if (!name) continue;
-  const key = name.trim().toLowerCase();
+  const key = normalizeName(name);
   goals[key] = Number(s.goals) || 0;
 }
 

@@ -282,6 +282,7 @@ body {
 (function () {
   let entries = [];
   let scores = { updatedAt: null, goals: {} };
+  let normalizedGoals = {};
   let dataReady = false;
   let loadError = null;
   let manageMode = false;
@@ -324,6 +325,10 @@ body {
       if (!scoresRes.ok) throw new Error(`Couldn't load data/scores.json (status ${scoresRes.status}).`);
       entries = await entriesRes.json();
       scores = await scoresRes.json();
+      normalizedGoals = {};
+      for (const [rawName, val] of Object.entries(scores.goals || {})) {
+        normalizedGoals[normalizeName(rawName)] = Number(val) || 0;
+      }
     } catch (err) {
       loadError = err.message || 'Failed to load data. If you opened this file directly, serve it with a local web server instead (fetch of local JSON is blocked from file:// URLs).';
       entries = [];
@@ -334,10 +339,16 @@ body {
   }
 
   /* ---------------- stats / ranking ---------------- */
+  function normalizeName(name) {
+    return (name || '')
+      .normalize('NFD').replace(/[̀-ͯ]/g, '') // strip accents (é, ü, š, …)
+      .replace(/ø/gi, 'o').replace(/æ/gi, 'ae').replace(/đ/gi, 'd').replace(/ł/gi, 'l') // letters NFD can't decompose
+      .toLowerCase()
+      .replace(/[^a-z0-9]/g, ''); // ignore spaces, hyphens, apostrophes
+  }
   function goalsFor(player) {
-    const key = (player.name || '').trim().toLowerCase();
-    const val = scores.goals ? scores.goals[key] : undefined;
-    return Number(val) || 0;
+    const key = normalizeName(player.name);
+    return normalizedGoals[key] || 0;
   }
   function entryStats(entry) {
     const total = entry.players.reduce((s, p) => s + goalsFor(p), 0);
