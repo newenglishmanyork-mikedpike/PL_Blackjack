@@ -1,12 +1,102 @@
 [
   {
-    "name": "Example Entry — edit or remove me",
-    "owner": "Your name here",
+    "name": "Loon",
+    "owner": "",
     "players": [
-      { "name": "Erling Haaland", "team": "Manchester City" },
-      { "name": "Mohamed Salah", "team": "Liverpool" },
-      { "name": "Bukayo Saka", "team": "Arsenal" },
-      { "name": "Cole Palmer", "team": "Chelsea" }
+      { "name": "Brian Brobbey", "team": "" },
+      { "name": "Jack Hinshelwood", "team": "Brighton" },
+      { "name": "Pedro Porro", "team": "Tottenham" },
+      { "name": "Kobbie Mainoo", "team": "Manchester United" }
+    ]
+  },
+  {
+    "name": "Lop",
+    "owner": "",
+    "players": [
+      { "name": "Ferdi Kadioglu", "team": "Brighton" },
+      { "name": "Daizen Maeda", "team": "" },
+      { "name": "Noah Okafor", "team": "" },
+      { "name": "Jack Hinshelwood", "team": "Brighton" }
+    ]
+  },
+  {
+    "name": "Dids",
+    "owner": "",
+    "players": [
+      { "name": "Gustavo Hamer", "team": "" },
+      { "name": "Oli McBurnie", "team": "Sheffield United" },
+      { "name": "Will Osula", "team": "Newcastle United" },
+      { "name": "Illiman Ndiaye", "team": "Everton" }
+    ]
+  },
+  {
+    "name": "Pasti",
+    "owner": "",
+    "players": [
+      { "name": "Mateus Fernandes", "team": "Tottenham" },
+      { "name": "Nico O'Reilly", "team": "Manchester City" },
+      { "name": "Enzo Le Fee", "team": "" },
+      { "name": "Pascal Gross", "team": "" }
+    ]
+  },
+  {
+    "name": "Jonny",
+    "owner": "",
+    "players": [
+      { "name": "Alex Iwobi", "team": "Fulham" },
+      { "name": "Declan Rice", "team": "Arsenal" },
+      { "name": "John McGinn", "team": "Aston Villa" },
+      { "name": "Phil Foden", "team": "Manchester City" }
+    ]
+  },
+  {
+    "name": "Bondy",
+    "owner": "",
+    "players": [
+      { "name": "Martin Odegaard", "team": "Arsenal" },
+      { "name": "Harvey Barnes", "team": "Newcastle United" },
+      { "name": "Rayyan Cherki", "team": "Manchester City" },
+      { "name": "Dominik Szoboszlai", "team": "Liverpool" }
+    ]
+  },
+  {
+    "name": "Brench",
+    "owner": "",
+    "players": [
+      { "name": "Harry Wilson", "team": "Fulham" },
+      { "name": "Mateus Fernandes", "team": "Tottenham" },
+      { "name": "Bruno Guimaraes", "team": "Newcastle United" },
+      { "name": "Kiernan Dewsbury-Hall", "team": "" }
+    ]
+  },
+  {
+    "name": "Pet",
+    "owner": "",
+    "players": [
+      { "name": "Noni Madueke", "team": "" },
+      { "name": "Micky van de Ven", "team": "Tottenham" },
+      { "name": "Moises Caicedo", "team": "Chelsea" },
+      { "name": "Cody Gakpo", "team": "Liverpool" }
+    ]
+  },
+  {
+    "name": "Mike",
+    "owner": "",
+    "players": [
+      { "name": "Amad Diallo", "team": "Manchester United" },
+      { "name": "Gabriel Magalhaes", "team": "Arsenal" },
+      { "name": "Alex Scott", "team": "Bournemouth" },
+      { "name": "Daniel Munoz", "team": "Crystal Palace" }
+    ]
+  },
+  {
+    "name": "Gav",
+    "owner": "",
+    "players": [
+      { "name": "Brian Brobbey", "team": "" },
+      { "name": "Dan Burn", "team": "Newcastle United" },
+      { "name": "Harry Wilson", "team": "Fulham" },
+      { "name": "Virgil van Dijk", "team": "Liverpool" }
     ]
   }
 ]
