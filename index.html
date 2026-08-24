@@ -256,6 +256,49 @@ body {
 
 .plbj-foot-note { text-align: center; font-size: 11.5px; color: var(--steel); margin-top: 22px; }
 .plbj-loading { text-align: center; padding: 60px 20px; color: var(--steel); font-size: 14px; }
+
+/* ---------- leaderboard summary table ---------- */
+.plbj-section-heading {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.03em;
+  color: var(--gold);
+  margin: 4px 0 12px;
+  padding-top: 6px;
+  border-top: 1px solid var(--felt-line);
+}
+.plbj-lb-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--felt-line);
+  border-radius: 12px;
+  margin-bottom: 22px;
+}
+.plbj-lb-table { width: 100%; border-collapse: collapse; font-size: 13.5px; min-width: 420px; }
+.plbj-lb-table th {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--steel);
+  text-align: left;
+  padding: 10px 14px;
+  background: var(--felt-dark);
+  border-bottom: 1px solid var(--felt-line);
+}
+.plbj-lb-table th.plbj-lb-num, .plbj-lb-table td.plbj-lb-num { text-align: right; }
+.plbj-lb-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid rgba(245,241,230,0.06);
+  vertical-align: middle;
+}
+.plbj-lb-table tr:last-child td { border-bottom: none; }
+.plbj-lb-table tr.is-leader td { background: var(--gold-soft); }
+.plbj-lb-table tr.is-bust td { background: var(--card-red-soft); }
+.plbj-lb-rank { font-family: 'IBM Plex Mono', monospace; color: var(--steel); }
+.plbj-lb-name { font-family: 'Bebas Neue', sans-serif; font-size: 17px; letter-spacing: 0.02em; }
+.plbj-lb-goals { font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 15px; }
+.plbj-lb-valid { font-family: 'IBM Plex Mono', monospace; color: var(--steel); }
+.plbj-lb-valid.all-valid { color: var(--gold); }
 </style>
 </head>
 <body>
@@ -274,8 +317,10 @@ body {
 
   <div id="plbj-status-slot"></div>
   <div id="plbj-panel-slot"></div>
+  <div id="plbj-leaderboard-slot"></div>
+  <div class="plbj-section-heading">Full Details</div>
   <div id="plbj-board"><div class="plbj-loading">Loading entries&hellip;</div></div>
-  <div class="plbj-foot-note">Each entry needs all 4 players to score at least once to qualify. 21 exactly wins the round; over 21 busts. Goals update automatically every few hours from live Premier League data.</div>
+  <div class="plbj-foot-note">Each entry needs all 4 players to score at least once to be Valid. 21 exactly wins the round; over 21 busts. Goals update automatically every few hours from live Premier League data.</div>
 </div>
 
 <script>
@@ -369,7 +414,7 @@ body {
   function statusLabel(stats) {
     if (stats.bust) return { text: 'Bust', cls: 'bust' };
     if (stats.blackjack) return { text: '21 — Blackjack', cls: 'blackjack' };
-    if (!stats.qualified) return { text: 'Not qualified', cls: 'notqualified' };
+    if (!stats.qualified) return { text: 'Not Valid', cls: 'notqualified' };
     return { text: 'In play', cls: 'inplay' };
   }
   function digitBoxes(total) {
@@ -381,7 +426,44 @@ body {
     renderHeader();
     renderStatus();
     renderPanel();
+    renderLeaderboard();
     renderBoard();
+  }
+
+  const leaderboardSlot = document.getElementById('plbj-leaderboard-slot');
+
+  function renderLeaderboard() {
+    if (!dataReady || !entries.length) { leaderboardSlot.innerHTML = ''; return; }
+    const ranked = sortedEntries();
+    const rows = ranked.map((r, idx) => {
+      const validCount = r.entry.players.filter(p => goalsFor(p) >= 1).length;
+      const rowCls = idx === 0 && r.stats.category === 0 && r.stats.total > 0 ? 'is-leader' : (r.stats.bust ? 'is-bust' : '');
+      const validCls = validCount === r.entry.players.length ? 'all-valid' : '';
+      return `
+        <tr class="${rowCls}">
+          <td class="plbj-lb-rank">${idx + 1}</td>
+          <td class="plbj-lb-name">${escapeHtml(r.entry.name)}</td>
+          <td class="plbj-lb-num plbj-lb-valid ${validCls}">${validCount}/${r.entry.players.length}</td>
+          <td class="plbj-lb-num plbj-lb-goals">${r.stats.total}</td>
+        </tr>
+      `;
+    }).join('');
+    leaderboardSlot.innerHTML = `
+      <div class="plbj-section-heading">Leaderboard</div>
+      <div class="plbj-lb-wrap">
+        <table class="plbj-lb-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Team</th>
+              <th class="plbj-lb-num">Valid Players</th>
+              <th class="plbj-lb-num">Total Goals</th>
+            </tr>
+          </thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>
+    `;
   }
 
   function renderHeader() {
