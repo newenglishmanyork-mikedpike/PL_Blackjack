@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-08-24T19:19:17.056Z",
+  "updatedAt": "2026-08-25T03:15:48.976Z",
   "season": "2026",
-  "scorersReturned": 24,
+  "scorersReturned": 28,
   "goals": {
     "jackhinshelwood": 2,
     "kaihavertz": 1,
@@ -26,6 +26,10 @@
     "codygakpo": 1,
     "joewillock": 1,
     "dominikszoboszlai": 1,
-    "joaopedro": 1
+    "joaopedro": 1,
+    "joshuaking": 1,
+    "morganrogers": 1,
+    "colepalmer": 1,
+    "gonzalogarcia": 1
   }
 }
