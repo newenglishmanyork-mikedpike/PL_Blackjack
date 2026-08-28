@@ -43,39 +43,21 @@ automatically, no manual score entry.
    immediately instead of waiting for the first scheduled run: Actions tab
    → "Refresh scores" → Run workflow.
 
-5. **(Optional) Set up the on-page "Refresh live scores" button**
-   Besides the automatic 6-hourly refresh, the page has a button that
-   triggers the same workflow on demand. This requires a GitHub token
-   pasted directly into `index.html` — **read the security note below
-   before setting this up**, since that token is visible to anyone who
-   views the page's source.
+5. **The "Refresh live scores" button** needs no setup — it just opens
+   GitHub's own "Run workflow" page for you in a new tab, where you (or
+   anyone signed into GitHub with access to this repo) click "Run
+   workflow" to kick off an immediate refresh, then come back and hit
+   "Reload data" a minute later.
 
-   1. GitHub → your avatar → Settings → Developer settings → Personal
-      access tokens → **Fine-grained tokens** → Generate new token.
-   2. Resource owner: the account/org that owns this repo.
-   3. Repository access: "Only select repositories" → pick this repo only.
-   4. Permissions → Repository permissions → **Actions** → "Read and
-      write". Leave everything else "No access".
-   5. Set an expiration, generate, and copy the token (starts with
-      `github_pat_`).
-   6. Open `index.html`, find `GH_TOKEN` near the top of the `<script>`
-      block, and paste the token in place of
-      `'PASTE_YOUR_FINE_GRAINED_TOKEN_HERE'`. Commit and push to `main`.
-
-   **Security note:** this token is embedded in client-side JavaScript,
-   so it is effectively public — anyone who opens dev tools or views the
-   page source can read and reuse it. It's scoped as narrowly as GitHub
-   allows (this one repo, Actions read/write only), so it can trigger or
-   read workflow runs but cannot read or change any file, read repository
-   secrets, or touch any other repo. Worst case if someone grabs it: they
-   can spam-trigger the refresh workflow, burning your football-data.org
-   rate limit and GitHub Actions minutes. If that ever happens, revoke the
-   token from Settings → Developer settings → Personal access tokens and
-   generate a fresh one. If you'd rather avoid this exposure entirely,
-   just use the automatic schedule and/or the "Run workflow" button on
-   GitHub's own Actions tab instead — leave `GH_TOKEN` as the placeholder
-   and the on-page button will just show a message pointing here instead
-   of doing anything.
+   We initially tried making this button trigger the refresh directly,
+   with no extra clicks needed. That requires a GitHub token embedded in
+   the page, which is a real security exposure (anyone can read it from
+   the page source) — and on top of that, GitHub's fine-grained tokens
+   hit an undocumented `403 Resource not accessible by integration` wall
+   on this specific API call no matter how they were scoped, even
+   following GitHub's own documented fix. Given a real security tradeoff
+   for a feature that didn't reliably work anyway, we dropped it for this
+   safer deep-link version instead. No credential lives in this page.
 
 ## Adding entries
 
