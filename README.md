@@ -43,6 +43,40 @@ automatically, no manual score entry.
    immediately instead of waiting for the first scheduled run: Actions tab
    → "Refresh scores" → Run workflow.
 
+5. **(Optional) Set up the on-page "Refresh live scores" button**
+   Besides the automatic 6-hourly refresh, the page has a button that
+   triggers the same workflow on demand. This requires a GitHub token
+   pasted directly into `index.html` — **read the security note below
+   before setting this up**, since that token is visible to anyone who
+   views the page's source.
+
+   1. GitHub → your avatar → Settings → Developer settings → Personal
+      access tokens → **Fine-grained tokens** → Generate new token.
+   2. Resource owner: the account/org that owns this repo.
+   3. Repository access: "Only select repositories" → pick this repo only.
+   4. Permissions → Repository permissions → **Actions** → "Read and
+      write". Leave everything else "No access".
+   5. Set an expiration, generate, and copy the token (starts with
+      `github_pat_`).
+   6. Open `index.html`, find `GH_TOKEN` near the top of the `<script>`
+      block, and paste the token in place of
+      `'PASTE_YOUR_FINE_GRAINED_TOKEN_HERE'`. Commit and push to `main`.
+
+   **Security note:** this token is embedded in client-side JavaScript,
+   so it is effectively public — anyone who opens dev tools or views the
+   page source can read and reuse it. It's scoped as narrowly as GitHub
+   allows (this one repo, Actions read/write only), so it can trigger or
+   read workflow runs but cannot read or change any file, read repository
+   secrets, or touch any other repo. Worst case if someone grabs it: they
+   can spam-trigger the refresh workflow, burning your football-data.org
+   rate limit and GitHub Actions minutes. If that ever happens, revoke the
+   token from Settings → Developer settings → Personal access tokens and
+   generate a fresh one. If you'd rather avoid this exposure entirely,
+   just use the automatic schedule and/or the "Run workflow" button on
+   GitHub's own Actions tab instead — leave `GH_TOKEN` as the placeholder
+   and the on-page button will just show a message pointing here instead
+   of doing anything.
+
 ## Adding entries
 
 Open the page and click **Add an entry** — fill in the entry name, owner,
@@ -63,11 +97,14 @@ open a pull request). You can also just edit the file directly:
 }
 ```
 
-**Player names must match how football-data.org spells them** (usually
-their full registered name, e.g. "Erling Haaland") for goals to match up.
-If a player shows 0 when you know they've scored, check the spelling
-against `data/scores.json` after a refresh — that file lists every name
-the API currently recognizes as having scored.
+**Player names should be close to how football-data.org spells them**
+(usually their full registered name, e.g. "Erling Haaland") for goals to
+match up. Matching ignores case, accents, and punctuation (so "Ødegaard"
+and "Odegaard", or "Dewsbury-Hall" and "Dewsbury Hall", all match fine),
+but it still needs the same words in the same order. If a player shows 0
+when you know they've scored, check the spelling against
+`data/scores.json` after a refresh — that file lists every name the API
+currently recognizes as having scored.
 
 ## Local preview
 

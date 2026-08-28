@@ -321,6 +321,7 @@ body {
     </div>
     <div class="plbj-actions">
       <button class="plbj-btn ghost" id="plbj-refresh-btn">&#8635; Reload data</button>
+      <button class="plbj-btn ghost" id="plbj-trigger-btn">&#9889; Refresh live scores</button>
       <button class="plbj-btn ghost" id="plbj-toggle-manage">Add an entry</button>
     </div>
   </div>
@@ -335,6 +336,20 @@ body {
 
 <script>
 (function () {
+  // --- GitHub Actions manual trigger ---
+  // WARNING: this token is visible to anyone who views this page's source or
+  // network requests. It is a fine-grained Personal Access Token scoped to
+  // ONLY this repository, with ONLY "Actions: Read and write" permission —
+  // it cannot read/write any file, read secrets, or touch any other repo.
+  // Worst case if misused: someone spams workflow runs. See README.md for
+  // how it's scoped and how to rotate/revoke it.
+  const GH_OWNER = 'newenglishmanyork-mikedpike';
+  const GH_REPO = 'PL_Blackjack';
+  const GH_WORKFLOW_FILE = 'refresh-scores.yml';
+  const GH_TOKEN = 'PASTE_YOUR_FINE_GRAINED_TOKEN_HERE';
+  const GH_TRIGGER_COOLDOWN_MS = 60000; // client-side spam guard, not real security
+  const GH_TRIGGER_LAST_KEY = 'plbj-last-trigger';
+
   let entries = [];
   let scores = { updatedAt: null, goals: {} };
   let normalizedGoals = {};
@@ -343,6 +358,7 @@ body {
   let manageMode = false;
   let statusMsg = null; // { type: 'ok'|'err', text }
   let refreshing = false;
+  let triggering = false;
 
   const board = document.getElementById('plbj-board');
   const panelSlot = document.getElementById('plbj-panel-slot');
@@ -350,6 +366,7 @@ body {
   const subtitle = document.getElementById('plbj-subtitle');
   const toggleManageBtn = document.getElementById('plbj-toggle-manage');
   const refreshBtn = document.getElementById('plbj-refresh-btn');
+  const triggerBtn = document.getElementById('plbj-trigger-btn');
 
   function escapeHtml(str) {
     const div = document.createElement('div');
@@ -484,6 +501,8 @@ body {
     toggleManageBtn.textContent = manageMode ? 'Close' : 'Add an entry';
     refreshBtn.innerHTML = refreshing ? '<span class="plbj-spin"></span> Reloading…' : '&#8635; Reload data';
     refreshBtn.disabled = refreshing;
+    triggerBtn.innerHTML = triggering ? '<span class="plbj-spin"></span> Refreshing…' : '&#9889; Refresh live scores';
+    triggerBtn.disabled = triggering;
   }
 
   function renderStatus() {
@@ -590,12 +609,109 @@ body {
     `;
   }
 
+  function sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms)); }
+
+  async function ghApiFetch(path, opts) {
+    const res = await fetch(`https://api.github.com${path}`, {
+      ...opts,
+      headers: {
+        'Authorization': `Bearer ${GH_TOKEN}`,
+        'Accept': 'application/vnd.github+json',
+        'X-GitHub-Api-Version': '2022-11-28',
+        ...(opts && opts.headers),
+      },
+    });
+    return res;
+  }
+
+  async function handleTriggerWorkflow() {
+    if (!GH_TOKEN || GH_TOKEN.indexOf('PASTE_') === 0) {
+      statusMsg = { type: 'err', text: 'The live-refresh button needs a GitHub token configured in index.html first — see README.md.' };
+      render();
+      return;
+    }
+    const lastTrigger = Number(localStorage.getItem(GH_TRIGGER_LAST_KEY) || 0);
+    const waitLeft = GH_TRIGGER_COOLDOWN_MS - (Date.now() - lastTrigger);
+    if (waitLeft > 0) {
+      statusMsg = { type: 'err', text: `Just refreshed — wait ${Math.ceil(waitLeft / 1000)}s before triggering again.` };
+      render();
+      return;
+    }
+
+    triggering = true;
+    statusMsg = { type: 'ok', text: 'Triggering a live score refresh…' };
+    render();
+
+    try {
+      const runsPath = `/repos/${GH_OWNER}/${GH_REPO}/actions/workflows/${GH_WORKFLOW_FILE}/runs?per_page=1`;
+      const beforeRes = await ghApiFetch(runsPath);
+      if (!beforeRes.ok) throw new Error(`Couldn't reach GitHub Actions (status ${beforeRes.status}). Check the token in index.html.`);
+      const beforeJson = await beforeRes.json();
+      const baselineRunId = beforeJson.workflow_runs && beforeJson.workflow_runs[0] ? beforeJson.workflow_runs[0].id : null;
+
+      const dispatchRes = await ghApiFetch(`/repos/${GH_OWNER}/${GH_REPO}/actions/workflows/${GH_WORKFLOW_FILE}/dispatches`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ref: 'main' }),
+      });
+      if (!dispatchRes.ok) {
+        const body = await dispatchRes.text().catch(() => '');
+        throw new Error(`GitHub rejected the trigger (status ${dispatchRes.status}). ${body.slice(0, 200)}`);
+      }
+      localStorage.setItem(GH_TRIGGER_LAST_KEY, String(Date.now()));
+
+      statusMsg = { type: 'ok', text: 'Triggered — waiting for the workflow to start…' };
+      render();
+
+      let newRun = null;
+      for (let i = 0; i < 15 && !newRun; i++) {
+        await sleep(3000);
+        const pollRes = await ghApiFetch(runsPath);
+        if (!pollRes.ok) continue;
+        const pollJson = await pollRes.json();
+        const latest = pollJson.workflow_runs && pollJson.workflow_runs[0];
+        if (latest && latest.id !== baselineRunId) newRun = latest;
+      }
+      if (!newRun) {
+        statusMsg = { type: 'err', text: "Triggered, but couldn't confirm it started. Check the Actions tab on GitHub, or click Reload data in a minute." };
+        triggering = false; render();
+        return;
+      }
+
+      let finished = null;
+      for (let i = 0; i < 20 && !finished; i++) {
+        const runRes = await ghApiFetch(`/repos/${GH_OWNER}/${GH_REPO}/actions/runs/${newRun.id}`);
+        if (runRes.ok) {
+          const runJson = await runRes.json();
+          if (runJson.status === 'completed') { finished = runJson; break; }
+        }
+        statusMsg = { type: 'ok', text: 'Refresh running on GitHub Actions…' };
+        render();
+        await sleep(4000);
+      }
+
+      if (!finished) {
+        statusMsg = { type: 'err', text: "Still running after a while — check the Actions tab on GitHub, or click Reload data shortly." };
+      } else if (finished.conclusion === 'success') {
+        statusMsg = { type: 'ok', text: 'Live scores refreshed!' };
+        await loadAll();
+      } else {
+        statusMsg = { type: 'err', text: `The refresh run finished with "${finished.conclusion}" — check the Actions tab on GitHub for details.` };
+      }
+    } catch (err) {
+      statusMsg = { type: 'err', text: err.message || 'Live refresh failed.' };
+    }
+    triggering = false;
+    render();
+  }
+
   toggleManageBtn.addEventListener('click', () => { manageMode = !manageMode; render(); });
   refreshBtn.addEventListener('click', async () => {
     refreshing = true; render();
     await loadAll();
     refreshing = false; render();
   });
+  triggerBtn.addEventListener('click', handleTriggerWorkflow);
 
   loadAll();
 })();
