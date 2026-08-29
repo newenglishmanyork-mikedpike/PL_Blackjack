@@ -101,6 +101,24 @@ python3 -m http.server 8000
 
 then open the printed `localhost` URL.
 
+## Projected total
+
+The leaderboard's "Proj." column estimates each entry's end-of-season
+total: for each of the 4 players, (goals so far ÷ their appearances so
+far) × their team's remaining Premier League fixtures, added to the
+entry's current actual goals. The emoji is just a quick read on that
+number relative to 21 (😴 way under, 😬 needs work, 😊 good pace, 🎯 right
+on target, 😅 getting risky, 🤯 way past).
+
+This is **not xG (expected goals)** — the free football-data.org tier
+doesn't expose that at all (nor do most free football APIs, reliably).
+It's a simpler proxy using each player's own actual scoring rate, which
+is why it's noisy early in the season (small sample sizes) and treats a
+tap-in the same as a wonder strike. Players with 0 goals so far don't
+appear in the scorers feed at all, so they have no appearances/team data
+to project from — their projected contribution is just 0, same as their
+current tally.
+
 ## Limitations
 
 - The free football-data.org tier's scorers list only includes players who

@@ -309,6 +309,7 @@ body {
 .plbj-lb-goals { font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 15px; }
 .plbj-lb-valid { font-family: 'IBM Plex Mono', monospace; color: var(--steel); }
 .plbj-lb-valid.all-valid { color: var(--gold); }
+.plbj-lb-projected { font-family: 'IBM Plex Mono', monospace; color: var(--steel); white-space: nowrap; }
 </style>
 </head>
 <body>
@@ -348,8 +349,7 @@ body {
   const GH_WORKFLOW_URL = `https://github.com/${GH_OWNER}/${GH_REPO}/actions/workflows/${GH_WORKFLOW_FILE}`;
 
   let entries = [];
-  let scores = { updatedAt: null, goals: {} };
-  let normalizedGoals = {};
+  let scores = { updatedAt: null, players: {}, teams: {} };
   let dataReady = false;
   let loadError = null;
   let manageMode = false;
@@ -393,14 +393,10 @@ body {
       if (!scoresRes.ok) throw new Error(`Couldn't load data/scores.json (status ${scoresRes.status}).`);
       entries = await entriesRes.json();
       scores = await scoresRes.json();
-      normalizedGoals = {};
-      for (const [rawName, val] of Object.entries(scores.goals || {})) {
-        normalizedGoals[normalizeName(rawName)] = Number(val) || 0;
-      }
     } catch (err) {
       loadError = err.message || 'Failed to load data. If you opened this file directly, serve it with a local web server instead (fetch of local JSON is blocked from file:// URLs).';
       entries = [];
-      scores = { updatedAt: null, goals: {} };
+      scores = { updatedAt: null, players: {}, teams: {} };
     }
     dataReady = true;
     render();
@@ -414,20 +410,45 @@ body {
       .toLowerCase()
       .replace(/[^a-z0-9]/g, ''); // ignore spaces, hyphens, apostrophes
   }
+  function statFor(player) {
+    return (scores.players || {})[normalizeName(player.name)] || null;
+  }
   function goalsFor(player) {
-    const key = normalizeName(player.name);
-    return normalizedGoals[key] || 0;
+    const stat = statFor(player);
+    return stat ? stat.goals : 0;
+  }
+  // Projects each player's REMAINING goals this season as
+  // (goals so far / their appearances so far) * their team's games left,
+  // using actual scoring rate — not xG, since the free data source doesn't
+  // expose it. Players with no goals yet (so no appearance/team data from
+  // the scorers feed) project 0 additional, same as their current tally.
+  function projectedAdditionalFor(player) {
+    const stat = statFor(player);
+    if (!stat || !stat.teamId || !stat.playedMatches) return 0;
+    const team = (scores.teams || {})[stat.teamId];
+    if (!team) return 0;
+    const perGame = stat.goals / stat.playedMatches;
+    return perGame * team.gamesRemaining;
   }
   function entryStats(entry) {
     const total = entry.players.reduce((s, p) => s + goalsFor(p), 0);
     const qualified = entry.players.every(p => goalsFor(p) >= 1);
     const bust = total > 21;
     const blackjack = total === 21 && qualified;
+    const projected = total + entry.players.reduce((s, p) => s + projectedAdditionalFor(p), 0);
     let category;
     if (bust) category = 2;
     else if (!qualified) category = 1;
     else category = 0;
-    return { total, qualified, bust, blackjack, category };
+    return { total, qualified, bust, blackjack, category, projected };
+  }
+  function projectionEmoji(total) {
+    if (total <= 10) return '😴';
+    if (total <= 15) return '😬';
+    if (total <= 19) return '😊';
+    if (total <= 21) return '🎯';
+    if (total <= 26) return '😅';
+    return '🤯';
   }
   function sortedEntries() {
     return entries
@@ -462,12 +483,14 @@ body {
       const validCount = r.entry.players.filter(p => goalsFor(p) >= 1).length;
       const rowCls = idx === 0 && r.stats.category === 0 && r.stats.total > 0 ? 'is-leader' : (r.stats.bust ? 'is-bust' : '');
       const validCls = validCount === r.entry.players.length ? 'all-valid' : '';
+      const projectedRounded = Math.round(r.stats.projected * 10) / 10;
       return `
         <tr class="${rowCls}">
           <td class="plbj-lb-rank">${idx + 1}</td>
           <td class="plbj-lb-name">${escapeHtml(r.entry.name)}</td>
           <td class="plbj-lb-num plbj-lb-goals">${r.stats.total}</td>
           <td class="plbj-lb-num plbj-lb-valid ${validCls}">${validCount}/${r.entry.players.length}</td>
+          <td class="plbj-lb-num plbj-lb-projected" title="Projected season total, based on each player's current goals-per-game rate and their team's remaining fixtures">${projectedRounded} ${projectionEmoji(projectedRounded)}</td>
         </tr>
       `;
     }).join('');
@@ -481,6 +504,7 @@ body {
               <th>Team</th>
               <th class="plbj-lb-num">Goals</th>
               <th class="plbj-lb-num">Valid</th>
+              <th class="plbj-lb-num">Proj.</th>
             </tr>
           </thead>
           <tbody>${rows}</tbody>
