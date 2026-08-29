@@ -422,9 +422,13 @@ body {
   // using actual scoring rate — not xG, since the free data source doesn't
   // expose it. Players with no goals yet (so no appearance/team data from
   // the scorers feed) project 0 additional, same as their current tally.
+  // Below MIN_APPEARANCES_FOR_PROJECTION, the sample is too small to
+  // extrapolate (one early goal would otherwise imply a 30+ goal season) —
+  // those players just carry their actual tally with no projected extra.
+  const MIN_APPEARANCES_FOR_PROJECTION = 3;
   function projectedAdditionalFor(player) {
     const stat = statFor(player);
-    if (!stat || !stat.teamId || !stat.playedMatches) return 0;
+    if (!stat || !stat.teamId || stat.playedMatches < MIN_APPEARANCES_FOR_PROJECTION) return 0;
     const team = (scores.teams || {})[stat.teamId];
     if (!team) return 0;
     const perGame = stat.goals / stat.playedMatches;

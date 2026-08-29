@@ -119,6 +119,12 @@ appear in the scorers feed at all, so they have no appearances/team data
 to project from — their projected contribution is just 0, same as their
 current tally.
 
+A player needs at least 3 appearances before their rate counts toward the
+projection (`MIN_APPEARANCES_FOR_PROJECTION` in `index.html`) — otherwise
+one early goal in game 1 would extrapolate to a ridiculous full-season
+total. Below that threshold, a player's projected contribution is just
+their actual goals so far, same as everyone else.
+
 ## Limitations
 
 - The free football-data.org tier's scorers list only includes players who
