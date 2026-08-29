@@ -1,19 +1,13 @@
 {
-  "updatedAt": "2026-08-30T12:01:56.364Z",
+  "updatedAt": "2026-08-29T15:11:50.120Z",
   "season": "2026",
-  "scorersReturned": 38,
+  "scorersReturned": 35,
   "players": {
     "jackhinshelwood": {
       "goals": 2,
       "playedMatches": 1,
       "teamId": 397,
       "teamName": "Brighton & Hove Albion FC"
-    },
-    "anthonyelanga": {
-      "goals": 2,
-      "playedMatches": 2,
-      "teamId": 67,
-      "teamName": "Newcastle United FC"
     },
     "erlinghaaland": {
       "goals": 2,
@@ -135,6 +129,12 @@
       "teamId": 397,
       "teamName": "Brighton & Hove Albion FC"
     },
+    "anthonyelanga": {
+      "goals": 1,
+      "playedMatches": 1,
+      "teamId": 67,
+      "teamName": "Newcastle United FC"
+    },
     "codygakpo": {
       "goals": 1,
       "playedMatches": 2,
@@ -143,7 +143,7 @@
     },
     "joewillock": {
       "goals": 1,
-      "playedMatches": 2,
+      "playedMatches": 1,
       "teamId": 67,
       "teamName": "Newcastle United FC"
     },
@@ -212,24 +212,6 @@
       "playedMatches": 2,
       "teamId": 1044,
       "teamName": "AFC Bournemouth"
-    },
-    "jamestarkowski": {
-      "goals": 1,
-      "playedMatches": 2,
-      "teamId": 62,
-      "teamName": "Everton FC"
-    },
-    "liammillar": {
-      "goals": 1,
-      "playedMatches": 2,
-      "teamId": 322,
-      "teamName": "Hull City AFC"
-    },
-    "yoanewissa": {
-      "goals": 1,
-      "playedMatches": 2,
-      "teamId": 67,
-      "teamName": "Newcastle United FC"
     }
   },
   "teams": {
@@ -275,8 +257,8 @@
     },
     "67": {
       "name": "Newcastle United FC",
-      "playedGames": 2,
-      "gamesRemaining": 36
+      "playedGames": 1,
+      "gamesRemaining": 37
     },
     "71": {
       "name": "Sunderland AFC",
@@ -285,8 +267,8 @@
     },
     "73": {
       "name": "Tottenham Hotspur FC",
-      "playedGames": 2,
-      "gamesRemaining": 36
+      "playedGames": 1,
+      "gamesRemaining": 37
     },
     "322": {
       "name": "Hull City AFC",
