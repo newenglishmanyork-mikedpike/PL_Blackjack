@@ -1,8 +1,14 @@
 {
-  "updatedAt": "2026-08-30T16:18:31.081Z",
+  "updatedAt": "2026-08-30T18:01:42.634Z",
   "season": "2026",
-  "scorersReturned": 47,
+  "scorersReturned": 49,
   "players": {
+    "brunofernandes": {
+      "goals": 3,
+      "playedMatches": 2,
+      "teamId": 66,
+      "teamName": "Manchester United FC"
+    },
     "jackhinshelwood": {
       "goals": 2,
       "playedMatches": 1,
@@ -255,7 +261,7 @@
       "teamId": 397,
       "teamName": "Brighton & Hove Albion FC"
     },
-    "pascalgro": {
+    "pascalgross": {
       "goals": 1,
       "playedMatches": 2,
       "teamId": 397,
@@ -279,11 +285,17 @@
       "teamId": 349,
       "teamName": "Ipswich Town FC"
     },
-    "brunofernandes": {
+    "bryanmbeumo": {
       "goals": 1,
       "playedMatches": 2,
       "teamId": 66,
       "teamName": "Manchester United FC"
+    },
+    "chubaakpom": {
+      "goals": 1,
+      "playedMatches": 2,
+      "teamId": 349,
+      "teamName": "Ipswich Town FC"
     }
   },
   "teams": {
