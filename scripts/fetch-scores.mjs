@@ -28,7 +28,7 @@ async function apiGet(pathname) {
 function normalizeName(name) {
   return (name || '')
     .normalize('NFD').replace(/[̀-ͯ]/g, '')
-    .replace(/ø/gi, 'o').replace(/æ/gi, 'ae').replace(/đ/gi, 'd').replace(/ł/gi, 'l')
+    .replace(/ø/gi, 'o').replace(/æ/gi, 'ae').replace(/đ/gi, 'd').replace(/ł/gi, 'l').replace(/ß/g, 'ss')
     .toLowerCase()
     .replace(/[^a-z0-9]/g, '');
 }

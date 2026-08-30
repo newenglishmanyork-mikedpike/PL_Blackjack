@@ -406,7 +406,7 @@ body {
   function normalizeName(name) {
     return (name || '')
       .normalize('NFD').replace(/[̀-ͯ]/g, '') // strip accents (é, ü, š, …)
-      .replace(/ø/gi, 'o').replace(/æ/gi, 'ae').replace(/đ/gi, 'd').replace(/ł/gi, 'l') // letters NFD can't decompose
+      .replace(/ø/gi, 'o').replace(/æ/gi, 'ae').replace(/đ/gi, 'd').replace(/ł/gi, 'l').replace(/ß/g, 'ss') // letters NFD can't decompose
       .toLowerCase()
       .replace(/[^a-z0-9]/g, ''); // ignore spaces, hyphens, apostrophes
   }
