@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-30T16:18:31.081Z",
+  "updatedAt": "2026-08-30T16:40:25.025Z",
   "season": "2026",
   "scorersReturned": 47,
   "players": {
@@ -255,7 +255,7 @@
       "teamId": 397,
       "teamName": "Brighton & Hove Albion FC"
     },
-    "pascalgro": {
+    "pascalgross": {
       "goals": 1,
       "playedMatches": 2,
       "teamId": 397,
