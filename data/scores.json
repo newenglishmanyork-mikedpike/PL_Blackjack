@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-31T18:02:19.637Z",
+  "updatedAt": "2026-09-01T00:03:44.694Z",
   "season": "2026",
   "scorersReturned": 49,
   "players": {
@@ -8,6 +8,12 @@
       "playedMatches": 2,
       "teamId": 66,
       "teamName": "Manchester United FC"
+    },
+    "bukayosaka": {
+      "goals": 2,
+      "playedMatches": 2,
+      "teamId": 57,
+      "teamName": "Arsenal FC"
     },
     "jackhinshelwood": {
       "goals": 2,
@@ -47,19 +53,13 @@
     },
     "kaihavertz": {
       "goals": 1,
-      "playedMatches": 1,
-      "teamId": 57,
-      "teamName": "Arsenal FC"
-    },
-    "bukayosaka": {
-      "goals": 1,
-      "playedMatches": 1,
+      "playedMatches": 2,
       "teamId": 57,
       "teamName": "Arsenal FC"
     },
     "martinodegaard": {
       "goals": 1,
-      "playedMatches": 1,
+      "playedMatches": 2,
       "teamId": 57,
       "teamName": "Arsenal FC"
     },
@@ -301,13 +301,13 @@
   "teams": {
     "57": {
       "name": "Arsenal FC",
-      "playedGames": 1,
-      "gamesRemaining": 37
+      "playedGames": 2,
+      "gamesRemaining": 36
     },
     "58": {
       "name": "Aston Villa FC",
-      "playedGames": 1,
-      "gamesRemaining": 37
+      "playedGames": 2,
+      "gamesRemaining": 36
     },
     "61": {
       "name": "Chelsea FC",
