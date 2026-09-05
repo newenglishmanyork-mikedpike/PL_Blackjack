@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-05T06:02:48.631Z",
+  "updatedAt": "2026-09-05T12:02:52.891Z",
   "season": "2026",
   "scorersReturned": 49,
   "players": {
@@ -341,8 +341,8 @@
     },
     "67": {
       "name": "Newcastle United FC",
-      "playedGames": 2,
-      "gamesRemaining": 36
+      "playedGames": 3,
+      "gamesRemaining": 35
     },
     "71": {
       "name": "Sunderland AFC",
@@ -391,8 +391,8 @@
     },
     "1044": {
       "name": "AFC Bournemouth",
-      "playedGames": 2,
-      "gamesRemaining": 36
+      "playedGames": 3,
+      "gamesRemaining": 35
     },
     "1076": {
       "name": "Coventry City FC",
