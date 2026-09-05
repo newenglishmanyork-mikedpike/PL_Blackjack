@@ -1,8 +1,14 @@
 {
-  "updatedAt": "2026-09-04T18:03:05.823Z",
+  "updatedAt": "2026-09-05T00:03:31.873Z",
   "season": "2026",
   "scorersReturned": 49,
   "players": {
+    "alexanderisak": {
+      "goals": 3,
+      "playedMatches": 3,
+      "teamId": 64,
+      "teamName": "Liverpool FC"
+    },
     "brunofernandes": {
       "goals": 3,
       "playedMatches": 2,
@@ -77,7 +83,7 @@
     },
     "emersonn": {
       "goals": 1,
-      "playedMatches": 2,
+      "playedMatches": 3,
       "teamId": 349,
       "teamName": "Ipswich Town FC"
     },
@@ -89,7 +95,7 @@
     },
     "jackclarke": {
       "goals": 1,
-      "playedMatches": 2,
+      "playedMatches": 3,
       "teamId": 349,
       "teamName": "Ipswich Town FC"
     },
@@ -155,7 +161,7 @@
     },
     "codygakpo": {
       "goals": 1,
-      "playedMatches": 2,
+      "playedMatches": 3,
       "teamId": 64,
       "teamName": "Liverpool FC"
     },
@@ -167,7 +173,7 @@
     },
     "dominikszoboszlai": {
       "goals": 1,
-      "playedMatches": 2,
+      "playedMatches": 3,
       "teamId": 64,
       "teamName": "Liverpool FC"
     },
@@ -195,12 +201,6 @@
       "teamId": 351,
       "teamName": "Nottingham Forest FC"
     },
-    "alexanderisak": {
-      "goals": 1,
-      "playedMatches": 2,
-      "teamId": 64,
-      "teamName": "Liverpool FC"
-    },
     "morgangibbswhite": {
       "goals": 1,
       "playedMatches": 2,
@@ -209,7 +209,7 @@
     },
     "victormunoz": {
       "goals": 1,
-      "playedMatches": 2,
+      "playedMatches": 3,
       "teamId": 64,
       "teamName": "Liverpool FC"
     },
@@ -281,7 +281,7 @@
     },
     "leifdavis": {
       "goals": 1,
-      "playedMatches": 2,
+      "playedMatches": 3,
       "teamId": 349,
       "teamName": "Ipswich Town FC"
     },
@@ -326,8 +326,8 @@
     },
     "64": {
       "name": "Liverpool FC",
-      "playedGames": 2,
-      "gamesRemaining": 36
+      "playedGames": 3,
+      "gamesRemaining": 35
     },
     "65": {
       "name": "Manchester City FC",
@@ -366,8 +366,8 @@
     },
     "349": {
       "name": "Ipswich Town FC",
-      "playedGames": 2,
-      "gamesRemaining": 36
+      "playedGames": 3,
+      "gamesRemaining": 35
     },
     "351": {
       "name": "Nottingham Forest FC",
