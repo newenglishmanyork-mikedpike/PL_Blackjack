@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-09-06T12:02:49.249Z",
+  "updatedAt": "2026-09-06T18:02:52.240Z",
   "season": "2026",
-  "scorersReturned": 57,
+  "scorersReturned": 60,
   "players": {
     "erlinghaaland": {
       "goals": 3,
@@ -21,9 +21,21 @@
       "teamId": 66,
       "teamName": "Manchester United FC"
     },
+    "kaihavertz": {
+      "goals": 2,
+      "playedMatches": 3,
+      "teamId": 57,
+      "teamName": "Arsenal FC"
+    },
     "bukayosaka": {
       "goals": 2,
-      "playedMatches": 2,
+      "playedMatches": 3,
+      "teamId": 57,
+      "teamName": "Arsenal FC"
+    },
+    "martinodegaard": {
+      "goals": 2,
+      "playedMatches": 3,
       "teamId": 57,
       "teamName": "Arsenal FC"
     },
@@ -53,7 +65,7 @@
     },
     "joaopedro": {
       "goals": 2,
-      "playedMatches": 2,
+      "playedMatches": 3,
       "teamId": 61,
       "teamName": "Chelsea FC"
     },
@@ -63,9 +75,15 @@
       "teamId": 63,
       "teamName": "Fulham FC"
     },
+    "morganrogers": {
+      "goals": 2,
+      "playedMatches": 3,
+      "teamId": 61,
+      "teamName": "Chelsea FC"
+    },
     "colepalmer": {
       "goals": 2,
-      "playedMatches": 2,
+      "playedMatches": 3,
       "teamId": 61,
       "teamName": "Chelsea FC"
     },
@@ -75,23 +93,17 @@
       "teamId": 65,
       "teamName": "Manchester City FC"
     },
+    "bryanmbeumo": {
+      "goals": 2,
+      "playedMatches": 3,
+      "teamId": 66,
+      "teamName": "Manchester United FC"
+    },
     "tyrickmitchell": {
       "goals": 2,
       "playedMatches": 3,
       "teamId": 354,
       "teamName": "Crystal Palace FC"
-    },
-    "kaihavertz": {
-      "goals": 1,
-      "playedMatches": 2,
-      "teamId": 57,
-      "teamName": "Arsenal FC"
-    },
-    "martinodegaard": {
-      "goals": 1,
-      "playedMatches": 2,
-      "teamId": 57,
-      "teamName": "Arsenal FC"
     },
     "semiajayi": {
       "goals": 1,
@@ -189,12 +201,6 @@
       "teamId": 64,
       "teamName": "Liverpool FC"
     },
-    "morganrogers": {
-      "goals": 1,
-      "playedMatches": 2,
-      "teamId": 61,
-      "teamName": "Chelsea FC"
-    },
     "gonzalogarcia": {
       "goals": 1,
       "playedMatches": 3,
@@ -251,13 +257,13 @@
     },
     "romeolavia": {
       "goals": 1,
-      "playedMatches": 2,
+      "playedMatches": 3,
       "teamId": 61,
       "teamName": "Chelsea FC"
     },
     "pedroneto": {
       "goals": 1,
-      "playedMatches": 2,
+      "playedMatches": 3,
       "teamId": 61,
       "teamName": "Chelsea FC"
     },
@@ -290,12 +296,6 @@
       "playedMatches": 3,
       "teamId": 349,
       "teamName": "Ipswich Town FC"
-    },
-    "bryanmbeumo": {
-      "goals": 1,
-      "playedMatches": 3,
-      "teamId": 66,
-      "teamName": "Manchester United FC"
     },
     "chubaakpom": {
       "goals": 1,
@@ -344,13 +344,31 @@
       "playedMatches": 1,
       "teamId": 354,
       "teamName": "Crystal Palace FC"
+    },
+    "tyriquegeorge": {
+      "goals": 1,
+      "playedMatches": 3,
+      "teamId": 62,
+      "teamName": "Everton FC"
+    },
+    "benjaminsesko": {
+      "goals": 1,
+      "playedMatches": 3,
+      "teamId": 66,
+      "teamName": "Manchester United FC"
+    },
+    "ainsleymaitlandniles": {
+      "goals": 1,
+      "playedMatches": 1,
+      "teamId": 62,
+      "teamName": "Everton FC"
     }
   },
   "teams": {
     "57": {
       "name": "Arsenal FC",
-      "playedGames": 2,
-      "gamesRemaining": 36
+      "playedGames": 3,
+      "gamesRemaining": 35
     },
     "58": {
       "name": "Aston Villa FC",
@@ -359,13 +377,13 @@
     },
     "61": {
       "name": "Chelsea FC",
-      "playedGames": 2,
-      "gamesRemaining": 36
+      "playedGames": 3,
+      "gamesRemaining": 35
     },
     "62": {
       "name": "Everton FC",
-      "playedGames": 2,
-      "gamesRemaining": 36
+      "playedGames": 3,
+      "gamesRemaining": 35
     },
     "63": {
       "name": "Fulham FC",
@@ -384,8 +402,8 @@
     },
     "66": {
       "name": "Manchester United FC",
-      "playedGames": 2,
-      "gamesRemaining": 36
+      "playedGames": 3,
+      "gamesRemaining": 35
     },
     "67": {
       "name": "Newcastle United FC",
