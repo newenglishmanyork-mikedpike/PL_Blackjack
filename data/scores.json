@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T06:02:47.282Z",
+  "updatedAt": "2026-09-06T12:02:49.249Z",
   "season": "2026",
   "scorersReturned": 57,
   "players": {
@@ -17,7 +17,7 @@
     },
     "brunofernandes": {
       "goals": 3,
-      "playedMatches": 2,
+      "playedMatches": 3,
       "teamId": 66,
       "teamName": "Manchester United FC"
     },
@@ -131,13 +131,13 @@
     },
     "kiernandewsburyhall": {
       "goals": 1,
-      "playedMatches": 2,
+      "playedMatches": 3,
       "teamId": 62,
       "teamName": "Everton FC"
     },
     "thiernobarry": {
       "goals": 1,
-      "playedMatches": 2,
+      "playedMatches": 3,
       "teamId": 62,
       "teamName": "Everton FC"
     },
@@ -227,7 +227,7 @@
     },
     "jamestarkowski": {
       "goals": 1,
-      "playedMatches": 2,
+      "playedMatches": 3,
       "teamId": 62,
       "teamName": "Everton FC"
     },
@@ -293,7 +293,7 @@
     },
     "bryanmbeumo": {
       "goals": 1,
-      "playedMatches": 2,
+      "playedMatches": 3,
       "teamId": 66,
       "teamName": "Manchester United FC"
     },
