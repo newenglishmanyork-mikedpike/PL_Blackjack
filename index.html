@@ -69,96 +69,10 @@ body {
   margin: 2px 0;
 }
 .plbj-sub { font-size: 13px; color: var(--steel); }
-.plbj-actions { display: flex; gap: 10px; flex-wrap: wrap; }
-.plbj-btn {
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 13px;
-  border: 1.5px solid var(--gold);
-  background: transparent;
-  color: var(--gold);
-  padding: 9px 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.15s ease, color 0.15s ease;
-  white-space: nowrap;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-.plbj-btn:hover { background: var(--gold); color: var(--felt-dark); }
-.plbj-btn.primary { background: var(--gold); color: var(--felt-dark); }
-.plbj-btn.primary:hover { background: #e6c968; }
-.plbj-btn.ghost { border-color: var(--felt-line); color: var(--steel); }
-.plbj-btn.ghost:hover { background: rgba(245,241,230,0.08); color: var(--chalk); }
-.plbj-btn:disabled { opacity: 0.45; cursor: not-allowed; }
-.plbj-btn:disabled:hover { background: transparent; color: var(--gold); }
-.plbj-spin {
-  display: inline-block; width: 11px; height: 11px; border-radius: 50%;
-  border: 2px solid currentColor; border-top-color: transparent;
-  animation: plbj-spin 0.7s linear infinite;
-}
-@keyframes plbj-spin { to { transform: rotate(360deg); } }
-
-/* ---------- panels ---------- */
-.plbj-panel {
-  background: var(--felt-dark);
-  border: 1px solid var(--felt-line);
-  border-radius: 12px;
-  padding: 18px;
-  margin-bottom: 22px;
-}
-.plbj-panel h3 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 20px;
-  letter-spacing: 0.03em;
-  margin: 0 0 12px;
-  color: var(--gold);
-}
-.plbj-panel p.plbj-hint { font-size: 12.5px; color: var(--steel); line-height: 1.5; margin: 6px 0 0; }
-.plbj-panel a { color: var(--gold); }
-.plbj-form-row { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
-.plbj-form-row label {
-  display: flex; flex-direction: column; gap: 5px;
-  font-size: 11px; color: var(--steel); text-transform: uppercase; letter-spacing: 0.06em;
-  flex: 1; min-width: 140px;
-}
-.plbj-input {
-  font-family: 'Inter', sans-serif;
-  background: var(--charcoal);
-  border: 1px solid var(--felt-line);
-  border-radius: 7px;
-  padding: 9px 10px;
-  color: var(--chalk);
-  font-size: 14px;
-  width: 100%;
-}
-.plbj-input:focus { outline: 2px solid var(--gold); outline-offset: 1px; }
-.plbj-player-form-block {
-  border: 1px solid var(--felt-line); border-radius: 9px; padding: 10px; display: flex; flex-direction: column; gap: 8px;
-}
-.plbj-players-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 12px; }
-@media (max-width: 560px) { .plbj-players-grid { grid-template-columns: 1fr; } }
-
-.plbj-json-out {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 12px;
-  background: var(--charcoal);
-  border: 1px solid var(--felt-line);
-  border-radius: 7px;
-  padding: 12px;
-  color: var(--chalk);
-  white-space: pre-wrap;
-  word-break: break-word;
-  max-height: 260px;
-  overflow: auto;
-  margin: 10px 0 0;
-}
 
 .plbj-status-banner {
   font-size: 12.5px; padding: 8px 12px; border-radius: 7px; margin-bottom: 12px; line-height: 1.5;
 }
-.plbj-status-banner.ok { background: var(--gold-soft); color: var(--gold); }
 .plbj-status-banner.err { background: var(--card-red-soft); color: #e8a2a5; }
 
 .plbj-empty {
@@ -320,15 +234,9 @@ body {
       <div class="plbj-title">Premier League Blackjack</div>
       <div class="plbj-sub" id="plbj-subtitle">Loading entries&hellip;</div>
     </div>
-    <div class="plbj-actions">
-      <button class="plbj-btn ghost" id="plbj-refresh-btn">&#8635; Reload data</button>
-      <button class="plbj-btn ghost" id="plbj-trigger-btn">&#8599; Refresh live scores</button>
-      <button class="plbj-btn ghost" id="plbj-toggle-manage">Add an entry</button>
-    </div>
   </div>
 
   <div id="plbj-status-slot"></div>
-  <div id="plbj-panel-slot"></div>
   <div id="plbj-leaderboard-slot"></div>
   <div class="plbj-section-heading">Full Details</div>
   <div id="plbj-board"><div class="plbj-loading">Loading entries&hellip;</div></div>
@@ -337,32 +245,14 @@ body {
 
 <script>
 (function () {
-  // Deep-link to GitHub's own "Run workflow" page. We tried triggering the
-  // Actions API directly from the browser first, but that needs a token
-  // embedded client-side (a real security exposure) and GitHub's
-  // fine-grained tokens hit an undocumented "Resource not accessible by
-  // integration" wall on workflow_dispatch no matter how they were scoped —
-  // so this is the safe fallback: no credential in the page at all.
-  const GH_OWNER = 'newenglishmanyork-mikedpike';
-  const GH_REPO = 'PL_Blackjack';
-  const GH_WORKFLOW_FILE = 'refresh-scores.yml';
-  const GH_WORKFLOW_URL = `https://github.com/${GH_OWNER}/${GH_REPO}/actions/workflows/${GH_WORKFLOW_FILE}`;
-
   let entries = [];
   let scores = { updatedAt: null, players: {}, teams: {} };
   let dataReady = false;
   let loadError = null;
-  let manageMode = false;
-  let statusMsg = null; // { type: 'ok'|'err', text }
-  let refreshing = false;
 
   const board = document.getElementById('plbj-board');
-  const panelSlot = document.getElementById('plbj-panel-slot');
   const statusSlot = document.getElementById('plbj-status-slot');
   const subtitle = document.getElementById('plbj-subtitle');
-  const toggleManageBtn = document.getElementById('plbj-toggle-manage');
-  const refreshBtn = document.getElementById('plbj-refresh-btn');
-  const triggerBtn = document.getElementById('plbj-trigger-btn');
 
   function escapeHtml(str) {
     const div = document.createElement('div');
@@ -382,7 +272,6 @@ body {
 
   /* ---------------- data loading ---------------- */
   async function loadAll() {
-    statusMsg = null;
     loadError = null;
     try {
       const [entriesRes, scoresRes] = await Promise.all([
@@ -473,7 +362,6 @@ body {
   function render() {
     renderHeader();
     renderStatus();
-    renderPanel();
     renderLeaderboard();
     renderBoard();
   }
@@ -522,9 +410,6 @@ body {
     const countTxt = entries.length ? `${entries.length} ${entries.length === 1 ? 'entry' : 'entries'} on the board` : 'No entries yet';
     const ago = timeAgo(scores.updatedAt);
     subtitle.textContent = ago ? `${countTxt} · scores refreshed ${ago}` : countTxt;
-    toggleManageBtn.textContent = manageMode ? 'Close' : 'Add an entry';
-    refreshBtn.innerHTML = refreshing ? '<span class="plbj-spin"></span> Reloading…' : '&#8635; Reload data';
-    refreshBtn.disabled = refreshing;
   }
 
   function renderStatus() {
@@ -532,60 +417,13 @@ body {
       statusSlot.innerHTML = `<div class="plbj-status-banner err">${escapeHtml(loadError)}</div>`;
       return;
     }
-    if (!statusMsg) { statusSlot.innerHTML = ''; return; }
-    statusSlot.innerHTML = `<div class="plbj-status-banner ${statusMsg.type}">${escapeHtml(statusMsg.text)}</div>`;
-  }
-
-  function renderPanel() {
-    if (!manageMode) { panelSlot.innerHTML = ''; return; }
-    panelSlot.innerHTML = `
-      <div class="plbj-panel">
-        <h3>Add an entry</h3>
-        <p class="plbj-hint">Entries live in <code>data/entries.json</code> in the repo, so a new pick needs a commit — there's no live "save" button on the page itself. Fill this in, click Generate, then paste the result into that file (as a new item in the array) and commit/push.</p>
-        <div class="plbj-form-row">
-          <label>Entry name
-            <input type="text" class="plbj-input" id="plbj-input-entryname" placeholder="e.g. Dave's XI" />
-          </label>
-          <label>Owner (optional)
-            <input type="text" class="plbj-input" id="plbj-input-owner" placeholder="e.g. Dave" />
-          </label>
-        </div>
-        <div class="plbj-players-grid">
-          ${[0, 1, 2, 3].map(i => `
-            <div class="plbj-player-form-block">
-              <label style="margin:0;">Player ${i + 1}
-                <input type="text" class="plbj-input" id="plbj-input-player-${i}" placeholder="Player name (exactly as in the Premier League)" />
-              </label>
-              <label style="margin:0;">Team (optional, just for display)
-                <input type="text" class="plbj-input" id="plbj-input-player-team-${i}" placeholder="e.g. Arsenal" />
-              </label>
-            </div>
-          `).join('')}
-        </div>
-        <button class="plbj-btn primary" id="plbj-generate-json">Generate JSON</button>
-        <div id="plbj-json-out-slot"></div>
-      </div>
-    `;
-    document.getElementById('plbj-generate-json').addEventListener('click', () => {
-      const name = document.getElementById('plbj-input-entryname').value.trim();
-      const owner = document.getElementById('plbj-input-owner').value.trim();
-      const players = [0, 1, 2, 3].map(i => ({
-        name: document.getElementById(`plbj-input-player-${i}`).value.trim(),
-        team: document.getElementById(`plbj-input-player-team-${i}`).value.trim(),
-      }));
-      if (!name || players.some(p => !p.name)) {
-        alert('Please give the entry a name and fill in all 4 player names.');
-        return;
-      }
-      const snippet = JSON.stringify({ name, owner, players }, null, 2);
-      document.getElementById('plbj-json-out-slot').innerHTML = `<pre class="plbj-json-out">${escapeHtml(snippet + ',')}</pre>`;
-    });
+    statusSlot.innerHTML = '';
   }
 
   function renderBoard() {
     if (!dataReady) { board.innerHTML = '<div class="plbj-loading">Loading entries…</div>'; return; }
     if (!entries.length) {
-      board.innerHTML = `<div class="plbj-empty">No entries on the board yet.<br>Click <strong>Add an entry</strong> to get the JSON for the first pick.</div>`;
+      board.innerHTML = `<div class="plbj-empty">No entries on the board yet.<br>Add contestants by editing <code>data/entries.json</code>.</div>`;
       return;
     }
     const ranked = sortedEntries();
@@ -630,18 +468,6 @@ body {
       </div>
     `;
   }
-
-  toggleManageBtn.addEventListener('click', () => { manageMode = !manageMode; render(); });
-  refreshBtn.addEventListener('click', async () => {
-    refreshing = true; render();
-    await loadAll();
-    refreshing = false; render();
-  });
-  triggerBtn.addEventListener('click', () => {
-    window.open(GH_WORKFLOW_URL, '_blank', 'noopener');
-    statusMsg = { type: 'ok', text: 'Opened the workflow on GitHub — click "Run workflow" there, then come back and hit Reload data in a minute.' };
-    render();
-  });
 
   loadAll();
 })();

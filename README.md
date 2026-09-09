@@ -43,28 +43,30 @@ automatically, no manual score entry.
    immediately instead of waiting for the first scheduled run: Actions tab
    → "Refresh scores" → Run workflow.
 
-5. **The "Refresh live scores" button** needs no setup — it just opens
-   GitHub's own "Run workflow" page for you in a new tab, where you (or
-   anyone signed into GitHub with access to this repo) click "Run
-   workflow" to kick off an immediate refresh, then come back and hit
-   "Reload data" a minute later.
+## Refreshing scores on demand
 
-   We initially tried making this button trigger the refresh directly,
-   with no extra clicks needed. That requires a GitHub token embedded in
-   the page, which is a real security exposure (anyone can read it from
-   the page source) — and on top of that, GitHub's fine-grained tokens
-   hit an undocumented `403 Resource not accessible by integration` wall
-   on this specific API call no matter how they were scoped, even
-   following GitHub's own documented fix. Given a real security tradeoff
-   for a feature that didn't reliably work anyway, we dropped it for this
-   safer deep-link version instead. No credential lives in this page.
+The page itself has no refresh/trigger button — the automatic 6-hourly
+schedule keeps `data/scores.json` current, and if you want it sooner,
+trigger it directly from GitHub: Actions tab → "Refresh scores" → Run
+workflow (or `workflow_dispatch` via the API/CLI). The page always shows
+whatever is currently committed; there's nothing to click on the page
+itself to force a reload, so give it a minute after triggering and then
+just revisit the page.
+
+(We initially tried an on-page button that called GitHub's API directly.
+That needs a token embedded in the page — a real security exposure — and
+on top of that, GitHub's fine-grained tokens hit an undocumented `403
+Resource not accessible by integration` wall on that specific call no
+matter how they were scoped. We dropped it for a plain deep-link version,
+and then removed even that in favor of managing refreshes from the
+GitHub side directly.)
 
 ## Adding entries
 
-Open the page and click **Add an entry** — fill in the entry name, owner,
-and 4 players, then click **Generate JSON**. Copy the result into
-`data/entries.json` as a new item in the array, then commit and push (or
-open a pull request). You can also just edit the file directly:
+Entries live in `data/entries.json` — edit the file directly and
+commit/push (or open a pull request). There's no on-page form for this
+either; it's simplest to manage from the GitHub side since squads are
+locked in once per season, not something people self-serve mid-season:
 
 ```json
 {
