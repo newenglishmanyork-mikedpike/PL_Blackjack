@@ -127,6 +127,36 @@ one early goal in game 1 would extrapolate to a ridiculous full-season
 total. Below that threshold, a player's projected contribution is just
 their actual goals so far, same as everyone else.
 
+## Latest goals ticker
+
+Below the header, the page shows the 4 most recent goals scored by anyone
+in someone's squad: player name, opponent, home/away, and date. This
+needed a real design compromise, since the free football-data.org tier
+has no goal-by-goal event data (no minute, no per-goal match link) —
+only a running season total per player. `fetch-scores.mjs` works around
+that by comparing each refresh's goal tallies against the previous ones
+committed to `data/scores.json`; whenever a drafted player's tally goes
+up, it logs that as an event against their team's most recent finished
+match (pulled from the `/matches` endpoint) and keeps a rolling history
+in `scores.json`'s `recentGoals` array (newest first, capped at 12).
+
+Caveats worth knowing:
+- **No kickoff-minute data** — the ticker shows date and opponent, not a
+  minute, because that data plainly isn't available on this tier.
+- **Attribution is inferred, not guaranteed.** If a player's tally rises
+  between two refreshes, that goal is credited to their team's latest
+  finished match as of that refresh. This is normally right, but would
+  misattribute if, say, a team played twice between refreshes and we
+  only caught the combined tally change — a good reason to keep the
+  6-hourly automatic refresh running rather than letting it lapse for
+  days.
+- **History starts from when this feature shipped.** Goals scored
+  before `recentGoals` existed aren't retroactively backfilled — the
+  ticker will be empty (or short) until new goals get logged going
+  forward.
+- A brace or hat-trick between refreshes shows as one ticker line with a
+  `×N` badge rather than N separate lines.
+
 ## Limitations
 
 - The free football-data.org tier's scorers list only includes players who

@@ -70,6 +70,40 @@ body {
 }
 .plbj-sub { font-size: 13px; color: var(--steel); }
 
+/* ---------- goals ticker ---------- */
+.plbj-ticker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+.plbj-ticker-item {
+  flex: 1 1 200px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  background: var(--felt-dark);
+  border: 1px solid var(--felt-line);
+  border-left: 3px solid var(--gold);
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+.plbj-ticker-name-row { display: flex; align-items: baseline; gap: 5px; min-width: 0; }
+.plbj-ticker-item .ball { flex-shrink: 0; font-size: 12px; }
+.plbj-ticker-player {
+  font-weight: 700; color: var(--chalk); font-size: 13px;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.plbj-ticker-multi { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--gold); flex-shrink: 0; }
+.plbj-ticker-detail {
+  color: var(--steel); font-size: 11.5px;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+@media (max-width: 640px) {
+  .plbj-ticker-item { flex-basis: 100%; }
+}
+
 .plbj-status-banner {
   font-size: 12.5px; padding: 8px 12px; border-radius: 7px; margin-bottom: 12px; line-height: 1.5;
 }
@@ -236,6 +270,7 @@ body {
     </div>
   </div>
 
+  <div id="plbj-ticker-slot"></div>
   <div id="plbj-status-slot"></div>
   <div id="plbj-leaderboard-slot"></div>
   <div class="plbj-section-heading">Full Details</div>
@@ -246,12 +281,13 @@ body {
 <script>
 (function () {
   let entries = [];
-  let scores = { updatedAt: null, players: {}, teams: {} };
+  let scores = { updatedAt: null, players: {}, teams: {}, recentGoals: [] };
   let dataReady = false;
   let loadError = null;
 
   const board = document.getElementById('plbj-board');
   const statusSlot = document.getElementById('plbj-status-slot');
+  const tickerSlot = document.getElementById('plbj-ticker-slot');
   const subtitle = document.getElementById('plbj-subtitle');
 
   function escapeHtml(str) {
@@ -269,6 +305,18 @@ body {
     if (hrs < 24) return `${hrs}h ago`;
     return `${Math.round(hrs / 24)}d ago`;
   }
+  function shortTeamName(name) {
+    return (name || '').replace(/\s+FC$/i, '').replace(/^AFC\s+/i, '').replace(/\s+AFC$/i, '').trim();
+  }
+  function ordinalDate(iso) {
+    const d = new Date(iso);
+    const day = d.getDate();
+    const suffix = (day % 10 === 1 && day !== 11) ? 'st'
+      : (day % 10 === 2 && day !== 12) ? 'nd'
+      : (day % 10 === 3 && day !== 13) ? 'rd' : 'th';
+    const month = d.toLocaleDateString('en-US', { month: 'short' });
+    return `${month} ${day}${suffix}`;
+  }
 
   /* ---------------- data loading ---------------- */
   async function loadAll() {
@@ -285,7 +333,7 @@ body {
     } catch (err) {
       loadError = err.message || 'Failed to load data. If you opened this file directly, serve it with a local web server instead (fetch of local JSON is blocked from file:// URLs).';
       entries = [];
-      scores = { updatedAt: null, players: {}, teams: {} };
+      scores = { updatedAt: null, players: {}, teams: {}, recentGoals: [] };
     }
     dataReady = true;
     render();
@@ -362,8 +410,28 @@ body {
   function render() {
     renderHeader();
     renderStatus();
+    renderTicker();
     renderLeaderboard();
     renderBoard();
+  }
+
+  function renderTicker() {
+    const items = (scores.recentGoals || []).slice(0, 4);
+    if (!items.length) { tickerSlot.innerHTML = ''; return; }
+    tickerSlot.innerHTML = `
+      <div class="plbj-ticker">
+        ${items.map(g => `
+          <div class="plbj-ticker-item">
+            <div class="plbj-ticker-name-row">
+              <span class="ball">⚽</span>
+              <span class="plbj-ticker-player">${escapeHtml(g.player)}</span>
+              ${g.delta > 1 ? `<span class="plbj-ticker-multi">×${g.delta}</span>` : ''}
+            </div>
+            <div class="plbj-ticker-detail">${escapeHtml(shortTeamName(g.opponent))} (${g.isHome ? 'H' : 'A'}) &middot; ${ordinalDate(g.matchDate)}</div>
+          </div>
+        `).join('')}
+      </div>
+    `;
   }
 
   const leaderboardSlot = document.getElementById('plbj-leaderboard-slot');
