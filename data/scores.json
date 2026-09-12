@@ -1,8 +1,36 @@
 {
-  "updatedAt": "2026-09-09T14:51:28.240Z",
+  "updatedAt": "2026-09-12T21:30:56.858Z",
   "season": "2026",
-  "scorersReturned": 60,
+  "scorersReturned": 69,
   "players": {
+    "bukayosaka": {
+      "name": "Bukayo Saka",
+      "goals": 3,
+      "playedMatches": 4,
+      "teamId": 57,
+      "teamName": "Arsenal FC"
+    },
+    "marcustavernier": {
+      "name": "Marcus Tavernier",
+      "goals": 3,
+      "playedMatches": 4,
+      "teamId": 1044,
+      "teamName": "AFC Bournemouth"
+    },
+    "joaopedro": {
+      "name": "João Pedro",
+      "goals": 3,
+      "playedMatches": 4,
+      "teamId": 61,
+      "teamName": "Chelsea FC"
+    },
+    "morganrogers": {
+      "name": "Morgan Rogers",
+      "goals": 3,
+      "playedMatches": 4,
+      "teamId": 61,
+      "teamName": "Chelsea FC"
+    },
     "erlinghaaland": {
       "name": "Erling Haaland",
       "goals": 3,
@@ -13,9 +41,16 @@
     "alexanderisak": {
       "name": "Alexander Isak",
       "goals": 3,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 64,
       "teamName": "Liverpool FC"
+    },
+    "kevinschade": {
+      "name": "Kevin Schade",
+      "goals": 3,
+      "playedMatches": 4,
+      "teamId": 402,
+      "teamName": "Brentford FC"
     },
     "brunofernandes": {
       "name": "Bruno Fernandes",
@@ -27,37 +62,30 @@
     "kaihavertz": {
       "name": "Kai Havertz",
       "goals": 2,
-      "playedMatches": 3,
-      "teamId": 57,
-      "teamName": "Arsenal FC"
-    },
-    "bukayosaka": {
-      "name": "Bukayo Saka",
-      "goals": 2,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 57,
       "teamName": "Arsenal FC"
     },
     "martinodegaard": {
       "name": "Martin Ødegaard",
       "goals": 2,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 57,
       "teamName": "Arsenal FC"
+    },
+    "emersonn": {
+      "name": "Emersonn",
+      "goals": 2,
+      "playedMatches": 4,
+      "teamId": 349,
+      "teamName": "Ipswich Town FC"
     },
     "vitalyjanelt": {
       "name": "Vitaly Janelt",
       "goals": 2,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 402,
       "teamName": "Brentford FC"
-    },
-    "marcustavernier": {
-      "name": "Marcus Tavernier",
-      "goals": 2,
-      "playedMatches": 3,
-      "teamId": 1044,
-      "teamName": "AFC Bournemouth"
     },
     "jackhinshelwood": {
       "name": "Jack Hinshelwood",
@@ -73,31 +101,17 @@
       "teamId": 67,
       "teamName": "Newcastle United FC"
     },
-    "joaopedro": {
-      "name": "João Pedro",
-      "goals": 2,
-      "playedMatches": 3,
-      "teamId": 61,
-      "teamName": "Chelsea FC"
-    },
     "joshuaking": {
       "name": "Joshua King",
       "goals": 2,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 63,
       "teamName": "Fulham FC"
-    },
-    "morganrogers": {
-      "name": "Morgan Rogers",
-      "goals": 2,
-      "playedMatches": 3,
-      "teamId": 61,
-      "teamName": "Chelsea FC"
     },
     "colepalmer": {
       "name": "Cole Palmer",
       "goals": 2,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 61,
       "teamName": "Chelsea FC"
     },
@@ -107,6 +121,13 @@
       "playedMatches": 3,
       "teamId": 65,
       "teamName": "Manchester City FC"
+    },
+    "leifdavis": {
+      "name": "Leif Davis",
+      "goals": 2,
+      "playedMatches": 4,
+      "teamId": 349,
+      "teamName": "Ipswich Town FC"
     },
     "bryanmbeumo": {
       "name": "Bryan Mbeumo",
@@ -118,42 +139,42 @@
     "tyrickmitchell": {
       "name": "Tyrick Mitchell",
       "goals": 2,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 354,
       "teamName": "Crystal Palace FC"
+    },
+    "mohamedbelloumi": {
+      "name": "Mohamed Belloumi",
+      "goals": 2,
+      "playedMatches": 4,
+      "teamId": 322,
+      "teamName": "Hull City AFC"
     },
     "semiajayi": {
       "name": "Semi Ajayi",
       "goals": 1,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 322,
       "teamName": "Hull City AFC"
     },
     "nobelmendy": {
       "name": "Nobel Mendy",
       "goals": 1,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 322,
       "teamName": "Hull City AFC"
-    },
-    "emersonn": {
-      "name": "Emersonn",
-      "goals": 1,
-      "playedMatches": 3,
-      "teamId": 349,
-      "teamName": "Ipswich Town FC"
     },
     "nilsonangulo": {
       "name": "Nilson Angulo",
       "goals": 1,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 71,
       "teamName": "Sunderland AFC"
     },
     "jackclarke": {
       "name": "Jack Clarke",
       "goals": 1,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 349,
       "teamName": "Ipswich Town FC"
     },
@@ -167,28 +188,28 @@
     "kiernandewsburyhall": {
       "name": "Kiernan Dewsbury Hall",
       "goals": 1,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 62,
       "teamName": "Everton FC"
     },
     "thiernobarry": {
       "name": "Thierno Barry",
       "goals": 1,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 62,
       "teamName": "Everton FC"
     },
     "keanelewispotter": {
       "name": "Keane Lewis-Potter",
       "goals": 1,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 402,
       "teamName": "Brentford FC"
     },
     "michaelkayode": {
       "name": "Michael Kayode",
       "goals": 1,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 402,
       "teamName": "Brentford FC"
     },
@@ -216,7 +237,7 @@
     "codygakpo": {
       "name": "Cody Gakpo",
       "goals": 1,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 64,
       "teamName": "Liverpool FC"
     },
@@ -230,49 +251,49 @@
     "dominikszoboszlai": {
       "name": "Dominik Szoboszlai",
       "goals": 1,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 64,
       "teamName": "Liverpool FC"
     },
     "gonzalogarcia": {
       "name": "Gonzalo García",
       "goals": 1,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 63,
       "teamName": "Fulham FC"
     },
     "danndoye": {
       "name": "Dan Ndoye",
       "goals": 1,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 351,
       "teamName": "Nottingham Forest FC"
     },
     "morgangibbswhite": {
       "name": "Morgan Gibbs-White",
       "goals": 1,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 351,
       "teamName": "Nottingham Forest FC"
     },
     "victormunoz": {
       "name": "Víctor Muñoz",
       "goals": 1,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 64,
       "teamName": "Liverpool FC"
     },
     "alexscott": {
       "name": "Alex Scott",
       "goals": 1,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 1044,
       "teamName": "AFC Bournemouth"
     },
     "jamestarkowski": {
       "name": "James Tarkowski",
       "goals": 1,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 62,
       "teamName": "Everton FC"
     },
@@ -293,21 +314,21 @@
     "wilsonisidor": {
       "name": "Wilson Isidor",
       "goals": 1,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 71,
       "teamName": "Sunderland AFC"
     },
     "romeolavia": {
       "name": "Romeo Lavia",
       "goals": 1,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 61,
       "teamName": "Chelsea FC"
     },
     "pedroneto": {
       "name": "Pedro Neto",
       "goals": 1,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 61,
       "teamName": "Chelsea FC"
     },
@@ -325,13 +346,6 @@
       "teamId": 397,
       "teamName": "Brighton & Hove Albion FC"
     },
-    "kevinschade": {
-      "name": "Kevin Schade",
-      "goals": 1,
-      "playedMatches": 3,
-      "teamId": 402,
-      "teamName": "Brentford FC"
-    },
     "dominiccalvertlewin": {
       "name": "Dominic Calvert-Lewin",
       "goals": 1,
@@ -339,17 +353,10 @@
       "teamId": 341,
       "teamName": "Leeds United FC"
     },
-    "leifdavis": {
-      "name": "Leif Davis",
-      "goals": 1,
-      "playedMatches": 3,
-      "teamId": 349,
-      "teamName": "Ipswich Town FC"
-    },
     "chubaakpom": {
       "name": "Chuba Akpom",
       "goals": 1,
-      "playedMatches": 2,
+      "playedMatches": 3,
       "teamId": 349,
       "teamName": "Ipswich Town FC"
     },
@@ -384,28 +391,28 @@
     "enzolefee": {
       "name": "Enzo Le Fée",
       "goals": 1,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 71,
       "teamName": "Sunderland AFC"
     },
     "cesarpalacios": {
       "name": "César Palacios",
       "goals": 1,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 63,
       "teamName": "Fulham FC"
     },
     "benchilwell": {
       "name": "Ben Chilwell",
       "goals": 1,
-      "playedMatches": 1,
+      "playedMatches": 2,
       "teamId": 354,
       "teamName": "Crystal Palace FC"
     },
     "tyriquegeorge": {
       "name": "Tyrique George",
       "goals": 1,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 62,
       "teamName": "Everton FC"
     },
@@ -419,41 +426,97 @@
     "ainsleymaitlandniles": {
       "name": "Ainsley Maitland-Niles",
       "goals": 1,
-      "playedMatches": 1,
+      "playedMatches": 2,
       "teamId": 62,
       "teamName": "Everton FC"
+    },
+    "anankhalaili": {
+      "name": "Anan Khalaili",
+      "goals": 1,
+      "playedMatches": 4,
+      "teamId": 354,
+      "teamName": "Crystal Palace FC"
+    },
+    "jorgenstrandlarsen": {
+      "name": "Jørgen Strand Larsen",
+      "goals": 1,
+      "playedMatches": 4,
+      "teamId": 354,
+      "teamName": "Crystal Palace FC"
+    },
+    "zianflemming": {
+      "name": "Zian Flemming",
+      "goals": 1,
+      "playedMatches": 2,
+      "teamId": 349,
+      "teamName": "Ipswich Town FC"
+    },
+    "liamdelap": {
+      "name": "Liam Delap",
+      "goals": 1,
+      "playedMatches": 3,
+      "teamId": 351,
+      "teamName": "Nottingham Forest FC"
+    },
+    "alysson": {
+      "name": "Alysson",
+      "goals": 1,
+      "playedMatches": 4,
+      "teamId": 58,
+      "teamName": "Aston Villa FC"
+    },
+    "igorjesus": {
+      "name": "Igor Jesus",
+      "goals": 1,
+      "playedMatches": 4,
+      "teamId": 351,
+      "teamName": "Nottingham Forest FC"
+    },
+    "justinkluivert": {
+      "name": "Justin Kluivert",
+      "goals": 1,
+      "playedMatches": 4,
+      "teamId": 1044,
+      "teamName": "AFC Bournemouth"
+    },
+    "brunoguimaraes": {
+      "name": "Bruno Guimarães",
+      "goals": 1,
+      "playedMatches": 3,
+      "teamId": 57,
+      "teamName": "Arsenal FC"
     }
   },
   "teams": {
     "57": {
       "name": "Arsenal FC",
-      "playedGames": 3,
-      "gamesRemaining": 35
+      "playedGames": 4,
+      "gamesRemaining": 34
     },
     "58": {
       "name": "Aston Villa FC",
-      "playedGames": 3,
-      "gamesRemaining": 35
+      "playedGames": 4,
+      "gamesRemaining": 34
     },
     "61": {
       "name": "Chelsea FC",
-      "playedGames": 3,
-      "gamesRemaining": 35
+      "playedGames": 4,
+      "gamesRemaining": 34
     },
     "62": {
       "name": "Everton FC",
-      "playedGames": 3,
-      "gamesRemaining": 35
+      "playedGames": 4,
+      "gamesRemaining": 34
     },
     "63": {
       "name": "Fulham FC",
-      "playedGames": 3,
-      "gamesRemaining": 35
+      "playedGames": 4,
+      "gamesRemaining": 34
     },
     "64": {
       "name": "Liverpool FC",
-      "playedGames": 3,
-      "gamesRemaining": 35
+      "playedGames": 4,
+      "gamesRemaining": 34
     },
     "65": {
       "name": "Manchester City FC",
@@ -472,18 +535,18 @@
     },
     "71": {
       "name": "Sunderland AFC",
-      "playedGames": 3,
-      "gamesRemaining": 35
+      "playedGames": 4,
+      "gamesRemaining": 34
     },
     "73": {
       "name": "Tottenham Hotspur FC",
-      "playedGames": 3,
-      "gamesRemaining": 35
+      "playedGames": 4,
+      "gamesRemaining": 34
     },
     "322": {
       "name": "Hull City AFC",
-      "playedGames": 3,
-      "gamesRemaining": 35
+      "playedGames": 4,
+      "gamesRemaining": 34
     },
     "341": {
       "name": "Leeds United FC",
@@ -492,18 +555,18 @@
     },
     "349": {
       "name": "Ipswich Town FC",
-      "playedGames": 3,
-      "gamesRemaining": 35
+      "playedGames": 4,
+      "gamesRemaining": 34
     },
     "351": {
       "name": "Nottingham Forest FC",
-      "playedGames": 3,
-      "gamesRemaining": 35
+      "playedGames": 4,
+      "gamesRemaining": 34
     },
     "354": {
       "name": "Crystal Palace FC",
-      "playedGames": 3,
-      "gamesRemaining": 35
+      "playedGames": 4,
+      "gamesRemaining": 34
     },
     "397": {
       "name": "Brighton & Hove Albion FC",
@@ -512,13 +575,13 @@
     },
     "402": {
       "name": "Brentford FC",
-      "playedGames": 3,
-      "gamesRemaining": 35
+      "playedGames": 4,
+      "gamesRemaining": 34
     },
     "1044": {
       "name": "AFC Bournemouth",
-      "playedGames": 3,
-      "gamesRemaining": 35
+      "playedGames": 4,
+      "gamesRemaining": 34
     },
     "1076": {
       "name": "Coventry City FC",
@@ -526,5 +589,16 @@
       "gamesRemaining": 35
     }
   },
-  "recentGoals": []
+  "recentGoals": [
+    {
+      "player": "Bruno Guimarães",
+      "teamName": "Arsenal FC",
+      "delta": 1,
+      "goalsAfter": 1,
+      "opponent": "Sunderland AFC",
+      "isHome": false,
+      "matchDate": "2026-09-12T19:00:00Z",
+      "detectedAt": "2026-09-12T21:30:56.858Z"
+    }
+  ]
 }
