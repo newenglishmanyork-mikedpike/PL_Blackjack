@@ -1,8 +1,15 @@
 {
-  "updatedAt": "2026-09-12T18:02:44.505Z",
+  "updatedAt": "2026-09-13T00:03:27.392Z",
   "season": "2026",
-  "scorersReturned": 68,
+  "scorersReturned": 69,
   "players": {
+    "bukayosaka": {
+      "name": "Bukayo Saka",
+      "goals": 3,
+      "playedMatches": 4,
+      "teamId": 57,
+      "teamName": "Arsenal FC"
+    },
     "marcustavernier": {
       "name": "Marcus Tavernier",
       "goals": 3,
@@ -55,21 +62,14 @@
     "kaihavertz": {
       "name": "Kai Havertz",
       "goals": 2,
-      "playedMatches": 3,
-      "teamId": 57,
-      "teamName": "Arsenal FC"
-    },
-    "bukayosaka": {
-      "name": "Bukayo Saka",
-      "goals": 2,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 57,
       "teamName": "Arsenal FC"
     },
     "martinodegaard": {
       "name": "Martin Ødegaard",
       "goals": 2,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 57,
       "teamName": "Arsenal FC"
     },
@@ -167,7 +167,7 @@
     "nilsonangulo": {
       "name": "Nilson Angulo",
       "goals": 1,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 71,
       "teamName": "Sunderland AFC"
     },
@@ -314,7 +314,7 @@
     "wilsonisidor": {
       "name": "Wilson Isidor",
       "goals": 1,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 71,
       "teamName": "Sunderland AFC"
     },
@@ -391,7 +391,7 @@
     "enzolefee": {
       "name": "Enzo Le Fée",
       "goals": 1,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 71,
       "teamName": "Sunderland AFC"
     },
@@ -478,13 +478,20 @@
       "playedMatches": 4,
       "teamId": 1044,
       "teamName": "AFC Bournemouth"
+    },
+    "brunoguimaraes": {
+      "name": "Bruno Guimarães",
+      "goals": 1,
+      "playedMatches": 3,
+      "teamId": 57,
+      "teamName": "Arsenal FC"
     }
   },
   "teams": {
     "57": {
       "name": "Arsenal FC",
-      "playedGames": 3,
-      "gamesRemaining": 35
+      "playedGames": 4,
+      "gamesRemaining": 34
     },
     "58": {
       "name": "Aston Villa FC",
@@ -528,8 +535,8 @@
     },
     "71": {
       "name": "Sunderland AFC",
-      "playedGames": 3,
-      "gamesRemaining": 35
+      "playedGames": 4,
+      "gamesRemaining": 34
     },
     "73": {
       "name": "Tottenham Hotspur FC",
@@ -582,5 +589,16 @@
       "gamesRemaining": 35
     }
   },
-  "recentGoals": []
+  "recentGoals": [
+    {
+      "player": "Bruno Guimarães",
+      "teamName": "Arsenal FC",
+      "delta": 1,
+      "goalsAfter": 1,
+      "opponent": "Sunderland AFC",
+      "isHome": false,
+      "matchDate": "2026-09-12T19:00:00Z",
+      "detectedAt": "2026-09-13T00:03:27.392Z"
+    }
+  ]
 }
