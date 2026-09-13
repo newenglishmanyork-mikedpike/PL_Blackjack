@@ -1,8 +1,15 @@
 {
-  "updatedAt": "2026-09-13T12:02:44.197Z",
+  "updatedAt": "2026-09-13T18:02:39.855Z",
   "season": "2026",
-  "scorersReturned": 69,
+  "scorersReturned": 72,
   "players": {
+    "erlinghaaland": {
+      "name": "Erling Haaland",
+      "goals": 4,
+      "playedMatches": 4,
+      "teamId": 65,
+      "teamName": "Manchester City FC"
+    },
     "bukayosaka": {
       "name": "Bukayo Saka",
       "goals": 3,
@@ -31,13 +38,6 @@
       "teamId": 61,
       "teamName": "Chelsea FC"
     },
-    "erlinghaaland": {
-      "name": "Erling Haaland",
-      "goals": 3,
-      "playedMatches": 3,
-      "teamId": 65,
-      "teamName": "Manchester City FC"
-    },
     "alexanderisak": {
       "name": "Alexander Isak",
       "goals": 3,
@@ -55,7 +55,7 @@
     "brunofernandes": {
       "name": "Bruno Fernandes",
       "goals": 3,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 66,
       "teamName": "Manchester United FC"
     },
@@ -118,9 +118,23 @@
     "rayancherki": {
       "name": "Rayan Cherki",
       "goals": 2,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 65,
       "teamName": "Manchester City FC"
+    },
+    "malickyalcouye": {
+      "name": "Malick Yalcouyé",
+      "goals": 2,
+      "playedMatches": 4,
+      "teamId": 397,
+      "teamName": "Brighton & Hove Albion FC"
+    },
+    "pascalgross": {
+      "name": "Pascal Groß",
+      "goals": 2,
+      "playedMatches": 4,
+      "teamId": 397,
+      "teamName": "Brighton & Hove Albion FC"
     },
     "leifdavis": {
       "name": "Leif Davis",
@@ -132,7 +146,7 @@
     "bryanmbeumo": {
       "name": "Bryan Mbeumo",
       "goals": 2,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 66,
       "teamName": "Manchester United FC"
     },
@@ -216,14 +230,14 @@
     "marcguehi": {
       "name": "Marc Guéhi",
       "goals": 1,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 65,
       "teamName": "Manchester City FC"
     },
     "joskogvardiol": {
       "name": "Joško Gvardiol",
       "goals": 1,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 65,
       "teamName": "Manchester City FC"
     },
@@ -332,20 +346,6 @@
       "teamId": 61,
       "teamName": "Chelsea FC"
     },
-    "malickyalcouye": {
-      "name": "Malick Yalcouyé",
-      "goals": 1,
-      "playedMatches": 4,
-      "teamId": 397,
-      "teamName": "Brighton & Hove Albion FC"
-    },
-    "pascalgross": {
-      "name": "Pascal Groß",
-      "goals": 1,
-      "playedMatches": 4,
-      "teamId": 397,
-      "teamName": "Brighton & Hove Albion FC"
-    },
     "dominiccalvertlewin": {
       "name": "Dominic Calvert-Lewin",
       "goals": 1,
@@ -419,7 +419,7 @@
     "benjaminsesko": {
       "name": "Benjamin Šeško",
       "goals": 1,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 66,
       "teamName": "Manchester United FC"
     },
@@ -485,6 +485,27 @@
       "playedMatches": 3,
       "teamId": 57,
       "teamName": "Arsenal FC"
+    },
+    "charalamposkostoulas": {
+      "name": "Charalampos Kostoulas",
+      "goals": 1,
+      "playedMatches": 4,
+      "teamId": 397,
+      "teamName": "Brighton & Hove Albion FC"
+    },
+    "lewisdunk": {
+      "name": "Lewis Dunk",
+      "goals": 1,
+      "playedMatches": 4,
+      "teamId": 397,
+      "teamName": "Brighton & Hove Albion FC"
+    },
+    "yasinayari": {
+      "name": "Yasin Ayari",
+      "goals": 1,
+      "playedMatches": 3,
+      "teamId": 397,
+      "teamName": "Brighton & Hove Albion FC"
     }
   },
   "teams": {
@@ -520,13 +541,13 @@
     },
     "65": {
       "name": "Manchester City FC",
-      "playedGames": 3,
-      "gamesRemaining": 35
+      "playedGames": 4,
+      "gamesRemaining": 34
     },
     "66": {
       "name": "Manchester United FC",
-      "playedGames": 3,
-      "gamesRemaining": 35
+      "playedGames": 4,
+      "gamesRemaining": 34
     },
     "67": {
       "name": "Newcastle United FC",
@@ -570,8 +591,8 @@
     },
     "397": {
       "name": "Brighton & Hove Albion FC",
-      "playedGames": 3,
-      "gamesRemaining": 35
+      "playedGames": 4,
+      "gamesRemaining": 34
     },
     "402": {
       "name": "Brentford FC",
@@ -585,11 +606,21 @@
     },
     "1076": {
       "name": "Coventry City FC",
-      "playedGames": 3,
-      "gamesRemaining": 35
+      "playedGames": 4,
+      "gamesRemaining": 34
     }
   },
   "recentGoals": [
+    {
+      "player": "Pascal Groß",
+      "teamName": "Brighton & Hove Albion FC",
+      "delta": 1,
+      "goalsAfter": 2,
+      "opponent": "Coventry City FC",
+      "isHome": false,
+      "matchDate": "2026-09-13T13:00:00Z",
+      "detectedAt": "2026-09-13T18:02:39.855Z"
+    },
     {
       "player": "Bruno Guimarães",
       "teamName": "Arsenal FC",
