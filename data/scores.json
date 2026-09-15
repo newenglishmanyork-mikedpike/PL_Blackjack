@@ -1,8 +1,15 @@
 {
-  "updatedAt": "2026-09-13T14:37:32.601Z",
+  "updatedAt": "2026-09-15T12:59:32.558Z",
   "season": "2026",
-  "scorersReturned": 70,
+  "scorersReturned": 74,
   "players": {
+    "erlinghaaland": {
+      "name": "Erling Haaland",
+      "goals": 4,
+      "playedMatches": 4,
+      "teamId": 65,
+      "teamName": "Manchester City FC"
+    },
     "bukayosaka": {
       "name": "Bukayo Saka",
       "goals": 3,
@@ -30,13 +37,6 @@
       "playedMatches": 4,
       "teamId": 61,
       "teamName": "Chelsea FC"
-    },
-    "erlinghaaland": {
-      "name": "Erling Haaland",
-      "goals": 3,
-      "playedMatches": 4,
-      "teamId": 65,
-      "teamName": "Manchester City FC"
     },
     "alexanderisak": {
       "name": "Alexander Isak",
@@ -136,6 +136,13 @@
       "teamId": 397,
       "teamName": "Brighton & Hove Albion FC"
     },
+    "dominiccalvertlewin": {
+      "name": "Dominic Calvert-Lewin",
+      "goals": 2,
+      "playedMatches": 4,
+      "teamId": 341,
+      "teamName": "Leeds United FC"
+    },
     "leifdavis": {
       "name": "Leif Davis",
       "goals": 2,
@@ -149,6 +156,13 @@
       "playedMatches": 4,
       "teamId": 66,
       "teamName": "Manchester United FC"
+    },
+    "jaydenbogle": {
+      "name": "Jayden Bogle",
+      "goals": 2,
+      "playedMatches": 4,
+      "teamId": 341,
+      "teamName": "Leeds United FC"
     },
     "tyrickmitchell": {
       "name": "Tyrick Mitchell",
@@ -195,7 +209,7 @@
     "antonstach": {
       "name": "Anton Stach",
       "goals": 1,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 341,
       "teamName": "Leeds United FC"
     },
@@ -258,7 +272,7 @@
     "joewillock": {
       "name": "Joe Willock",
       "goals": 1,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 67,
       "teamName": "Newcastle United FC"
     },
@@ -321,7 +335,7 @@
     "yoanewissa": {
       "name": "Yoane Wissa",
       "goals": 1,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 67,
       "teamName": "Newcastle United FC"
     },
@@ -346,13 +360,6 @@
       "teamId": 61,
       "teamName": "Chelsea FC"
     },
-    "dominiccalvertlewin": {
-      "name": "Dominic Calvert-Lewin",
-      "goals": 1,
-      "playedMatches": 3,
-      "teamId": 341,
-      "teamName": "Leeds United FC"
-    },
     "chubaakpom": {
       "name": "Chuba Akpom",
       "goals": 1,
@@ -363,23 +370,16 @@
     "harveybarnes": {
       "name": "Harvey Barnes",
       "goals": 1,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 67,
       "teamName": "Newcastle United FC"
     },
     "jacobramsey": {
       "name": "Jacob Ramsey",
       "goals": 1,
-      "playedMatches": 3,
+      "playedMatches": 4,
       "teamId": 67,
       "teamName": "Newcastle United FC"
-    },
-    "jaydenbogle": {
-      "name": "Jayden Bogle",
-      "goals": 1,
-      "playedMatches": 3,
-      "teamId": 341,
-      "teamName": "Leeds United FC"
     },
     "lukavuskovic": {
       "name": "Luka Vušković",
@@ -492,6 +492,34 @@
       "playedMatches": 4,
       "teamId": 397,
       "teamName": "Brighton & Hove Albion FC"
+    },
+    "lewisdunk": {
+      "name": "Lewis Dunk",
+      "goals": 1,
+      "playedMatches": 4,
+      "teamId": 397,
+      "teamName": "Brighton & Hove Albion FC"
+    },
+    "yasinayari": {
+      "name": "Yasin Ayari",
+      "goals": 1,
+      "playedMatches": 3,
+      "teamId": 397,
+      "teamName": "Brighton & Hove Albion FC"
+    },
+    "noahokafor": {
+      "name": "Noah Okafor",
+      "goals": 1,
+      "playedMatches": 4,
+      "teamId": 341,
+      "teamName": "Leeds United FC"
+    },
+    "bazoumanatoure": {
+      "name": "Bazoumana Touré",
+      "goals": 1,
+      "playedMatches": 4,
+      "teamId": 67,
+      "teamName": "Newcastle United FC"
     }
   },
   "teams": {
@@ -527,18 +555,18 @@
     },
     "65": {
       "name": "Manchester City FC",
-      "playedGames": 3,
-      "gamesRemaining": 35
+      "playedGames": 4,
+      "gamesRemaining": 34
     },
     "66": {
       "name": "Manchester United FC",
-      "playedGames": 3,
-      "gamesRemaining": 35
+      "playedGames": 4,
+      "gamesRemaining": 34
     },
     "67": {
       "name": "Newcastle United FC",
-      "playedGames": 3,
-      "gamesRemaining": 35
+      "playedGames": 4,
+      "gamesRemaining": 34
     },
     "71": {
       "name": "Sunderland AFC",
@@ -557,8 +585,8 @@
     },
     "341": {
       "name": "Leeds United FC",
-      "playedGames": 3,
-      "gamesRemaining": 35
+      "playedGames": 4,
+      "gamesRemaining": 34
     },
     "349": {
       "name": "Ipswich Town FC",
@@ -597,6 +625,16 @@
     }
   },
   "recentGoals": [
+    {
+      "player": "Noah Okafor",
+      "teamName": "Leeds United FC",
+      "delta": 1,
+      "goalsAfter": 1,
+      "opponent": "Newcastle United FC",
+      "isHome": true,
+      "matchDate": "2026-09-14T19:00:00Z",
+      "detectedAt": "2026-09-15T12:59:32.558Z"
+    },
     {
       "player": "Pascal Groß",
       "teamName": "Brighton & Hove Albion FC",
