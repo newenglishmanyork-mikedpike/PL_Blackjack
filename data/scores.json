@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-18T12:03:04.900Z",
+  "updatedAt": "2026-09-18T18:02:49.544Z",
   "season": "2026",
   "scorersReturned": 74,
   "players": {
@@ -34,7 +34,7 @@
     "morganrogers": {
       "name": "Morgan Rogers",
       "goals": 3,
-      "playedMatches": 4,
+      "playedMatches": 5,
       "teamId": 61,
       "teamName": "Chelsea FC"
     },
@@ -48,7 +48,7 @@
     "kevinschade": {
       "name": "Kevin Schade",
       "goals": 3,
-      "playedMatches": 4,
+      "playedMatches": 5,
       "teamId": 402,
       "teamName": "Brentford FC"
     },
@@ -83,7 +83,7 @@
     "vitalyjanelt": {
       "name": "Vitaly Janelt",
       "goals": 2,
-      "playedMatches": 4,
+      "playedMatches": 5,
       "teamId": 402,
       "teamName": "Brentford FC"
     },
@@ -111,7 +111,7 @@
     "colepalmer": {
       "name": "Cole Palmer",
       "goals": 2,
-      "playedMatches": 4,
+      "playedMatches": 5,
       "teamId": 61,
       "teamName": "Chelsea FC"
     },
@@ -230,14 +230,14 @@
     "keanelewispotter": {
       "name": "Keane Lewis-Potter",
       "goals": 1,
-      "playedMatches": 4,
+      "playedMatches": 5,
       "teamId": 402,
       "teamName": "Brentford FC"
     },
     "michaelkayode": {
       "name": "Michael Kayode",
       "goals": 1,
-      "playedMatches": 4,
+      "playedMatches": 5,
       "teamId": 402,
       "teamName": "Brentford FC"
     },
@@ -349,14 +349,14 @@
     "romeolavia": {
       "name": "Romeo Lavia",
       "goals": 1,
-      "playedMatches": 4,
+      "playedMatches": 5,
       "teamId": 61,
       "teamName": "Chelsea FC"
     },
     "pedroneto": {
       "name": "Pedro Neto",
       "goals": 1,
-      "playedMatches": 4,
+      "playedMatches": 5,
       "teamId": 61,
       "teamName": "Chelsea FC"
     },
