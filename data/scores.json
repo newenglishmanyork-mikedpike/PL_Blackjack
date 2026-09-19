@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-09-18T18:02:49.544Z",
+  "updatedAt": "2026-09-19T00:02:59.902Z",
   "season": "2026",
-  "scorersReturned": 74,
+  "scorersReturned": 77,
   "players": {
     "erlinghaaland": {
       "name": "Erling Haaland",
@@ -520,6 +520,27 @@
       "playedMatches": 4,
       "teamId": 67,
       "teamName": "Newcastle United FC"
+    },
+    "jaidonanthony": {
+      "name": "Jaidon Anthony",
+      "goals": 1,
+      "playedMatches": 5,
+      "teamId": 402,
+      "teamName": "Brentford FC"
+    },
+    "thiago": {
+      "name": "Thiago",
+      "goals": 1,
+      "playedMatches": 5,
+      "teamId": 402,
+      "teamName": "Brentford FC"
+    },
+    "fabiocarvalho": {
+      "name": "Fabio Carvalho",
+      "goals": 1,
+      "playedMatches": 4,
+      "teamId": 402,
+      "teamName": "Brentford FC"
     }
   },
   "teams": {
@@ -535,8 +556,8 @@
     },
     "61": {
       "name": "Chelsea FC",
-      "playedGames": 4,
-      "gamesRemaining": 34
+      "playedGames": 5,
+      "gamesRemaining": 33
     },
     "62": {
       "name": "Everton FC",
@@ -610,8 +631,8 @@
     },
     "402": {
       "name": "Brentford FC",
-      "playedGames": 4,
-      "gamesRemaining": 34
+      "playedGames": 5,
+      "gamesRemaining": 33
     },
     "1044": {
       "name": "AFC Bournemouth",
