@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-19T06:03:44.996Z",
+  "updatedAt": "2026-09-19T12:02:47.148Z",
   "season": "2026",
   "scorersReturned": 77,
   "players": {
@@ -551,8 +551,8 @@
     },
     "58": {
       "name": "Aston Villa FC",
-      "playedGames": 4,
-      "gamesRemaining": 34
+      "playedGames": 5,
+      "gamesRemaining": 33
     },
     "61": {
       "name": "Chelsea FC",
@@ -596,8 +596,8 @@
     },
     "73": {
       "name": "Tottenham Hotspur FC",
-      "playedGames": 4,
-      "gamesRemaining": 34
+      "playedGames": 5,
+      "gamesRemaining": 33
     },
     "322": {
       "name": "Hull City AFC",
