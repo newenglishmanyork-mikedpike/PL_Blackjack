@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-09-20T06:02:53.757Z",
+  "updatedAt": "2026-09-20T12:02:51.607Z",
   "season": "2026",
   "scorersReturned": 86,
   "players": {
     "erlinghaaland": {
       "name": "Erling Haaland",
       "goals": 4,
-      "playedMatches": 4,
+      "playedMatches": 5,
       "teamId": 65,
       "teamName": "Manchester City FC"
     },
@@ -20,7 +20,7 @@
     "marcustavernier": {
       "name": "Marcus Tavernier",
       "goals": 3,
-      "playedMatches": 4,
+      "playedMatches": 5,
       "teamId": 1044,
       "teamName": "AFC Bournemouth"
     },
@@ -41,7 +41,7 @@
     "alexanderisak": {
       "name": "Alexander Isak",
       "goals": 3,
-      "playedMatches": 4,
+      "playedMatches": 5,
       "teamId": 64,
       "teamName": "Liverpool FC"
     },
@@ -139,7 +139,7 @@
     "rayancherki": {
       "name": "Rayan Cherki",
       "goals": 2,
-      "playedMatches": 4,
+      "playedMatches": 5,
       "teamId": 65,
       "teamName": "Manchester City FC"
     },
@@ -153,7 +153,7 @@
     "dominiccalvertlewin": {
       "name": "Dominic Calvert-Lewin",
       "goals": 2,
-      "playedMatches": 4,
+      "playedMatches": 5,
       "teamId": 341,
       "teamName": "Leeds United FC"
     },
@@ -174,14 +174,14 @@
     "jaydenbogle": {
       "name": "Jayden Bogle",
       "goals": 2,
-      "playedMatches": 4,
+      "playedMatches": 5,
       "teamId": 341,
       "teamName": "Leeds United FC"
     },
     "tyrickmitchell": {
       "name": "Tyrick Mitchell",
       "goals": 2,
-      "playedMatches": 4,
+      "playedMatches": 5,
       "teamId": 354,
       "teamName": "Crystal Palace FC"
     },
@@ -216,7 +216,7 @@
     "nilsonangulo": {
       "name": "Nilson Angulo",
       "goals": 1,
-      "playedMatches": 4,
+      "playedMatches": 5,
       "teamId": 71,
       "teamName": "Sunderland AFC"
     },
@@ -230,7 +230,7 @@
     "antonstach": {
       "name": "Anton Stach",
       "goals": 1,
-      "playedMatches": 4,
+      "playedMatches": 5,
       "teamId": 341,
       "teamName": "Leeds United FC"
     },
@@ -258,14 +258,14 @@
     "marcguehi": {
       "name": "Marc Guéhi",
       "goals": 1,
-      "playedMatches": 4,
+      "playedMatches": 5,
       "teamId": 65,
       "teamName": "Manchester City FC"
     },
     "joskogvardiol": {
       "name": "Joško Gvardiol",
       "goals": 1,
-      "playedMatches": 4,
+      "playedMatches": 5,
       "teamId": 65,
       "teamName": "Manchester City FC"
     },
@@ -279,14 +279,14 @@
     "codygakpo": {
       "name": "Cody Gakpo",
       "goals": 1,
-      "playedMatches": 4,
+      "playedMatches": 5,
       "teamId": 64,
       "teamName": "Liverpool FC"
     },
     "dominikszoboszlai": {
       "name": "Dominik Szoboszlai",
       "goals": 1,
-      "playedMatches": 4,
+      "playedMatches": 5,
       "teamId": 64,
       "teamName": "Liverpool FC"
     },
@@ -314,14 +314,14 @@
     "victormunoz": {
       "name": "Víctor Muñoz",
       "goals": 1,
-      "playedMatches": 4,
+      "playedMatches": 5,
       "teamId": 64,
       "teamName": "Liverpool FC"
     },
     "alexscott": {
       "name": "Alex Scott",
       "goals": 1,
-      "playedMatches": 4,
+      "playedMatches": 5,
       "teamId": 1044,
       "teamName": "AFC Bournemouth"
     },
@@ -349,7 +349,7 @@
     "wilsonisidor": {
       "name": "Wilson Isidor",
       "goals": 1,
-      "playedMatches": 4,
+      "playedMatches": 5,
       "teamId": 71,
       "teamName": "Sunderland AFC"
     },
@@ -398,7 +398,7 @@
     "enzolefee": {
       "name": "Enzo Le Fée",
       "goals": 1,
-      "playedMatches": 4,
+      "playedMatches": 5,
       "teamId": 71,
       "teamName": "Sunderland AFC"
     },
@@ -412,7 +412,7 @@
     "benchilwell": {
       "name": "Ben Chilwell",
       "goals": 1,
-      "playedMatches": 2,
+      "playedMatches": 3,
       "teamId": 354,
       "teamName": "Crystal Palace FC"
     },
@@ -440,14 +440,14 @@
     "anankhalaili": {
       "name": "Anan Khalaili",
       "goals": 1,
-      "playedMatches": 4,
+      "playedMatches": 5,
       "teamId": 354,
       "teamName": "Crystal Palace FC"
     },
     "jorgenstrandlarsen": {
       "name": "Jørgen Strand Larsen",
       "goals": 1,
-      "playedMatches": 4,
+      "playedMatches": 5,
       "teamId": 354,
       "teamName": "Crystal Palace FC"
     },
@@ -510,7 +510,7 @@
     "noahokafor": {
       "name": "Noah Okafor",
       "goals": 1,
-      "playedMatches": 4,
+      "playedMatches": 5,
       "teamId": 341,
       "teamName": "Leeds United FC"
     },
