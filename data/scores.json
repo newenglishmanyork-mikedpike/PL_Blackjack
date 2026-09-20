@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-20T14:06:35.780Z",
+  "updatedAt": "2026-09-20T14:25:14.124Z",
   "season": "2026",
   "scorersReturned": 89,
   "players": {
@@ -9,6 +9,13 @@
       "playedMatches": 5,
       "teamId": 65,
       "teamName": "Manchester City FC"
+    },
+    "alexanderisak": {
+      "name": "Alexander Isak",
+      "goals": 4,
+      "playedMatches": 5,
+      "teamId": 64,
+      "teamName": "Liverpool FC"
     },
     "bukayosaka": {
       "name": "Bukayo Saka",
@@ -45,13 +52,6 @@
       "teamId": 65,
       "teamName": "Manchester City FC"
     },
-    "alexanderisak": {
-      "name": "Alexander Isak",
-      "goals": 3,
-      "playedMatches": 5,
-      "teamId": 64,
-      "teamName": "Liverpool FC"
-    },
     "pascalgross": {
       "name": "Pascal Groß",
       "goals": 3,
@@ -72,6 +72,13 @@
       "playedMatches": 4,
       "teamId": 66,
       "teamName": "Manchester United FC"
+    },
+    "brianbrobbey": {
+      "name": "Brian Brobbey",
+      "goals": 3,
+      "playedMatches": 5,
+      "teamId": 71,
+      "teamName": "Sunderland AFC"
     },
     "kaihavertz": {
       "name": "Kai Havertz",
@@ -199,12 +206,12 @@
       "teamId": 397,
       "teamName": "Brighton & Hove Albion FC"
     },
-    "brianbrobbey": {
-      "name": "Brian Brobbey",
+    "antoinesemenyo": {
+      "name": "Antoine Semenyo",
       "goals": 2,
       "playedMatches": 5,
-      "teamId": 71,
-      "teamName": "Sunderland AFC"
+      "teamId": 65,
+      "teamName": "Manchester City FC"
     },
     "semiajayi": {
       "name": "Semi Ajayi",
@@ -618,13 +625,6 @@
       "playedMatches": 4,
       "teamId": 65,
       "teamName": "Manchester City FC"
-    },
-    "antoinesemenyo": {
-      "name": "Antoine Semenyo",
-      "goals": 1,
-      "playedMatches": 5,
-      "teamId": 65,
-      "teamName": "Manchester City FC"
     }
   },
   "teams": {
@@ -730,6 +730,16 @@
     }
   },
   "recentGoals": [
+    {
+      "player": "Brian Brobbey",
+      "teamName": "Sunderland AFC",
+      "delta": 1,
+      "goalsAfter": 3,
+      "opponent": "Arsenal FC",
+      "isHome": true,
+      "matchDate": "2026-09-12T19:00:00Z",
+      "detectedAt": "2026-09-20T14:25:14.123Z"
+    },
     {
       "player": "Rayan Cherki",
       "teamName": "Manchester City FC",
