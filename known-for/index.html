@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#0d0d0f" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>Known For</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" />
+<style>
+:root {
+  --bg: #0d0d0f;
+  --panel: rgba(18, 18, 22, 0.92);
+  --line: rgba(255, 255, 255, 0.12);
+  --text: #f4f4f5;
+  --muted: #a1a1aa;
+  --gold: #f5c518;
+  --gold-ink: #121212;
+  --good: #34d399;
+  --bad: #f87171;
+  --tile: rgba(255, 255, 255, 0.06);
+}
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  overscroll-behavior: none;
+}
+button { font: inherit; color: inherit; cursor: pointer; }
+.hidden { display: none !important; }
+
+.brand {
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  letter-spacing: 0.04em;
+  line-height: 0.9;
+}
+.brand .mark {
+  background: var(--gold);
+  color: var(--gold-ink);
+  padding: 0.05em 0.25em 0;
+  border-radius: 0.12em;
+}
+
+.btn {
+  border: 0;
+  border-radius: 12px;
+  padding: 14px 18px;
+  font-weight: 700;
+  font-size: 16px;
+  background: var(--gold);
+  color: var(--gold-ink);
+  transition: transform 0.08s ease, opacity 0.2s;
+}
+.btn:active { transform: scale(0.97); }
+.btn:disabled { opacity: 0.4; cursor: default; }
+.btn.ghost {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  border: 1px solid var(--line);
+}
+
+/* ---------- start / end screens ---------- */
+.screen-center {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px calc(32px + env(safe-area-inset-bottom));
+  text-align: center;
+  max-width: 480px;
+  margin: 0 auto;
+}
+.screen-center h1 { font-size: clamp(64px, 20vw, 110px); margin: 0 0 20px; font-weight: 400; }
+.screen-center p { color: var(--muted); line-height: 1.55; margin: 0 0 14px; }
+.how {
+  text-align: left;
+  background: var(--tile);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 14px 16px 14px 36px;
+  margin: 8px 0 22px;
+  color: var(--muted);
+  line-height: 1.5;
+  font-size: 15px;
+}
+.how li + li { margin-top: 6px; }
+.how b { color: var(--text); }
+.rounds-label { font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 8px; }
+.seg { display: flex; gap: 8px; margin-bottom: 22px; }
+.seg button {
+  flex: 1;
+  padding: 10px 0;
+  min-width: 64px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: transparent;
+  font-weight: 600;
+}
+.seg button[aria-pressed="true"] { background: var(--text); color: var(--bg); border-color: var(--text); }
+.screen-center .btn { width: 100%; font-size: 18px; padding: 16px; }
+
+.final-score { font-family: 'Bebas Neue', sans-serif; font-size: 96px; line-height: 1; color: var(--gold); }
+.final-of { color: var(--muted); margin-bottom: 10px; }
+.verdict { font-size: 20px; font-weight: 600; margin: 4px 0 20px; }
+.recap { width: 100%; text-align: left; margin: 0 0 24px; padding: 0; list-style: none; }
+.recap li {
+  display: flex; justify-content: space-between; gap: 12px;
+  padding: 10px 2px; border-bottom: 1px solid var(--line);
+}
+.recap .pips { letter-spacing: 3px; white-space: nowrap; }
+
+/* ---------- play screen ---------- */
+#play {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background: #000;
+}
+.photo {
+  position: absolute;
+  inset: 0;
+  background: #1a1a1f center 20% / cover no-repeat;
+  transition: opacity 0.35s ease;
+}
+.photo.loading { opacity: 0; }
+.photo-fallback {
+  position: absolute; inset: 0;
+  display: flex; align-items: flex-start; justify-content: center;
+  padding-top: 14vh;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 40vmin;
+  color: rgba(255, 255, 255, 0.08);
+  background: radial-gradient(circle at 50% 35%, #2a2a33, #0d0d0f 70%);
+}
+.shade {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 18%, rgba(0,0,0,0) 45%, rgba(0,0,0,0.85) 75%, #000 100%);
+  pointer-events: none;
+}
+
+.topbar {
+  position: absolute; top: 0; left: 0; right: 0;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: calc(12px + env(safe-area-inset-top)) 16px 12px;
+  font-weight: 600; font-size: 14px;
+  z-index: 3;
+}
+.topbar .brand { font-size: 26px; font-weight: 400; }
+.chip {
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 12px;
+}
+.chip b { color: var(--gold); }
+.quit { border: 0; background: none; color: var(--muted); padding: 6px 4px; font-size: 14px; }
+
+.board {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  z-index: 2;
+  padding: 0 16px calc(16px + env(safe-area-inset-bottom));
+  max-width: 560px;
+  margin: 0 auto;
+}
+.actor-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(48px, 14vw, 76px);
+  line-height: 0.92;
+  margin: 0 0 4px;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.6);
+  font-weight: 400;
+}
+.prompt { color: #d4d4d8; margin: 0 0 14px; font-size: 15px; }
+
+.panel { transition: transform 0.35s ease, opacity 0.35s ease; }
+.board.intro .panel { display: none; }
+.board:not(.intro) .start-guessing { display: none; }
+.start-guessing { width: 100%; font-size: 18px; padding: 16px; }
+
+.tiles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.tile {
+  position: relative;
+  min-height: 78px;
+  border-radius: 12px;
+  border: 1px dashed rgba(255,255,255,0.25);
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 10px 12px;
+  display: flex; flex-direction: column; justify-content: center;
+  text-align: left;
+  overflow: hidden;
+}
+.tile .num {
+  position: absolute; top: 8px; right: 10px;
+  font-size: 11px; color: var(--muted); font-weight: 600;
+}
+.tile .t { font-weight: 700; font-size: 15px; line-height: 1.2; }
+.tile .y { font-size: 13px; color: var(--muted); margin-top: 3px; font-variant-numeric: tabular-nums; }
+.tile.hiddenTitle .t { color: rgba(255,255,255,0.35); font-size: 22px; letter-spacing: 4px; }
+.tile.hiddenTitle .y { color: var(--gold); font-weight: 700; font-size: 15px; }
+.tile.got {
+  border: 1px solid var(--good);
+  background: rgba(16, 80, 56, 0.75);
+  animation: pop 0.35s ease;
+}
+.tile.missed { border: 1px solid rgba(248,113,113,0.6); background: rgba(80, 20, 20, 0.7); }
+.tile.missed .t { color: #fecaca; }
+.tile .pts {
+  position: absolute; bottom: 8px; right: 10px;
+  font-size: 12px; font-weight: 700; color: var(--good);
+}
+.tile.missed .pts { color: #fca5a5; font-weight: 500; }
+button.tile { cursor: pointer; }
+@keyframes pop { 0% { transform: scale(0.92); } 60% { transform: scale(1.04); } 100% { transform: scale(1); } }
+
+.guess-row { display: flex; gap: 8px; margin-bottom: 8px; }
+.guess-row input {
+  flex: 1; min-width: 0;
+  font: inherit; font-size: 16px; /* 16px stops iOS zooming on focus */
+  color: var(--text);
+  background: rgba(0,0,0,0.55);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 13px 14px;
+  outline: none;
+}
+.guess-row input:focus { border-color: var(--gold); }
+.guess-row.shake { animation: shake 0.35s ease; }
+@keyframes shake {
+  20%, 60% { transform: translateX(-6px); }
+  40%, 80% { transform: translateX(6px); }
+}
+.feedback { min-height: 22px; font-size: 14px; color: var(--muted); margin: 0 2px 8px; }
+.feedback.good { color: var(--good); }
+.feedback.bad { color: var(--bad); }
+.misses { display: flex; flex-wrap: wrap; gap: 6px; margin: -2px 0 10px; }
+.misses span {
+  font-size: 12px; color: #fca5a5;
+  border: 1px solid rgba(248,113,113,0.35);
+  border-radius: 999px; padding: 3px 9px;
+  text-decoration: line-through;
+}
+.actions { display: flex; gap: 8px; }
+.actions .btn { flex: 1; padding: 12px 10px; font-size: 15px; }
+.clue-note { font-size: 12px; color: var(--muted); text-align: center; margin-top: 8px; }
+
+/* Short phones: tighten up so the board never covers the whole photo */
+@media (max-height: 700px) {
+  .tile { min-height: 62px; padding: 8px 10px; }
+  .tile .t { font-size: 14px; }
+  .actor-name { font-size: 48px; }
+  .prompt { margin-bottom: 8px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Start -->
+<section id="start" class="screen-center">
+  <h1 class="brand"><span class="mark">Known</span> For</h1>
+  <p>Every actor's IMDb page shows the four titles they're best <i>known for</i>. Can your team name all four?</p>
+  <ol class="how">
+    <li>An actor appears. <b>Talk it over as a team.</b></li>
+    <li>Type in your guesses — <b>2 points</b> for each title you get.</li>
+    <li>Stuck? Show the <b>release years</b> as a clue, but remaining titles are then worth 1 point.</li>
+  </ol>
+  <div class="rounds-label">Actors per game</div>
+  <div class="seg" id="rounds">
+    <button type="button" data-n="5">5</button>
+    <button type="button" data-n="10" aria-pressed="true">10</button>
+    <button type="button" data-n="20">20</button>
+    <button type="button" data-n="all">All</button>
+  </div>
+  <button class="btn" id="startBtn" type="button">Start game</button>
+</section>
+
+<!-- Play -->
+<section id="play" class="hidden" aria-live="polite">
+  <div class="photo-fallback" id="fallback"></div>
+  <div class="photo loading" id="photo" role="img"></div>
+  <div class="shade"></div>
+
+  <div class="topbar">
+    <button class="quit" id="quitBtn" type="button">✕ End</button>
+    <span class="chip">Actor <b id="roundNum">1</b>/<span id="roundTotal">10</span></span>
+    <span class="chip">Score <b id="score">0</b></span>
+  </div>
+
+  <div class="board intro" id="board">
+    <h2 class="actor-name" id="actorName"></h2>
+    <p class="prompt" id="prompt">What are they known for?</p>
+    <button class="btn start-guessing" id="beginBtn" type="button">Start guessing</button>
+
+    <div class="panel">
+      <div class="tiles" id="tiles"></div>
+
+      <form class="guess-row" id="guessForm" autocomplete="off">
+        <input id="guessInput" type="text" placeholder="Type a movie or show…" enterkeyhint="go" autocapitalize="words" autocorrect="off" spellcheck="false" />
+        <button class="btn" type="submit">Guess</button>
+      </form>
+      <div class="feedback" id="feedback"></div>
+      <div class="misses" id="misses"></div>
+
+      <div class="actions" id="liveActions">
+        <button class="btn ghost" id="clueBtn" type="button">📅 Show years</button>
+        <button class="btn ghost" id="giveUpBtn" type="button">Reveal</button>
+      </div>
+      <div class="actions hidden" id="doneActions">
+        <button class="btn" id="nextBtn" type="button">Next actor →</button>
+      </div>
+      <div class="clue-note hidden" id="overrideNote">Got one the game didn't accept? Tap it to give yourselves the points.</div>
+    </div>
+  </div>
+</section>
+
+<!-- End -->
+<section id="end" class="screen-center hidden">
+  <h1 class="brand" style="font-size:56px;margin-bottom:16px"><span class="mark">Known</span> For</h1>
+  <div class="final-score" id="finalScore">0</div>
+  <div class="final-of" id="finalOf">out of 0</div>
+  <div class="verdict" id="verdict"></div>
+  <ul class="recap" id="recap"></ul>
+  <button class="btn" id="againBtn" type="button">Play again</button>
+</section>
+
+<script src="actors.js"></script>
+<script>
+(() => {
+  const ALL = window.KNOWN_FOR_ACTORS || [];
+  const PTS_CLEAN = 2;
+  const PTS_CLUE = 1;
+
+  const $ = (id) => document.getElementById(id);
+  const screens = { start: $('start'), play: $('play'), end: $('end') };
+  const show = (name) => {
+    for (const [k, el] of Object.entries(screens)) el.classList.toggle('hidden', k !== name);
+  };
+
+  // ---------- guess matching ----------
+  const normalize = (s) => s
+    .normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .toLowerCase()
+    .replace(/&/g, ' and ')
+    .replace(/['’`]/g, '')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .replace(/^(the|a|an) /, '')
+    .trim();
+
+  function levenshtein(a, b) {
+    if (a === b) return 0;
+    let prev = Array.from({ length: b.length + 1 }, (_, i) => i);
+    for (let i = 1; i <= a.length; i++) {
+      const cur = [i];
+      for (let j = 1; j <= b.length; j++) {
+        cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+      }
+      prev = cur;
+    }
+    return prev[b.length];
+  }
+
+  // Every acceptable spelling for a title: the full title, the part before a
+  // colon ("Mission: Impossible" -> "Mission"... only if it's long enough to be
+  // meaningful), and any aliases from the data file.
+  function answerForms(title, aliases) {
+    const forms = new Set([normalize(title)]);
+    const beforeColon = title.split(':')[0];
+    if (beforeColon !== title && normalize(beforeColon).length >= 8) forms.add(normalize(beforeColon));
+    for (const a of aliases || []) forms.add(normalize(a));
+    forms.delete('');
+    return [...forms];
+  }
+
+  function matches(guess, forms) {
+    if (!guess) return false;
+    return forms.some((f) => {
+      if (f === guess) return true;
+      // Allow a typo or two on longer titles, scaled by length.
+      const allowed = f.length >= 12 ? 2 : f.length >= 6 ? 1 : 0;
+      return allowed > 0 && Math.abs(f.length - guess.length) <= allowed && levenshtein(f, guess) <= allowed;
+    });
+  }
+
+  // ---------- photos (from Wikipedia, which allows cross-origin requests) ----------
+  const photoCache = new Map();
+  function photoUrl(actor) {
+    const page = actor.wiki || actor.name.replace(/ /g, '_');
+    if (!photoCache.has(page)) {
+      photoCache.set(page, fetch('https://en.wikipedia.org/api/rest_v1/page/summary/' + encodeURIComponent(page))
+        .then((r) => (r.ok ? r.json() : null))
+        .then((d) => {
+          if (!d) return null;
+          const orig = d.originalimage;
+          if (orig && orig.width <= 1400) return orig.source;
+          if (d.thumbnail) return d.thumbnail.source.replace(/\/\d+px-/, '/1000px-');
+          return orig ? orig.source : null;
+        })
+        .catch(() => null));
+    }
+    return photoCache.get(page);
+  }
+  function preload(url) {
+    return new Promise((resolve) => {
+      if (!url) return resolve(false);
+      const img = new Image();
+      img.onload = () => resolve(true);
+      img.onerror = () => resolve(false);
+      img.src = url;
+    });
+  }
+
+  // ---------- game state ----------
+  let roundsChoice = '10';
+  let deck = [];
+  let idx = 0;
+  let score = 0;
+  let history = [];
+  let cur = null; // { actor, found:[bool], pts:[n], clue, done, wrong:[] }
+
+  function shuffle(arr) {
+    const a = arr.slice();
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  $('rounds').addEventListener('click', (e) => {
+    const b = e.target.closest('button');
+    if (!b) return;
+    roundsChoice = b.dataset.n;
+    for (const x of $('rounds').children) x.setAttribute('aria-pressed', String(x === b));
+  });
+
+  function startGame() {
+    const n = roundsChoice === 'all' ? ALL.length : Math.min(Number(roundsChoice), ALL.length);
+    deck = shuffle(ALL).slice(0, n);
+    idx = 0; score = 0; history = [];
+    $('roundTotal').textContent = deck.length;
+    show('play');
+    loadActor();
+  }
+
+  async function loadActor() {
+    const actor = deck[idx];
+    cur = {
+      actor,
+      forms: actor.titles.map(([t, , al]) => answerForms(t, al)),
+      found: [false, false, false, false],
+      pts: [0, 0, 0, 0],
+      clue: false,
+      done: false,
+      wrong: [],
+    };
+    $('roundNum').textContent = idx + 1;
+    $('score').textContent = score;
+    $('actorName').textContent = actor.name;
+    $('prompt').textContent = 'What are they known for?';
+    $('board').classList.add('intro');
+    $('feedback').textContent = '';
+    $('feedback').className = 'feedback';
+    $('misses').innerHTML = '';
+    $('guessInput').value = '';
+    $('clueBtn').disabled = false;
+    $('liveActions').classList.remove('hidden');
+    $('doneActions').classList.add('hidden');
+    $('overrideNote').classList.add('hidden');
+    $('guessForm').classList.remove('hidden');
+    renderTiles();
+
+    const photo = $('photo');
+    photo.classList.add('loading');
+    photo.style.backgroundImage = '';
+    photo.setAttribute('aria-label', actor.name);
+    $('fallback').textContent = actor.name.split(/\s+/).map((w) => w[0]).join('').slice(0, 3);
+
+    const url = await photoUrl(actor);
+    const ok = await preload(url);
+    if (cur.actor !== actor) return; // moved on while loading
+    if (ok) {
+      photo.style.backgroundImage = `url("${url.replace(/"/g, '%22')}")`;
+      photo.classList.remove('loading');
+    }
+    // Warm the next photo so it appears instantly.
+    if (deck[idx + 1]) photoUrl(deck[idx + 1]).then(preload);
+  }
+
+  function renderTiles() {
+    const box = $('tiles');
+    box.innerHTML = '';
+    cur.actor.titles.forEach(([title, year], i) => {
+      const revealed = cur.found[i] || cur.done;
+      const el = document.createElement(cur.done && !cur.found[i] ? 'button' : 'div');
+      if (el.tagName === 'BUTTON') {
+        el.type = 'button';
+        el.title = 'Tap if you actually got this one';
+        el.addEventListener('click', () => override(i));
+      }
+      el.className = 'tile' + (cur.found[i] ? ' got' : cur.done ? ' missed' : ' hiddenTitle');
+      const t = document.createElement('div');
+      t.className = 't';
+      t.textContent = revealed ? title : '? ? ?';
+      const y = document.createElement('div');
+      y.className = 'y';
+      y.textContent = revealed || cur.clue ? year : '';
+      const num = document.createElement('span');
+      num.className = 'num';
+      num.textContent = i + 1;
+      el.append(num, t, y);
+      if (cur.found[i]) {
+        const p = document.createElement('span');
+        p.className = 'pts';
+        p.textContent = '+' + cur.pts[i];
+        el.append(p);
+      } else if (cur.done) {
+        const p = document.createElement('span');
+        p.className = 'pts';
+        p.textContent = 'missed';
+        el.append(p);
+      }
+      box.append(el);
+    });
+  }
+
+  function setFeedback(text, kind) {
+    const f = $('feedback');
+    f.textContent = text;
+    f.className = 'feedback' + (kind ? ' ' + kind : '');
+  }
+
+  function submitGuess(e) {
+    e.preventDefault();
+    if (!cur || cur.done) return;
+    const input = $('guessInput');
+    const raw = input.value.trim();
+    if (!raw) return;
+    const g = normalize(raw);
+    input.value = '';
+
+    const hit = cur.forms.findIndex((forms) => matches(g, forms));
+    if (hit === -1) {
+      if (!cur.wrong.includes(raw)) {
+        cur.wrong.push(raw);
+        const s = document.createElement('span');
+        s.textContent = raw;
+        $('misses').append(s);
+      }
+      setFeedback('Not one of the four.', 'bad');
+      const row = $('guessForm');
+      row.classList.remove('shake');
+      void row.offsetWidth;
+      row.classList.add('shake');
+      return;
+    }
+    if (cur.found[hit]) {
+      setFeedback('You already have that one!', '');
+      return;
+    }
+    const pts = cur.clue ? PTS_CLUE : PTS_CLEAN;
+    cur.found[hit] = true;
+    cur.pts[hit] = pts;
+    score += pts;
+    $('score').textContent = score;
+    setFeedback(`Yes! ${cur.actor.titles[hit][0]} (+${pts})`, 'good');
+    renderTiles();
+    if (cur.found.every(Boolean)) finishRound(true);
+  }
+
+  function showClue() {
+    if (cur.clue || cur.done) return;
+    cur.clue = true;
+    $('clueBtn').disabled = true;
+    setFeedback(`Years revealed — remaining titles are worth ${PTS_CLUE} point each.`, '');
+    renderTiles();
+  }
+
+  function finishRound(perfect) {
+    cur.done = true;
+    $('liveActions').classList.add('hidden');
+    $('doneActions').classList.remove('hidden');
+    $('guessForm').classList.add('hidden');
+    $('nextBtn').textContent = idx + 1 < deck.length ? 'Next actor →' : 'See results →';
+    if (perfect) {
+      setFeedback(cur.clue ? 'All four! 🎉' : 'All four, no clue needed! 🏆', 'good');
+    } else {
+      const got = cur.found.filter(Boolean).length;
+      setFeedback(`You got ${got} of 4.`, got ? 'good' : 'bad');
+      $('overrideNote').classList.remove('hidden');
+    }
+    $('guessInput').blur();
+    renderTiles();
+  }
+
+  // For when the team said it right but the matcher didn't recognize the typing.
+  function override(i) {
+    if (!cur.done || cur.found[i]) return;
+    const pts = cur.clue ? PTS_CLUE : PTS_CLEAN;
+    cur.found[i] = true;
+    cur.pts[i] = pts;
+    score += pts;
+    $('score').textContent = score;
+    const got = cur.found.filter(Boolean).length;
+    setFeedback(`You got ${got} of 4.`, 'good');
+    if (got === 4) $('overrideNote').classList.add('hidden');
+    renderTiles();
+  }
+
+  function nextActor() {
+    history.push({ name: cur.actor.name, got: cur.found.filter(Boolean).length, pts: cur.pts.reduce((a, b) => a + b, 0), clue: cur.clue });
+    idx++;
+    if (idx < deck.length) loadActor();
+    else endGame();
+  }
+
+  function endGame() {
+    if (cur && !history.some((h) => h.name === cur.actor.name) && cur.done) {
+      history.push({ name: cur.actor.name, got: cur.found.filter(Boolean).length, pts: cur.pts.reduce((a, b) => a + b, 0), clue: cur.clue });
+    }
+    cur = null;
+    const max = history.length * 4 * PTS_CLEAN;
+    $('finalScore').textContent = score;
+    $('finalOf').textContent = `out of ${max} possible`;
+    const pct = max ? score / max : 0;
+    $('verdict').textContent =
+      pct >= 0.85 ? 'IMDb could hire you. 🍿' :
+      pct >= 0.6 ? 'Serious film buffs. 🎬' :
+      pct >= 0.35 ? 'Solid movie night crew. 📼' :
+      'Maybe watch a few more films… 🛋️';
+    const recap = $('recap');
+    recap.innerHTML = '';
+    for (const h of history) {
+      const li = document.createElement('li');
+      const name = document.createElement('span');
+      name.textContent = h.name + (h.clue ? ' 📅' : '');
+      const pips = document.createElement('span');
+      pips.className = 'pips';
+      pips.textContent = '●'.repeat(h.got) + '○'.repeat(4 - h.got);
+      li.append(name, pips);
+      recap.append(li);
+    }
+    show('end');
+  }
+
+  $('startBtn').addEventListener('click', startGame);
+  $('againBtn').addEventListener('click', () => show('start'));
+  $('beginBtn').addEventListener('click', () => {
+    $('board').classList.remove('intro');
+    $('prompt').textContent = 'Name the four titles they are known for on IMDb.';
+  });
+  $('guessForm').addEventListener('submit', submitGuess);
+  $('clueBtn').addEventListener('click', showClue);
+  $('giveUpBtn').addEventListener('click', () => {
+    if (cur && !cur.done && confirm('Reveal the answers for this actor?')) finishRound(false);
+  });
+  $('nextBtn').addEventListener('click', nextActor);
+  $('quitBtn').addEventListener('click', () => {
+    if (confirm('End the game now?')) endGame();
+  });
+
+  if (!ALL.length) {
+    $('startBtn').disabled = true;
+    $('startBtn').textContent = 'No actors loaded (check actors.js)';
+  }
+})();
+</script>
+</body>
+</html>

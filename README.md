@@ -166,3 +166,38 @@ Caveats worth knowing:
   validated against anything.
 - Editing entries requires git access (or asking whoever maintains the
   repo to add a pull request). There's no in-browser save.
+
+---
+
+# Known For (party game)
+
+A separate game lives in [`known-for/`](known-for/). Once GitHub Pages is
+on, it's at `https://<your-username>.github.io/<repo-name>/known-for/`.
+It's built for phones and is meant for one team playing together.
+
+Every IMDb name page lists four titles the actor is **known for**. The game
+shows a full-screen photo of an actor, and the group talks it over and
+types in guesses for those four titles.
+
+- **2 points** for each title you get, so 8 is a perfect actor.
+- **📅 Show years** is the clue: it shows each title's release year.
+  Titles you get after that are worth 1 point.
+- **Reveal** ends the round. If the game missed a title you really got
+  (say an odd spelling), tap that tile to give yourselves the points.
+- Guessing ignores case, punctuation, accents and a leading "The", and
+  allows a small typo.
+
+**Files**
+
+- `known-for/actors.js`: the actor deck (name plus four titles with years
+  and optional alternate answers). Edit it to add actors or update lists.
+  IMDb changes its "known for" picks now and then, so the lists are a
+  best-effort snapshot. Check them against IMDb if anything looks wrong.
+- `known-for/index.html`: the whole game, plain HTML/CSS/JS with no build
+  step. Photos come from each actor's Wikipedia page at runtime. If an
+  actor's Wikipedia page title isn't just their name, set `wiki` in
+  `actors.js`. If a photo can't be loaded, the game shows the actor's
+  initials.
+
+To try it locally, run `python3 -m http.server 8000` from the repo root and
+open `http://localhost:8000/known-for/`.
