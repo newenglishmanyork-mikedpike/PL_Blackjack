@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-10T16:31:09.797Z",
+  "updatedAt": "2026-10-10T20:49:10.275Z",
   "season": "2026",
   "scorersReturned": 100,
   "players": {
@@ -68,6 +68,13 @@
     },
     "brunofernandes": {
       "name": "Bruno Fernandes",
+      "goals": 3,
+      "playedMatches": 6,
+      "teamId": 66,
+      "teamName": "Manchester United FC"
+    },
+    "bryanmbeumo": {
+      "name": "Bryan Mbeumo",
       "goals": 3,
       "playedMatches": 6,
       "teamId": 66,
@@ -177,13 +184,6 @@
       "playedMatches": 6,
       "teamId": 349,
       "teamName": "Ipswich Town FC"
-    },
-    "bryanmbeumo": {
-      "name": "Bryan Mbeumo",
-      "goals": 2,
-      "playedMatches": 6,
-      "teamId": 66,
-      "teamName": "Manchester United FC"
     },
     "jaydenbogle": {
       "name": "Jayden Bogle",
