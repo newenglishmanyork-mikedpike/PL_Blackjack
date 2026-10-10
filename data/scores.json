@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-10T03:08:13.780Z",
+  "updatedAt": "2026-10-10T11:31:10.235Z",
   "season": "2026",
   "scorersReturned": 90,
   "players": {
@@ -20,7 +20,7 @@
     "bukayosaka": {
       "name": "Bukayo Saka",
       "goals": 3,
-      "playedMatches": 5,
+      "playedMatches": 6,
       "teamId": 57,
       "teamName": "Arsenal FC"
     },
@@ -83,14 +83,14 @@
     "kaihavertz": {
       "name": "Kai Havertz",
       "goals": 2,
-      "playedMatches": 5,
+      "playedMatches": 6,
       "teamId": 57,
       "teamName": "Arsenal FC"
     },
     "martinodegaard": {
       "name": "Martin Ødegaard",
       "goals": 2,
-      "playedMatches": 5,
+      "playedMatches": 6,
       "teamId": 57,
       "teamName": "Arsenal FC"
     },
@@ -160,7 +160,7 @@
     "dominiccalvertlewin": {
       "name": "Dominic Calvert-Lewin",
       "goals": 2,
-      "playedMatches": 5,
+      "playedMatches": 6,
       "teamId": 341,
       "teamName": "Leeds United FC"
     },
@@ -181,7 +181,7 @@
     "jaydenbogle": {
       "name": "Jayden Bogle",
       "goals": 2,
-      "playedMatches": 5,
+      "playedMatches": 6,
       "teamId": 341,
       "teamName": "Leeds United FC"
     },
@@ -244,7 +244,7 @@
     "antonstach": {
       "name": "Anton Stach",
       "goals": 1,
-      "playedMatches": 5,
+      "playedMatches": 6,
       "teamId": 341,
       "teamName": "Leeds United FC"
     },
@@ -503,7 +503,7 @@
     "brunoguimaraes": {
       "name": "Bruno Guimarães",
       "goals": 1,
-      "playedMatches": 4,
+      "playedMatches": 5,
       "teamId": 57,
       "teamName": "Arsenal FC"
     },
@@ -524,7 +524,7 @@
     "noahokafor": {
       "name": "Noah Okafor",
       "goals": 1,
-      "playedMatches": 5,
+      "playedMatches": 6,
       "teamId": 341,
       "teamName": "Leeds United FC"
     },
@@ -637,8 +637,8 @@
   "teams": {
     "57": {
       "name": "Arsenal FC",
-      "playedGames": 5,
-      "gamesRemaining": 33
+      "playedGames": 6,
+      "gamesRemaining": 32
     },
     "58": {
       "name": "Aston Villa FC",
@@ -697,8 +697,8 @@
     },
     "341": {
       "name": "Leeds United FC",
-      "playedGames": 5,
-      "gamesRemaining": 33
+      "playedGames": 6,
+      "gamesRemaining": 32
     },
     "349": {
       "name": "Ipswich Town FC",
