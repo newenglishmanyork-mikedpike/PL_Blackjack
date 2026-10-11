@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-11T16:55:53.834Z",
+  "updatedAt": "2026-10-11T21:10:27.980Z",
   "season": "2026",
   "scorersReturned": 100,
   "players": {
@@ -23,6 +23,13 @@
       "playedMatches": 6,
       "teamId": 61,
       "teamName": "Chelsea FC"
+    },
+    "rayancherki": {
+      "name": "Rayan Cherki",
+      "goals": 4,
+      "playedMatches": 6,
+      "teamId": 65,
+      "teamName": "Manchester City FC"
     },
     "alexanderisak": {
       "name": "Alexander Isak",
@@ -51,13 +58,6 @@
       "playedMatches": 6,
       "teamId": 1044,
       "teamName": "AFC Bournemouth"
-    },
-    "rayancherki": {
-      "name": "Rayan Cherki",
-      "goals": 3,
-      "playedMatches": 6,
-      "teamId": 65,
-      "teamName": "Manchester City FC"
     },
     "pascalgross": {
       "name": "Pascal Groß",
@@ -807,6 +807,16 @@
     }
   },
   "recentGoals": [
+    {
+      "player": "Rayan Cherki",
+      "teamName": "Manchester City FC",
+      "delta": 1,
+      "goalsAfter": 4,
+      "opponent": "Liverpool FC",
+      "isHome": false,
+      "matchDate": "2026-10-11T15:30:00Z",
+      "detectedAt": "2026-10-11T21:10:27.980Z"
+    },
     {
       "player": "Kiernan Dewsbury Hall",
       "teamName": "Everton FC",
