@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-12T13:47:13.397Z",
+  "updatedAt": "2026-10-12T23:54:36.469Z",
   "season": "2026",
   "scorersReturned": 100,
   "players": {
@@ -160,7 +160,7 @@
     "joewillock": {
       "name": "Joe Willock",
       "goals": 2,
-      "playedMatches": 5,
+      "playedMatches": 6,
       "teamId": 67,
       "teamName": "Newcastle United FC"
     },
@@ -377,7 +377,7 @@
     "yoanewissa": {
       "name": "Yoane Wissa",
       "goals": 1,
-      "playedMatches": 5,
+      "playedMatches": 6,
       "teamId": 67,
       "teamName": "Newcastle United FC"
     },
@@ -412,7 +412,7 @@
     "harveybarnes": {
       "name": "Harvey Barnes",
       "goals": 1,
-      "playedMatches": 5,
+      "playedMatches": 6,
       "teamId": 67,
       "teamName": "Newcastle United FC"
     },
@@ -545,7 +545,7 @@
     "bazoumanatoure": {
       "name": "Bazoumana Touré",
       "goals": 1,
-      "playedMatches": 5,
+      "playedMatches": 6,
       "teamId": 67,
       "teamName": "Newcastle United FC"
     },
@@ -608,7 +608,7 @@
     "lewishall": {
       "name": "Lewis Hall",
       "goals": 1,
-      "playedMatches": 5,
+      "playedMatches": 6,
       "teamId": 67,
       "teamName": "Newcastle United FC"
     },
@@ -622,7 +622,7 @@
     "jaydasilva": {
       "name": "Jay Dasilva",
       "goals": 1,
-      "playedMatches": 5,
+      "playedMatches": 6,
       "teamId": 1076,
       "teamName": "Coventry City FC"
     },
@@ -747,8 +747,8 @@
     },
     "67": {
       "name": "Newcastle United FC",
-      "playedGames": 5,
-      "gamesRemaining": 33
+      "playedGames": 6,
+      "gamesRemaining": 32
     },
     "71": {
       "name": "Sunderland AFC",
@@ -802,8 +802,8 @@
     },
     "1076": {
       "name": "Coventry City FC",
-      "playedGames": 5,
-      "gamesRemaining": 33
+      "playedGames": 6,
+      "gamesRemaining": 32
     }
   },
   "recentGoals": [
