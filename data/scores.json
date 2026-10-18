@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-18T15:01:37.198Z",
+  "updatedAt": "2026-10-18T19:48:37.394Z",
   "season": "2026",
   "scorersReturned": 100,
   "players": {
@@ -707,8 +707,8 @@
   "teams": {
     "57": {
       "name": "Arsenal FC",
-      "playedGames": 6,
-      "gamesRemaining": 32
+      "playedGames": 7,
+      "gamesRemaining": 31
     },
     "58": {
       "name": "Aston Villa FC",
@@ -777,8 +777,8 @@
     },
     "351": {
       "name": "Nottingham Forest FC",
-      "playedGames": 6,
-      "gamesRemaining": 32
+      "playedGames": 7,
+      "gamesRemaining": 31
     },
     "354": {
       "name": "Crystal Palace FC",
