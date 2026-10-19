@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-19T17:53:47.151Z",
+  "updatedAt": "2026-10-19T21:49:09.487Z",
   "season": "2026",
   "scorersReturned": 100,
   "players": {
@@ -304,6 +304,13 @@
       "teamId": 1044,
       "teamName": "AFC Bournemouth"
     },
+    "jackrudoni": {
+      "name": "Jack Rudoni",
+      "goals": 2,
+      "playedMatches": 7,
+      "teamId": 1076,
+      "teamName": "Coventry City FC"
+    },
     "semiajayi": {
       "name": "Semi Ajayi",
       "goals": 1,
@@ -594,14 +601,14 @@
     "conorgallagher": {
       "name": "Conor Gallagher",
       "goals": 1,
-      "playedMatches": 6,
+      "playedMatches": 7,
       "teamId": 73,
       "teamName": "Tottenham Hotspur FC"
     },
     "janpaulvanhecke": {
       "name": "Jan Paul van Hecke",
       "goals": 1,
-      "playedMatches": 6,
+      "playedMatches": 7,
       "teamId": 73,
       "teamName": "Tottenham Hotspur FC"
     },
@@ -629,7 +636,7 @@
     "jaydasilva": {
       "name": "Jay Dasilva",
       "goals": 1,
-      "playedMatches": 6,
+      "playedMatches": 7,
       "teamId": 1076,
       "teamName": "Coventry City FC"
     },
@@ -695,13 +702,6 @@
       "playedMatches": 7,
       "teamId": 402,
       "teamName": "Brentford FC"
-    },
-    "johnmcginn": {
-      "name": "John McGinn",
-      "goals": 1,
-      "playedMatches": 7,
-      "teamId": 58,
-      "teamName": "Aston Villa FC"
     }
   },
   "teams": {
@@ -757,8 +757,8 @@
     },
     "73": {
       "name": "Tottenham Hotspur FC",
-      "playedGames": 6,
-      "gamesRemaining": 32
+      "playedGames": 7,
+      "gamesRemaining": 31
     },
     "322": {
       "name": "Hull City AFC",
@@ -802,8 +802,8 @@
     },
     "1076": {
       "name": "Coventry City FC",
-      "playedGames": 6,
-      "gamesRemaining": 32
+      "playedGames": 7,
+      "gamesRemaining": 31
     }
   },
   "recentGoals": [
