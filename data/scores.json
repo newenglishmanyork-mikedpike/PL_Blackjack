@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-23T16:02:50.526Z",
+  "updatedAt": "2026-10-23T20:44:41.857Z",
   "season": "2026",
-  "scorersReturned": 120,
+  "scorersReturned": 122,
   "players": {
     "erlinghaaland": {
       "name": "Erling Haaland",
@@ -146,7 +146,7 @@
     "emersonn": {
       "name": "Emersonn",
       "goals": 2,
-      "playedMatches": 7,
+      "playedMatches": 8,
       "teamId": 349,
       "teamName": "Ipswich Town FC"
     },
@@ -209,7 +209,7 @@
     "danndoye": {
       "name": "Dan Ndoye",
       "goals": 2,
-      "playedMatches": 7,
+      "playedMatches": 8,
       "teamId": 351,
       "teamName": "Nottingham Forest FC"
     },
@@ -230,7 +230,7 @@
     "leifdavis": {
       "name": "Leif Davis",
       "goals": 2,
-      "playedMatches": 7,
+      "playedMatches": 8,
       "teamId": 349,
       "teamName": "Ipswich Town FC"
     },
@@ -251,7 +251,7 @@
     "zianflemming": {
       "name": "Zian Flemming",
       "goals": 2,
-      "playedMatches": 5,
+      "playedMatches": 6,
       "teamId": 349,
       "teamName": "Ipswich Town FC"
     },
@@ -335,7 +335,7 @@
     "jackclarke": {
       "name": "Jack Clarke",
       "goals": 1,
-      "playedMatches": 7,
+      "playedMatches": 8,
       "teamId": 349,
       "teamName": "Ipswich Town FC"
     },
@@ -391,7 +391,7 @@
     "morgangibbswhite": {
       "name": "Morgan Gibbs-White",
       "goals": 1,
-      "playedMatches": 6,
+      "playedMatches": 7,
       "teamId": 351,
       "teamName": "Nottingham Forest FC"
     },
@@ -440,7 +440,7 @@
     "chubaakpom": {
       "name": "Chuba Akpom",
       "goals": 1,
-      "playedMatches": 6,
+      "playedMatches": 7,
       "teamId": 349,
       "teamName": "Ipswich Town FC"
     },
@@ -524,7 +524,7 @@
     "liamdelap": {
       "name": "Liam Delap",
       "goals": 1,
-      "playedMatches": 6,
+      "playedMatches": 7,
       "teamId": 351,
       "teamName": "Nottingham Forest FC"
     },
@@ -685,14 +685,14 @@
     "abdoulouattara": {
       "name": "Abdoul Ouattara",
       "goals": 1,
-      "playedMatches": 7,
+      "playedMatches": 8,
       "teamId": 349,
       "teamName": "Ipswich Town FC"
     },
     "daraoshea": {
       "name": "Dara O'Shea",
       "goals": 1,
-      "playedMatches": 7,
+      "playedMatches": 8,
       "teamId": 349,
       "teamName": "Ipswich Town FC"
     },
@@ -804,7 +804,7 @@
     "daizenmaeda": {
       "name": "Daizen Maeda",
       "goals": 1,
-      "playedMatches": 7,
+      "playedMatches": 8,
       "teamId": 349,
       "teamName": "Ipswich Town FC"
     },
@@ -842,6 +842,20 @@
       "playedMatches": 5,
       "teamId": 73,
       "teamName": "Tottenham Hotspur FC"
+    },
+    "necowilliams": {
+      "name": "Neco Williams",
+      "goals": 1,
+      "playedMatches": 8,
+      "teamId": 351,
+      "teamName": "Nottingham Forest FC"
+    },
+    "julioenciso": {
+      "name": "Julio Enciso",
+      "goals": 1,
+      "playedMatches": 8,
+      "teamId": 349,
+      "teamName": "Ipswich Town FC"
     }
   },
   "teams": {
@@ -912,13 +926,13 @@
     },
     "349": {
       "name": "Ipswich Town FC",
-      "playedGames": 7,
-      "gamesRemaining": 31
+      "playedGames": 8,
+      "gamesRemaining": 30
     },
     "351": {
       "name": "Nottingham Forest FC",
-      "playedGames": 7,
-      "gamesRemaining": 31
+      "playedGames": 8,
+      "gamesRemaining": 30
     },
     "354": {
       "name": "Crystal Palace FC",
