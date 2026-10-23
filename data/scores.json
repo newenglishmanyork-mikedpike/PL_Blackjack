@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-22T14:49:00.087Z",
+  "updatedAt": "2026-10-23T12:37:18.071Z",
   "season": "2026",
-  "scorersReturned": 100,
+  "scorersReturned": 120,
   "players": {
     "erlinghaaland": {
       "name": "Erling Haaland",
@@ -702,6 +702,146 @@
       "playedMatches": 7,
       "teamId": 402,
       "teamName": "Brentford FC"
+    },
+    "johnmcginn": {
+      "name": "John McGinn",
+      "goals": 1,
+      "playedMatches": 7,
+      "teamId": 58,
+      "teamName": "Aston Villa FC"
+    },
+    "kristofferajer": {
+      "name": "Kristoffer Ajer",
+      "goals": 1,
+      "playedMatches": 7,
+      "teamId": 402,
+      "teamName": "Brentford FC"
+    },
+    "dominicsolanke": {
+      "name": "Dominic Solanke",
+      "goals": 1,
+      "playedMatches": 7,
+      "teamId": 73,
+      "teamName": "Tottenham Hotspur FC"
+    },
+    "joegelhardt": {
+      "name": "Joe Gelhardt",
+      "goals": 1,
+      "playedMatches": 3,
+      "teamId": 322,
+      "teamName": "Hull City AFC"
+    },
+    "daichikamada": {
+      "name": "Daichi Kamada",
+      "goals": 1,
+      "playedMatches": 7,
+      "teamId": 354,
+      "teamName": "Crystal Palace FC"
+    },
+    "jeffersonlerma": {
+      "name": "Jefferson Lerma",
+      "goals": 1,
+      "playedMatches": 5,
+      "teamId": 354,
+      "teamName": "Crystal Palace FC"
+    },
+    "yeremipino": {
+      "name": "Yeremi Pino",
+      "goals": 1,
+      "playedMatches": 7,
+      "teamId": 354,
+      "teamName": "Crystal Palace FC"
+    },
+    "jeremydoku": {
+      "name": "Jeremy Doku",
+      "goals": 1,
+      "playedMatches": 3,
+      "teamId": 65,
+      "teamName": "Manchester City FC"
+    },
+    "sidikicherif": {
+      "name": "Sidiki Cherif",
+      "goals": 1,
+      "playedMatches": 4,
+      "teamId": 1076,
+      "teamName": "Coventry City FC"
+    },
+    "svenbotman": {
+      "name": "Sven Botman",
+      "goals": 1,
+      "playedMatches": 7,
+      "teamId": 67,
+      "teamName": "Newcastle United FC"
+    },
+    "ellissimms": {
+      "name": "Ellis Simms",
+      "goals": 1,
+      "playedMatches": 6,
+      "teamId": 1076,
+      "teamName": "Coventry City FC"
+    },
+    "stephenmfuni": {
+      "name": "Stephen Mfuni",
+      "goals": 1,
+      "playedMatches": 4,
+      "teamId": 1076,
+      "teamName": "Coventry City FC"
+    },
+    "alexiwobi": {
+      "name": "Alex Iwobi",
+      "goals": 1,
+      "playedMatches": 7,
+      "teamId": 63,
+      "teamName": "Fulham FC"
+    },
+    "philfoden": {
+      "name": "Phil Foden",
+      "goals": 1,
+      "playedMatches": 5,
+      "teamId": 65,
+      "teamName": "Manchester City FC"
+    },
+    "daizenmaeda": {
+      "name": "Daizen Maeda",
+      "goals": 1,
+      "playedMatches": 7,
+      "teamId": 349,
+      "teamName": "Ipswich Town FC"
+    },
+    "diegogomez": {
+      "name": "Diego Gómez",
+      "goals": 1,
+      "playedMatches": 7,
+      "teamId": 397,
+      "teamName": "Brighton & Hove Albion FC"
+    },
+    "nonimadueke": {
+      "name": "Noni Madueke",
+      "goals": 1,
+      "playedMatches": 7,
+      "teamId": 57,
+      "teamName": "Arsenal FC"
+    },
+    "jamesmaddison": {
+      "name": "James Maddison",
+      "goals": 1,
+      "playedMatches": 5,
+      "teamId": 73,
+      "teamName": "Tottenham Hotspur FC"
+    },
+    "omarmarmoush": {
+      "name": "Omar Marmoush",
+      "goals": 1,
+      "playedMatches": 7,
+      "teamId": 73,
+      "teamName": "Tottenham Hotspur FC"
+    },
+    "bendavies": {
+      "name": "Ben Davies",
+      "goals": 1,
+      "playedMatches": 5,
+      "teamId": 73,
+      "teamName": "Tottenham Hotspur FC"
     }
   },
   "teams": {
@@ -808,6 +948,56 @@
   },
   "recentGoals": [
     {
+      "player": "John McGinn",
+      "teamName": "Aston Villa FC",
+      "delta": 1,
+      "goalsAfter": 1,
+      "opponent": "Newcastle United FC",
+      "isHome": false,
+      "matchDate": "2026-10-17T16:30:00Z",
+      "detectedAt": "2026-10-23T12:37:18.070Z"
+    },
+    {
+      "player": "Alex Iwobi",
+      "teamName": "Fulham FC",
+      "delta": 1,
+      "goalsAfter": 1,
+      "opponent": "Hull City AFC",
+      "isHome": true,
+      "matchDate": "2026-10-17T14:00:00Z",
+      "detectedAt": "2026-10-23T12:37:18.071Z"
+    },
+    {
+      "player": "Phil Foden",
+      "teamName": "Manchester City FC",
+      "delta": 1,
+      "goalsAfter": 1,
+      "opponent": "Ipswich Town FC",
+      "isHome": true,
+      "matchDate": "2026-10-17T14:00:00Z",
+      "detectedAt": "2026-10-23T12:37:18.071Z"
+    },
+    {
+      "player": "Daizen Maeda",
+      "teamName": "Ipswich Town FC",
+      "delta": 1,
+      "goalsAfter": 1,
+      "opponent": "Manchester City FC",
+      "isHome": false,
+      "matchDate": "2026-10-17T14:00:00Z",
+      "detectedAt": "2026-10-23T12:37:18.071Z"
+    },
+    {
+      "player": "Noni Madueke",
+      "teamName": "Arsenal FC",
+      "delta": 1,
+      "goalsAfter": 1,
+      "opponent": "Nottingham Forest FC",
+      "isHome": false,
+      "matchDate": "2026-10-18T15:30:00Z",
+      "detectedAt": "2026-10-23T12:37:18.071Z"
+    },
+    {
       "player": "Rayan Cherki",
       "teamName": "Manchester City FC",
       "delta": 1,
@@ -876,46 +1066,6 @@
       "isHome": true,
       "matchDate": "2026-09-12T19:00:00Z",
       "detectedAt": "2026-09-20T14:06:35.780Z"
-    },
-    {
-      "player": "Pascal Groß",
-      "teamName": "Brighton & Hove Albion FC",
-      "delta": 1,
-      "goalsAfter": 3,
-      "opponent": "Arsenal FC",
-      "isHome": true,
-      "matchDate": "2026-09-19T14:00:00Z",
-      "detectedAt": "2026-09-19T19:01:31.800Z"
-    },
-    {
-      "player": "Noah Okafor",
-      "teamName": "Leeds United FC",
-      "delta": 1,
-      "goalsAfter": 1,
-      "opponent": "Newcastle United FC",
-      "isHome": true,
-      "matchDate": "2026-09-14T19:00:00Z",
-      "detectedAt": "2026-09-15T12:59:32.558Z"
-    },
-    {
-      "player": "Pascal Groß",
-      "teamName": "Brighton & Hove Albion FC",
-      "delta": 1,
-      "goalsAfter": 2,
-      "opponent": "Leeds United FC",
-      "isHome": true,
-      "matchDate": "2026-09-05T14:00:00Z",
-      "detectedAt": "2026-09-13T14:37:32.601Z"
-    },
-    {
-      "player": "Bruno Guimarães",
-      "teamName": "Arsenal FC",
-      "delta": 1,
-      "goalsAfter": 1,
-      "opponent": "Sunderland AFC",
-      "isHome": false,
-      "matchDate": "2026-09-12T19:00:00Z",
-      "detectedAt": "2026-09-12T21:30:56.858Z"
     }
   ]
 }
