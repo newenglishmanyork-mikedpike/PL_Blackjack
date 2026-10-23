@@ -160,8 +160,15 @@ Caveats worth knowing:
 ## Limitations
 
 - The free football-data.org tier's scorers list only includes players who
-  have scored at least once this season, capped at 100 entries — that's
-  fine here, since anyone not on that list simply has 0 goals.
+  have scored at least once this season — anyone not on that list simply
+  has 0 goals. `fetch-scores.mjs` requests `limit=500`, comfortably above
+  the number of distinct Premier League scorers in a season (confirmed:
+  requesting a limit beyond the season's actual scorer count just returns
+  everyone, there's no hard server-side cap). An earlier version of this
+  script used `limit=100`, which silently truncated the list once more
+  than 100 players had scored — that's why Phil Foden's goal against
+  Ipswich went briefly unrecorded in October 2026, not an error on
+  football-data.org's part.
 - Team names on player cards are just labels you type in — they aren't
   validated against anything.
 - Editing entries requires git access (or asking whoever maintains the

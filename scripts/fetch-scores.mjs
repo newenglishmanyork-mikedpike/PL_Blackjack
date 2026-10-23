@@ -59,7 +59,13 @@ try {
   console.error(`Couldn't read entries.json for the goals ticker (continuing without it): ${err.message}`);
 }
 
-const scorersJson = await apiGet('/competitions/PL/scorers?limit=100');
+// A high limit, not a real cap on expected scorer count: with limit=100
+// the endpoint silently truncated to the top 100 goalscorers, which
+// quietly dropped single-goal scorers once more than 100 players had
+// scored this season (confirmed live: limit=500 returns all 120 current
+// scorers, same as the API's own `count` field — there's no pagination
+// needed, just a high enough limit).
+const scorersJson = await apiGet('/competitions/PL/scorers?limit=500');
 const scorers = Array.isArray(scorersJson.scorers) ? scorersJson.scorers : [];
 
 // football-data.org's free tier only returns goalscorers (players with 0
