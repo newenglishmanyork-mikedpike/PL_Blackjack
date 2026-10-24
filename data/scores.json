@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-24T09:57:02.453Z",
+  "updatedAt": "2026-10-24T14:59:48.283Z",
   "season": "2026",
   "scorersReturned": 122,
   "players": {
@@ -861,13 +861,13 @@
   "teams": {
     "57": {
       "name": "Arsenal FC",
-      "playedGames": 7,
-      "gamesRemaining": 31
+      "playedGames": 8,
+      "gamesRemaining": 30
     },
     "58": {
       "name": "Aston Villa FC",
-      "playedGames": 7,
-      "gamesRemaining": 31
+      "playedGames": 8,
+      "gamesRemaining": 30
     },
     "61": {
       "name": "Chelsea FC",
@@ -876,13 +876,13 @@
     },
     "62": {
       "name": "Everton FC",
-      "playedGames": 7,
-      "gamesRemaining": 31
+      "playedGames": 8,
+      "gamesRemaining": 30
     },
     "63": {
       "name": "Fulham FC",
-      "playedGames": 7,
-      "gamesRemaining": 31
+      "playedGames": 8,
+      "gamesRemaining": 30
     },
     "64": {
       "name": "Liverpool FC",
@@ -891,8 +891,8 @@
     },
     "65": {
       "name": "Manchester City FC",
-      "playedGames": 7,
-      "gamesRemaining": 31
+      "playedGames": 8,
+      "gamesRemaining": 30
     },
     "66": {
       "name": "Manchester United FC",
@@ -956,8 +956,8 @@
     },
     "1076": {
       "name": "Coventry City FC",
-      "playedGames": 7,
-      "gamesRemaining": 31
+      "playedGames": 8,
+      "gamesRemaining": 30
     }
   },
   "recentGoals": [
