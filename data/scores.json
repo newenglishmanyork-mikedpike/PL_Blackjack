@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-25T15:11:09.874Z",
+  "updatedAt": "2026-10-25T20:06:21.986Z",
   "season": "2026",
-  "scorersReturned": 129,
+  "scorersReturned": 130,
   "players": {
     "erlinghaaland": {
       "name": "Erling Haaland",
@@ -104,7 +104,7 @@
     "dominiccalvertlewin": {
       "name": "Dominic Calvert-Lewin",
       "goals": 3,
-      "playedMatches": 7,
+      "playedMatches": 8,
       "teamId": 341,
       "teamName": "Leeds United FC"
     },
@@ -132,9 +132,16 @@
     "brianbrobbey": {
       "name": "Brian Brobbey",
       "goals": 3,
-      "playedMatches": 5,
+      "playedMatches": 6,
       "teamId": 71,
       "teamName": "Sunderland AFC"
+    },
+    "evanilson": {
+      "name": "Evanilson",
+      "goals": 3,
+      "playedMatches": 8,
+      "teamId": 1044,
+      "teamName": "AFC Bournemouth"
     },
     "kaihavertz": {
       "name": "Kai Havertz",
@@ -241,10 +248,17 @@
       "teamId": 349,
       "teamName": "Ipswich Town FC"
     },
+    "harveybarnes": {
+      "name": "Harvey Barnes",
+      "goals": 2,
+      "playedMatches": 8,
+      "teamId": 67,
+      "teamName": "Newcastle United FC"
+    },
     "jaydenbogle": {
       "name": "Jayden Bogle",
       "goals": 2,
-      "playedMatches": 7,
+      "playedMatches": 8,
       "teamId": 341,
       "teamName": "Leeds United FC"
     },
@@ -297,13 +311,6 @@
       "teamId": 61,
       "teamName": "Chelsea FC"
     },
-    "evanilson": {
-      "name": "Evanilson",
-      "goals": 2,
-      "playedMatches": 8,
-      "teamId": 1044,
-      "teamName": "AFC Bournemouth"
-    },
     "jackrudoni": {
       "name": "Jack Rudoni",
       "goals": 2,
@@ -328,7 +335,7 @@
     "nilsonangulo": {
       "name": "Nilson Angulo",
       "goals": 1,
-      "playedMatches": 7,
+      "playedMatches": 8,
       "teamId": 71,
       "teamName": "Sunderland AFC"
     },
@@ -342,7 +349,7 @@
     "antonstach": {
       "name": "Anton Stach",
       "goals": 1,
-      "playedMatches": 7,
+      "playedMatches": 8,
       "teamId": 341,
       "teamName": "Leeds United FC"
     },
@@ -444,13 +451,6 @@
       "teamId": 349,
       "teamName": "Ipswich Town FC"
     },
-    "harveybarnes": {
-      "name": "Harvey Barnes",
-      "goals": 1,
-      "playedMatches": 8,
-      "teamId": 67,
-      "teamName": "Newcastle United FC"
-    },
     "jacobramsey": {
       "name": "Jacob Ramsey",
       "goals": 1,
@@ -468,7 +468,7 @@
     "enzolefee": {
       "name": "Enzo Le Fée",
       "goals": 1,
-      "playedMatches": 7,
+      "playedMatches": 8,
       "teamId": 71,
       "teamName": "Sunderland AFC"
     },
@@ -559,7 +559,7 @@
     "noahokafor": {
       "name": "Noah Okafor",
       "goals": 1,
-      "playedMatches": 7,
+      "playedMatches": 8,
       "teamId": 341,
       "teamName": "Leeds United FC"
     },
@@ -657,7 +657,7 @@
     "jamesjustin": {
       "name": "James Justin",
       "goals": 1,
-      "playedMatches": 7,
+      "playedMatches": 8,
       "teamId": 341,
       "teamName": "Leeds United FC"
     },
@@ -905,6 +905,13 @@
       "playedMatches": 8,
       "teamId": 322,
       "teamName": "Hull City AFC"
+    },
+    "dangoouattara": {
+      "name": "Dango Ouattara",
+      "goals": 1,
+      "playedMatches": 8,
+      "teamId": 402,
+      "teamName": "Brentford FC"
     }
   },
   "teams": {
@@ -955,8 +962,8 @@
     },
     "71": {
       "name": "Sunderland AFC",
-      "playedGames": 7,
-      "gamesRemaining": 31
+      "playedGames": 8,
+      "gamesRemaining": 30
     },
     "73": {
       "name": "Tottenham Hotspur FC",
@@ -970,8 +977,8 @@
     },
     "341": {
       "name": "Leeds United FC",
-      "playedGames": 7,
-      "gamesRemaining": 31
+      "playedGames": 8,
+      "gamesRemaining": 30
     },
     "349": {
       "name": "Ipswich Town FC",
@@ -1010,6 +1017,16 @@
     }
   },
   "recentGoals": [
+    {
+      "player": "Harvey Barnes",
+      "teamName": "Newcastle United FC",
+      "delta": 1,
+      "goalsAfter": 2,
+      "opponent": "Crystal Palace FC",
+      "isHome": false,
+      "matchDate": "2026-10-25T14:00:00Z",
+      "detectedAt": "2026-10-25T20:06:21.986Z"
+    },
     {
       "player": "Gabriel Magalhães",
       "teamName": "Arsenal FC",
@@ -1119,16 +1136,6 @@
       "isHome": true,
       "matchDate": "2026-10-10T14:00:00Z",
       "detectedAt": "2026-10-10T16:31:09.797Z"
-    },
-    {
-      "player": "Rayan Cherki",
-      "teamName": "Manchester City FC",
-      "delta": 1,
-      "goalsAfter": 3,
-      "opponent": "Sunderland AFC",
-      "isHome": true,
-      "matchDate": "2026-09-20T13:00:00Z",
-      "detectedAt": "2026-09-20T18:03:12.500Z"
     }
   ]
 }
