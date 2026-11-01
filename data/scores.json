@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-01T12:13:09.036Z",
+  "updatedAt": "2026-11-01T21:27:04.199Z",
   "season": "2026",
   "scorersReturned": 136,
   "players": {
@@ -13,7 +13,7 @@
     "alexanderisak": {
       "name": "Alexander Isak",
       "goals": 6,
-      "playedMatches": 7,
+      "playedMatches": 8,
       "teamId": 64,
       "teamName": "Liverpool FC"
     },
@@ -65,6 +65,13 @@
       "playedMatches": 9,
       "teamId": 1044,
       "teamName": "AFC Bournemouth"
+    },
+    "kaihavertz": {
+      "name": "Kai Havertz",
+      "goals": 3,
+      "playedMatches": 9,
+      "teamId": 57,
+      "teamName": "Arsenal FC"
     },
     "bukayosaka": {
       "name": "Bukayo Saka",
@@ -164,17 +171,10 @@
       "teamId": 1076,
       "teamName": "Coventry City FC"
     },
-    "kaihavertz": {
-      "name": "Kai Havertz",
-      "goals": 2,
-      "playedMatches": 8,
-      "teamId": 57,
-      "teamName": "Arsenal FC"
-    },
     "martinodegaard": {
       "name": "Martin Ødegaard",
       "goals": 2,
-      "playedMatches": 8,
+      "playedMatches": 9,
       "teamId": 57,
       "teamName": "Arsenal FC"
     },
@@ -244,7 +244,7 @@
     "victormunoz": {
       "name": "Víctor Muñoz",
       "goals": 2,
-      "playedMatches": 7,
+      "playedMatches": 8,
       "teamId": 64,
       "teamName": "Liverpool FC"
     },
@@ -300,7 +300,7 @@
     "brunoguimaraes": {
       "name": "Bruno Guimarães",
       "goals": 2,
-      "playedMatches": 7,
+      "playedMatches": 8,
       "teamId": 57,
       "teamName": "Arsenal FC"
     },
@@ -412,14 +412,14 @@
     "codygakpo": {
       "name": "Cody Gakpo",
       "goals": 1,
-      "playedMatches": 7,
+      "playedMatches": 8,
       "teamId": 64,
       "teamName": "Liverpool FC"
     },
     "dominikszoboszlai": {
       "name": "Dominik Szoboszlai",
       "goals": 1,
-      "playedMatches": 6,
+      "playedMatches": 7,
       "teamId": 64,
       "teamName": "Liverpool FC"
     },
@@ -678,7 +678,7 @@
     "riccardocalafiori": {
       "name": "Riccardo Calafiori",
       "goals": 1,
-      "playedMatches": 8,
+      "playedMatches": 9,
       "teamId": 57,
       "teamName": "Arsenal FC"
     },
@@ -832,7 +832,7 @@
     "nonimadueke": {
       "name": "Noni Madueke",
       "goals": 1,
-      "playedMatches": 8,
+      "playedMatches": 9,
       "teamId": 57,
       "teamName": "Arsenal FC"
     },
@@ -867,14 +867,14 @@
     "ezrikonsa": {
       "name": "Ezri Konsa",
       "goals": 1,
-      "playedMatches": 7,
+      "playedMatches": 8,
       "teamId": 57,
       "teamName": "Arsenal FC"
     },
     "gabrielmagalhaes": {
       "name": "Gabriel Magalhães",
       "goals": 1,
-      "playedMatches": 8,
+      "playedMatches": 9,
       "teamId": 57,
       "teamName": "Arsenal FC"
     },
@@ -959,8 +959,8 @@
   "teams": {
     "57": {
       "name": "Arsenal FC",
-      "playedGames": 8,
-      "gamesRemaining": 30
+      "playedGames": 9,
+      "gamesRemaining": 29
     },
     "58": {
       "name": "Aston Villa FC",
@@ -984,8 +984,8 @@
     },
     "64": {
       "name": "Liverpool FC",
-      "playedGames": 8,
-      "gamesRemaining": 30
+      "playedGames": 9,
+      "gamesRemaining": 29
     },
     "65": {
       "name": "Manchester City FC",
