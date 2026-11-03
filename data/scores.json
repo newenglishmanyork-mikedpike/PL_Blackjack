@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-02T14:02:56.212Z",
+  "updatedAt": "2026-11-03T00:09:02.797Z",
   "season": "2026",
   "scorersReturned": 136,
   "players": {
@@ -45,6 +45,13 @@
       "teamId": 58,
       "teamName": "Aston Villa FC"
     },
+    "thiernobarry": {
+      "name": "Thierno Barry",
+      "goals": 4,
+      "playedMatches": 9,
+      "teamId": 62,
+      "teamName": "Everton FC"
+    },
     "rayancherki": {
       "name": "Rayan Cherki",
       "goals": 4,
@@ -79,13 +86,6 @@
       "playedMatches": 7,
       "teamId": 57,
       "teamName": "Arsenal FC"
-    },
-    "thiernobarry": {
-      "name": "Thierno Barry",
-      "goals": 3,
-      "playedMatches": 8,
-      "teamId": 62,
-      "teamName": "Everton FC"
     },
     "jackhinshelwood": {
       "name": "Jack Hinshelwood",
@@ -188,7 +188,7 @@
     "kiernandewsburyhall": {
       "name": "Kiernan Dewsbury Hall",
       "goals": 2,
-      "playedMatches": 8,
+      "playedMatches": 9,
       "teamId": 62,
       "teamName": "Everton FC"
     },
@@ -216,14 +216,14 @@
     "anthonyelanga": {
       "name": "Anthony Elanga",
       "goals": 2,
-      "playedMatches": 4,
+      "playedMatches": 5,
       "teamId": 67,
       "teamName": "Newcastle United FC"
     },
     "joewillock": {
       "name": "Joe Willock",
       "goals": 2,
-      "playedMatches": 8,
+      "playedMatches": 9,
       "teamId": 67,
       "teamName": "Newcastle United FC"
     },
@@ -265,7 +265,7 @@
     "harveybarnes": {
       "name": "Harvey Barnes",
       "goals": 2,
-      "playedMatches": 8,
+      "playedMatches": 9,
       "teamId": 67,
       "teamName": "Newcastle United FC"
     },
@@ -447,7 +447,7 @@
     "jamestarkowski": {
       "name": "James Tarkowski",
       "goals": 1,
-      "playedMatches": 8,
+      "playedMatches": 9,
       "teamId": 62,
       "teamName": "Everton FC"
     },
@@ -461,7 +461,7 @@
     "yoanewissa": {
       "name": "Yoane Wissa",
       "goals": 1,
-      "playedMatches": 8,
+      "playedMatches": 9,
       "teamId": 67,
       "teamName": "Newcastle United FC"
     },
@@ -489,7 +489,7 @@
     "jacobramsey": {
       "name": "Jacob Ramsey",
       "goals": 1,
-      "playedMatches": 5,
+      "playedMatches": 6,
       "teamId": 67,
       "teamName": "Newcastle United FC"
     },
@@ -517,7 +517,7 @@
     "tyriquegeorge": {
       "name": "Tyrique George",
       "goals": 1,
-      "playedMatches": 8,
+      "playedMatches": 9,
       "teamId": 62,
       "teamName": "Everton FC"
     },
@@ -531,7 +531,7 @@
     "ainsleymaitlandniles": {
       "name": "Ainsley Maitland-Niles",
       "goals": 1,
-      "playedMatches": 6,
+      "playedMatches": 7,
       "teamId": 62,
       "teamName": "Everton FC"
     },
@@ -594,7 +594,7 @@
     "bazoumanatoure": {
       "name": "Bazoumana Touré",
       "goals": 1,
-      "playedMatches": 8,
+      "playedMatches": 9,
       "teamId": 67,
       "teamName": "Newcastle United FC"
     },
@@ -636,7 +636,7 @@
     "lewishall": {
       "name": "Lewis Hall",
       "goals": 1,
-      "playedMatches": 8,
+      "playedMatches": 9,
       "teamId": 67,
       "teamName": "Newcastle United FC"
     },
@@ -783,7 +783,7 @@
     "svenbotman": {
       "name": "Sven Botman",
       "goals": 1,
-      "playedMatches": 8,
+      "playedMatches": 9,
       "teamId": 67,
       "teamName": "Newcastle United FC"
     },
@@ -895,7 +895,7 @@
     "williamosula": {
       "name": "William Osula",
       "goals": 1,
-      "playedMatches": 4,
+      "playedMatches": 5,
       "teamId": 67,
       "teamName": "Newcastle United FC"
     },
@@ -974,8 +974,8 @@
     },
     "62": {
       "name": "Everton FC",
-      "playedGames": 8,
-      "gamesRemaining": 30
+      "playedGames": 9,
+      "gamesRemaining": 29
     },
     "63": {
       "name": "Fulham FC",
@@ -999,8 +999,8 @@
     },
     "67": {
       "name": "Newcastle United FC",
-      "playedGames": 8,
-      "gamesRemaining": 30
+      "playedGames": 9,
+      "gamesRemaining": 29
     },
     "71": {
       "name": "Sunderland AFC",
