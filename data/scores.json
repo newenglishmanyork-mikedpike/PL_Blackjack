@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-06T13:23:33.293Z",
+  "updatedAt": "2026-11-06T22:29:10.744Z",
   "season": "2026",
-  "scorersReturned": 136,
+  "scorersReturned": 137,
   "players": {
     "erlinghaaland": {
       "name": "Erling Haaland",
@@ -9,6 +9,13 @@
       "playedMatches": 9,
       "teamId": 65,
       "teamName": "Manchester City FC"
+    },
+    "thiernobarry": {
+      "name": "Thierno Barry",
+      "goals": 6,
+      "playedMatches": 10,
+      "teamId": 62,
+      "teamName": "Everton FC"
     },
     "alexanderisak": {
       "name": "Alexander Isak",
@@ -45,13 +52,6 @@
       "teamId": 58,
       "teamName": "Aston Villa FC"
     },
-    "thiernobarry": {
-      "name": "Thierno Barry",
-      "goals": 4,
-      "playedMatches": 9,
-      "teamId": 62,
-      "teamName": "Everton FC"
-    },
     "rayancherki": {
       "name": "Rayan Cherki",
       "goals": 4,
@@ -86,6 +86,13 @@
       "playedMatches": 7,
       "teamId": 57,
       "teamName": "Arsenal FC"
+    },
+    "kiernandewsburyhall": {
+      "name": "Kiernan Dewsbury Hall",
+      "goals": 3,
+      "playedMatches": 10,
+      "teamId": 62,
+      "teamName": "Everton FC"
     },
     "jackhinshelwood": {
       "name": "Jack Hinshelwood",
@@ -167,7 +174,7 @@
     "jackrudoni": {
       "name": "Jack Rudoni",
       "goals": 3,
-      "playedMatches": 9,
+      "playedMatches": 10,
       "teamId": 1076,
       "teamName": "Coventry City FC"
     },
@@ -184,13 +191,6 @@
       "playedMatches": 9,
       "teamId": 349,
       "teamName": "Ipswich Town FC"
-    },
-    "kiernandewsburyhall": {
-      "name": "Kiernan Dewsbury Hall",
-      "goals": 2,
-      "playedMatches": 9,
-      "teamId": 62,
-      "teamName": "Everton FC"
     },
     "keanelewispotter": {
       "name": "Keane Lewis-Potter",
@@ -447,7 +447,7 @@
     "jamestarkowski": {
       "name": "James Tarkowski",
       "goals": 1,
-      "playedMatches": 9,
+      "playedMatches": 10,
       "teamId": 62,
       "teamName": "Everton FC"
     },
@@ -517,7 +517,7 @@
     "tyriquegeorge": {
       "name": "Tyrique George",
       "goals": 1,
-      "playedMatches": 9,
+      "playedMatches": 10,
       "teamId": 62,
       "teamName": "Everton FC"
     },
@@ -531,7 +531,7 @@
     "ainsleymaitlandniles": {
       "name": "Ainsley Maitland-Niles",
       "goals": 1,
-      "playedMatches": 7,
+      "playedMatches": 8,
       "teamId": 62,
       "teamName": "Everton FC"
     },
@@ -650,7 +650,7 @@
     "jaydasilva": {
       "name": "Jay Dasilva",
       "goals": 1,
-      "playedMatches": 9,
+      "playedMatches": 10,
       "teamId": 1076,
       "teamName": "Coventry City FC"
     },
@@ -776,7 +776,7 @@
     "sidikicherif": {
       "name": "Sidiki Cherif",
       "goals": 1,
-      "playedMatches": 6,
+      "playedMatches": 7,
       "teamId": 1076,
       "teamName": "Coventry City FC"
     },
@@ -790,14 +790,14 @@
     "ellissimms": {
       "name": "Ellis Simms",
       "goals": 1,
-      "playedMatches": 7,
+      "playedMatches": 8,
       "teamId": 1076,
       "teamName": "Coventry City FC"
     },
     "stephenmfuni": {
       "name": "Stephen Mfuni",
       "goals": 1,
-      "playedMatches": 6,
+      "playedMatches": 7,
       "teamId": 1076,
       "teamName": "Coventry City FC"
     },
@@ -923,14 +923,14 @@
     "tatsuhirosakamoto": {
       "name": "Tatsuhiro Sakamoto",
       "goals": 1,
-      "playedMatches": 9,
+      "playedMatches": 10,
       "teamId": 1076,
       "teamName": "Coventry City FC"
     },
     "taiwoawoniyi": {
       "name": "Taiwo Awoniyi",
       "goals": 1,
-      "playedMatches": 7,
+      "playedMatches": 8,
       "teamId": 1076,
       "teamName": "Coventry City FC"
     },
@@ -954,6 +954,13 @@
       "playedMatches": 9,
       "teamId": 73,
       "teamName": "Tottenham Hotspur FC"
+    },
+    "yanngboho": {
+      "name": "Yann Gboho",
+      "goals": 1,
+      "playedMatches": 5,
+      "teamId": 1076,
+      "teamName": "Coventry City FC"
     }
   },
   "teams": {
@@ -974,8 +981,8 @@
     },
     "62": {
       "name": "Everton FC",
-      "playedGames": 9,
-      "gamesRemaining": 29
+      "playedGames": 10,
+      "gamesRemaining": 28
     },
     "63": {
       "name": "Fulham FC",
@@ -1054,11 +1061,21 @@
     },
     "1076": {
       "name": "Coventry City FC",
-      "playedGames": 9,
-      "gamesRemaining": 29
+      "playedGames": 10,
+      "gamesRemaining": 28
     }
   },
   "recentGoals": [
+    {
+      "player": "Kiernan Dewsbury Hall",
+      "teamName": "Everton FC",
+      "delta": 1,
+      "goalsAfter": 3,
+      "opponent": "Coventry City FC",
+      "isHome": true,
+      "matchDate": "2026-11-06T20:00:00Z",
+      "detectedAt": "2026-11-06T22:29:10.743Z"
+    },
     {
       "player": "Enzo Le Fée",
       "teamName": "Sunderland AFC",
@@ -1168,16 +1185,6 @@
       "isHome": false,
       "matchDate": "2026-10-11T13:00:00Z",
       "detectedAt": "2026-10-11T16:55:53.834Z"
-    },
-    {
-      "player": "Bruno Guimarães",
-      "teamName": "Arsenal FC",
-      "delta": 1,
-      "goalsAfter": 2,
-      "opponent": "Leeds United FC",
-      "isHome": true,
-      "matchDate": "2026-10-10T11:30:00Z",
-      "detectedAt": "2026-10-10T16:31:09.797Z"
     }
   ]
 }
