@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-07T03:35:24.069Z",
+  "updatedAt": "2026-11-07T12:01:33.804Z",
   "season": "2026",
   "scorersReturned": 137,
   "players": {
@@ -132,7 +132,7 @@
     "dominiccalvertlewin": {
       "name": "Dominic Calvert-Lewin",
       "goals": 3,
-      "playedMatches": 9,
+      "playedMatches": 10,
       "teamId": 341,
       "teamName": "Leeds United FC"
     },
@@ -272,7 +272,7 @@
     "jaydenbogle": {
       "name": "Jayden Bogle",
       "goals": 2,
-      "playedMatches": 9,
+      "playedMatches": 10,
       "teamId": 341,
       "teamName": "Leeds United FC"
     },
@@ -321,7 +321,7 @@
     "janpaulvanhecke": {
       "name": "Jan Paul van Hecke",
       "goals": 2,
-      "playedMatches": 9,
+      "playedMatches": 10,
       "teamId": 73,
       "teamName": "Tottenham Hotspur FC"
     },
@@ -587,7 +587,7 @@
     "noahokafor": {
       "name": "Noah Okafor",
       "goals": 1,
-      "playedMatches": 8,
+      "playedMatches": 9,
       "teamId": 341,
       "teamName": "Leeds United FC"
     },
@@ -622,7 +622,7 @@
     "conorgallagher": {
       "name": "Conor Gallagher",
       "goals": 1,
-      "playedMatches": 9,
+      "playedMatches": 10,
       "teamId": 73,
       "teamName": "Tottenham Hotspur FC"
     },
@@ -671,7 +671,7 @@
     "jamesjustin": {
       "name": "James Justin",
       "goals": 1,
-      "playedMatches": 9,
+      "playedMatches": 10,
       "teamId": 341,
       "teamName": "Leeds United FC"
     },
@@ -734,7 +734,7 @@
     "dominicsolanke": {
       "name": "Dominic Solanke",
       "goals": 1,
-      "playedMatches": 9,
+      "playedMatches": 10,
       "teamId": 73,
       "teamName": "Tottenham Hotspur FC"
     },
@@ -839,21 +839,21 @@
     "jamesmaddison": {
       "name": "James Maddison",
       "goals": 1,
-      "playedMatches": 7,
+      "playedMatches": 8,
       "teamId": 73,
       "teamName": "Tottenham Hotspur FC"
     },
     "omarmarmoush": {
       "name": "Omar Marmoush",
       "goals": 1,
-      "playedMatches": 9,
+      "playedMatches": 10,
       "teamId": 73,
       "teamName": "Tottenham Hotspur FC"
     },
     "bendavies": {
       "name": "Ben Davies",
       "goals": 1,
-      "playedMatches": 7,
+      "playedMatches": 8,
       "teamId": 73,
       "teamName": "Tottenham Hotspur FC"
     },
@@ -888,7 +888,7 @@
     "mathystel": {
       "name": "Mathys Tel",
       "goals": 1,
-      "playedMatches": 8,
+      "playedMatches": 9,
       "teamId": 73,
       "teamName": "Tottenham Hotspur FC"
     },
@@ -951,7 +951,7 @@
     "archiegray": {
       "name": "Archie Gray",
       "goals": 1,
-      "playedMatches": 9,
+      "playedMatches": 10,
       "teamId": 73,
       "teamName": "Tottenham Hotspur FC"
     },
