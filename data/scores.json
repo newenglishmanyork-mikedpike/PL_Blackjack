@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-11-21T04:38:29.811Z",
+  "updatedAt": "2026-11-21T13:50:30.494Z",
   "season": "2026",
-  "scorersReturned": 147,
+  "scorersReturned": 148,
   "players": {
     "erlinghaaland": {
       "name": "Erling Haaland",
       "goals": 9,
-      "playedMatches": 10,
+      "playedMatches": 11,
       "teamId": 65,
       "teamName": "Manchester City FC"
     },
@@ -55,7 +55,7 @@
     "rayancherki": {
       "name": "Rayan Cherki",
       "goals": 5,
-      "playedMatches": 10,
+      "playedMatches": 11,
       "teamId": 65,
       "teamName": "Manchester City FC"
     },
@@ -251,7 +251,7 @@
     "joshuaking": {
       "name": "Joshua King",
       "goals": 2,
-      "playedMatches": 10,
+      "playedMatches": 11,
       "teamId": 63,
       "teamName": "Fulham FC"
     },
@@ -395,6 +395,13 @@
       "teamId": 322,
       "teamName": "Hull City AFC"
     },
+    "rodrigomuniz": {
+      "name": "Rodrigo Muniz",
+      "goals": 2,
+      "playedMatches": 11,
+      "teamId": 63,
+      "teamName": "Fulham FC"
+    },
     "semiajayi": {
       "name": "Semi Ajayi",
       "goals": 1,
@@ -433,14 +440,14 @@
     "marcguehi": {
       "name": "Marc Guéhi",
       "goals": 1,
-      "playedMatches": 10,
+      "playedMatches": 11,
       "teamId": 65,
       "teamName": "Manchester City FC"
     },
     "joskogvardiol": {
       "name": "Joško Gvardiol",
       "goals": 1,
-      "playedMatches": 10,
+      "playedMatches": 11,
       "teamId": 65,
       "teamName": "Manchester City FC"
     },
@@ -461,7 +468,7 @@
     "gonzalogarcia": {
       "name": "Gonzalo García",
       "goals": 1,
-      "playedMatches": 10,
+      "playedMatches": 11,
       "teamId": 63,
       "teamName": "Fulham FC"
     },
@@ -538,7 +545,7 @@
     "cesarpalacios": {
       "name": "César Palacios",
       "goals": 1,
-      "playedMatches": 10,
+      "playedMatches": 11,
       "teamId": 63,
       "teamName": "Fulham FC"
     },
@@ -671,7 +678,7 @@
     "enzofernandez": {
       "name": "Enzo Fernández",
       "goals": 1,
-      "playedMatches": 9,
+      "playedMatches": 10,
       "teamId": 65,
       "teamName": "Manchester City FC"
     },
@@ -706,7 +713,7 @@
     "ryansessegnon": {
       "name": "Ryan Sessegnon",
       "goals": 1,
-      "playedMatches": 7,
+      "playedMatches": 8,
       "teamId": 63,
       "teamName": "Fulham FC"
     },
@@ -776,7 +783,7 @@
     "jeremydoku": {
       "name": "Jeremy Doku",
       "goals": 1,
-      "playedMatches": 6,
+      "playedMatches": 7,
       "teamId": 65,
       "teamName": "Manchester City FC"
     },
@@ -811,14 +818,14 @@
     "alexiwobi": {
       "name": "Alex Iwobi",
       "goals": 1,
-      "playedMatches": 10,
+      "playedMatches": 11,
       "teamId": 63,
       "teamName": "Fulham FC"
     },
     "philfoden": {
       "name": "Phil Foden",
       "goals": 1,
-      "playedMatches": 8,
+      "playedMatches": 9,
       "teamId": 65,
       "teamName": "Manchester City FC"
     },
@@ -881,7 +888,7 @@
     "oscarbobb": {
       "name": "Oscar Bobb",
       "goals": 1,
-      "playedMatches": 10,
+      "playedMatches": 11,
       "teamId": 63,
       "teamName": "Fulham FC"
     },
@@ -969,13 +976,6 @@
       "teamId": 67,
       "teamName": "Newcastle United FC"
     },
-    "rodrigomuniz": {
-      "name": "Rodrigo Muniz",
-      "goals": 1,
-      "playedMatches": 10,
-      "teamId": 63,
-      "teamName": "Fulham FC"
-    },
     "jairpaula": {
       "name": "Jair Paula",
       "goals": 1,
@@ -1031,6 +1031,13 @@
       "playedMatches": 6,
       "teamId": 66,
       "teamName": "Manchester United FC"
+    },
+    "elliotanderson": {
+      "name": "Elliot Anderson",
+      "goals": 1,
+      "playedMatches": 11,
+      "teamId": 65,
+      "teamName": "Manchester City FC"
     }
   },
   "teams": {
@@ -1056,8 +1063,8 @@
     },
     "63": {
       "name": "Fulham FC",
-      "playedGames": 10,
-      "gamesRemaining": 28
+      "playedGames": 11,
+      "gamesRemaining": 27
     },
     "64": {
       "name": "Liverpool FC",
@@ -1066,8 +1073,8 @@
     },
     "65": {
       "name": "Manchester City FC",
-      "playedGames": 10,
-      "gamesRemaining": 28
+      "playedGames": 11,
+      "gamesRemaining": 27
     },
     "66": {
       "name": "Manchester United FC",
