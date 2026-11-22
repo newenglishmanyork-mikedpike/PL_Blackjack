@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-22T03:52:37.016Z",
+  "updatedAt": "2026-11-22T13:43:33.245Z",
   "season": "2026",
   "scorersReturned": 153,
   "players": {
@@ -69,7 +69,7 @@
     "pascalgross": {
       "name": "Pascal Groß",
       "goals": 4,
-      "playedMatches": 10,
+      "playedMatches": 11,
       "teamId": 397,
       "teamName": "Brighton & Hove Albion FC"
     },
@@ -132,7 +132,7 @@
     "jackhinshelwood": {
       "name": "Jack Hinshelwood",
       "goals": 3,
-      "playedMatches": 5,
+      "playedMatches": 6,
       "teamId": 397,
       "teamName": "Brighton & Hove Albion FC"
     },
@@ -181,21 +181,21 @@
     "mohamedbelloumi": {
       "name": "Mohamed Belloumi",
       "goals": 3,
-      "playedMatches": 9,
+      "playedMatches": 10,
       "teamId": 322,
       "teamName": "Hull City AFC"
     },
     "charalamposkostoulas": {
       "name": "Charalampos Kostoulas",
       "goals": 3,
-      "playedMatches": 10,
+      "playedMatches": 11,
       "teamId": 397,
       "teamName": "Brighton & Hove Albion FC"
     },
     "yasinayari": {
       "name": "Yasin Ayari",
       "goals": 3,
-      "playedMatches": 9,
+      "playedMatches": 10,
       "teamId": 397,
       "teamName": "Brighton & Hove Albion FC"
     },
@@ -244,7 +244,7 @@
     "maximdecuyper": {
       "name": "Maxim De Cuyper",
       "goals": 2,
-      "playedMatches": 10,
+      "playedMatches": 11,
       "teamId": 397,
       "teamName": "Brighton & Hove Albion FC"
     },
@@ -405,7 +405,7 @@
     "diegogomez": {
       "name": "Diego Gómez",
       "goals": 2,
-      "playedMatches": 10,
+      "playedMatches": 11,
       "teamId": 397,
       "teamName": "Brighton & Hove Albion FC"
     },
@@ -426,7 +426,7 @@
     "olivermcburnie": {
       "name": "Oliver McBurnie",
       "goals": 2,
-      "playedMatches": 10,
+      "playedMatches": 11,
       "teamId": 322,
       "teamName": "Hull City AFC"
     },
@@ -454,14 +454,14 @@
     "semiajayi": {
       "name": "Semi Ajayi",
       "goals": 1,
-      "playedMatches": 10,
+      "playedMatches": 11,
       "teamId": 322,
       "teamName": "Hull City AFC"
     },
     "nobelmendy": {
       "name": "Nobel Mendy",
       "goals": 1,
-      "playedMatches": 7,
+      "playedMatches": 8,
       "teamId": 322,
       "teamName": "Hull City AFC"
     },
@@ -587,7 +587,7 @@
     "lukavuskovic": {
       "name": "Luka Vušković",
       "goals": 1,
-      "playedMatches": 10,
+      "playedMatches": 11,
       "teamId": 397,
       "teamName": "Brighton & Hove Albion FC"
     },
@@ -643,7 +643,7 @@
     "lewisdunk": {
       "name": "Lewis Dunk",
       "goals": 1,
-      "playedMatches": 9,
+      "playedMatches": 10,
       "teamId": 397,
       "teamName": "Brighton & Hove Albion FC"
     },
@@ -685,7 +685,7 @@
     "chemaandres": {
       "name": "Chema Andrés",
       "goals": 1,
-      "playedMatches": 8,
+      "playedMatches": 9,
       "teamId": 397,
       "teamName": "Brighton & Hove Albion FC"
     },
@@ -699,7 +699,7 @@
     "mohamedcho": {
       "name": "Mohamed Cho",
       "goals": 1,
-      "playedMatches": 7,
+      "playedMatches": 8,
       "teamId": 322,
       "teamName": "Hull City AFC"
     },
@@ -951,7 +951,7 @@
     "timiroegbunam": {
       "name": "Tim Iroegbunam",
       "goals": 1,
-      "playedMatches": 8,
+      "playedMatches": 9,
       "teamId": 322,
       "teamName": "Hull City AFC"
     },
