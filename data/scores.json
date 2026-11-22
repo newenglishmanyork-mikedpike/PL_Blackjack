@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-22T13:43:33.245Z",
+  "updatedAt": "2026-11-22T22:55:13.649Z",
   "season": "2026",
-  "scorersReturned": 153,
+  "scorersReturned": 154,
   "players": {
     "erlinghaaland": {
       "name": "Erling Haaland",
@@ -13,7 +13,7 @@
     "alexanderisak": {
       "name": "Alexander Isak",
       "goals": 7,
-      "playedMatches": 9,
+      "playedMatches": 10,
       "teamId": 64,
       "teamName": "Liverpool FC"
     },
@@ -83,14 +83,14 @@
     "brunofernandes": {
       "name": "Bruno Fernandes",
       "goals": 4,
-      "playedMatches": 10,
+      "playedMatches": 11,
       "teamId": 66,
       "teamName": "Manchester United FC"
     },
     "bryanmbeumo": {
       "name": "Bryan Mbeumo",
       "goals": 4,
-      "playedMatches": 10,
+      "playedMatches": 11,
       "teamId": 66,
       "teamName": "Manchester United FC"
     },
@@ -100,6 +100,13 @@
       "playedMatches": 10,
       "teamId": 341,
       "teamName": "Leeds United FC"
+    },
+    "olivermcburnie": {
+      "name": "Oliver McBurnie",
+      "goals": 4,
+      "playedMatches": 11,
+      "teamId": 322,
+      "teamName": "Hull City AFC"
     },
     "kaihavertz": {
       "name": "Kai Havertz",
@@ -142,6 +149,13 @@
       "playedMatches": 11,
       "teamId": 61,
       "teamName": "Chelsea FC"
+    },
+    "victormunoz": {
+      "name": "Víctor Muñoz",
+      "goals": 3,
+      "playedMatches": 10,
+      "teamId": 64,
+      "teamName": "Liverpool FC"
     },
     "pedroneto": {
       "name": "Pedro Neto",
@@ -262,6 +276,13 @@
       "teamId": 67,
       "teamName": "Newcastle United FC"
     },
+    "dominikszoboszlai": {
+      "name": "Dominik Szoboszlai",
+      "goals": 2,
+      "playedMatches": 9,
+      "teamId": 64,
+      "teamName": "Liverpool FC"
+    },
     "joshuaking": {
       "name": "Joshua King",
       "goals": 2,
@@ -275,13 +296,6 @@
       "playedMatches": 11,
       "teamId": 351,
       "teamName": "Nottingham Forest FC"
-    },
-    "victormunoz": {
-      "name": "Víctor Muñoz",
-      "goals": 2,
-      "playedMatches": 9,
-      "teamId": 64,
-      "teamName": "Liverpool FC"
     },
     "malickyalcouye": {
       "name": "Malick Yalcouyé",
@@ -423,13 +437,6 @@
       "teamId": 349,
       "teamName": "Ipswich Town FC"
     },
-    "olivermcburnie": {
-      "name": "Oliver McBurnie",
-      "goals": 2,
-      "playedMatches": 11,
-      "teamId": 322,
-      "teamName": "Hull City AFC"
-    },
     "tatsuhirosakamoto": {
       "name": "Tatsuhiro Sakamoto",
       "goals": 2,
@@ -450,6 +457,13 @@
       "playedMatches": 11,
       "teamId": 63,
       "teamName": "Fulham FC"
+    },
+    "florianwirtz": {
+      "name": "Florian Wirtz",
+      "goals": 2,
+      "playedMatches": 11,
+      "teamId": 64,
+      "teamName": "Liverpool FC"
     },
     "semiajayi": {
       "name": "Semi Ajayi",
@@ -504,13 +518,6 @@
       "name": "Cody Gakpo",
       "goals": 1,
       "playedMatches": 9,
-      "teamId": 64,
-      "teamName": "Liverpool FC"
-    },
-    "dominikszoboszlai": {
-      "name": "Dominik Szoboszlai",
-      "goals": 1,
-      "playedMatches": 8,
       "teamId": 64,
       "teamName": "Liverpool FC"
     },
@@ -720,7 +727,7 @@
     "matheuscunha": {
       "name": "Matheus Cunha",
       "goals": 1,
-      "playedMatches": 10,
+      "playedMatches": 11,
       "teamId": 66,
       "teamName": "Manchester United FC"
     },
@@ -986,14 +993,7 @@
     "alexismacallister": {
       "name": "Alexis Mac Allister",
       "goals": 1,
-      "playedMatches": 10,
-      "teamId": 64,
-      "teamName": "Liverpool FC"
-    },
-    "florianwirtz": {
-      "name": "Florian Wirtz",
-      "goals": 1,
-      "playedMatches": 10,
+      "playedMatches": 11,
       "teamId": 64,
       "teamName": "Liverpool FC"
     },
@@ -1007,7 +1007,7 @@
     "youritielemans": {
       "name": "Youri Tielemans",
       "goals": 1,
-      "playedMatches": 10,
+      "playedMatches": 11,
       "teamId": 66,
       "teamName": "Manchester United FC"
     },
@@ -1021,14 +1021,14 @@
     "joshuazirkzee": {
       "name": "Joshua Zirkzee",
       "goals": 1,
-      "playedMatches": 10,
+      "playedMatches": 11,
       "teamId": 66,
       "teamName": "Manchester United FC"
     },
     "patrickdorgu": {
       "name": "Patrick Dorgu",
       "goals": 1,
-      "playedMatches": 6,
+      "playedMatches": 7,
       "teamId": 66,
       "teamName": "Manchester United FC"
     },
@@ -1073,6 +1073,13 @@
       "playedMatches": 11,
       "teamId": 67,
       "teamName": "Newcastle United FC"
+    },
+    "riongumoha": {
+      "name": "Rio Ngumoha",
+      "goals": 1,
+      "playedMatches": 11,
+      "teamId": 64,
+      "teamName": "Liverpool FC"
     }
   },
   "teams": {
@@ -1103,8 +1110,8 @@
     },
     "64": {
       "name": "Liverpool FC",
-      "playedGames": 10,
-      "gamesRemaining": 28
+      "playedGames": 11,
+      "gamesRemaining": 27
     },
     "65": {
       "name": "Manchester City FC",
@@ -1113,8 +1120,8 @@
     },
     "66": {
       "name": "Manchester United FC",
-      "playedGames": 10,
-      "gamesRemaining": 28
+      "playedGames": 11,
+      "gamesRemaining": 27
     },
     "67": {
       "name": "Newcastle United FC",
@@ -1133,8 +1140,8 @@
     },
     "322": {
       "name": "Hull City AFC",
-      "playedGames": 10,
-      "gamesRemaining": 28
+      "playedGames": 11,
+      "gamesRemaining": 27
     },
     "341": {
       "name": "Leeds United FC",
@@ -1158,8 +1165,8 @@
     },
     "397": {
       "name": "Brighton & Hove Albion FC",
-      "playedGames": 10,
-      "gamesRemaining": 28
+      "playedGames": 11,
+      "gamesRemaining": 27
     },
     "402": {
       "name": "Brentford FC",
@@ -1178,6 +1185,16 @@
     }
   },
   "recentGoals": [
+    {
+      "player": "Dominik Szoboszlai",
+      "teamName": "Liverpool FC",
+      "delta": 1,
+      "goalsAfter": 2,
+      "opponent": "Manchester United FC",
+      "isHome": true,
+      "matchDate": "2026-11-22T16:30:00Z",
+      "detectedAt": "2026-11-22T22:55:13.649Z"
+    },
     {
       "player": "Noah Okafor",
       "teamName": "Leeds United FC",
@@ -1287,16 +1304,6 @@
       "isHome": true,
       "matchDate": "2026-10-25T16:30:00Z",
       "detectedAt": "2026-10-31T16:27:10.750Z"
-    },
-    {
-      "player": "Harvey Barnes",
-      "teamName": "Newcastle United FC",
-      "delta": 1,
-      "goalsAfter": 2,
-      "opponent": "Crystal Palace FC",
-      "isHome": false,
-      "matchDate": "2026-10-25T14:00:00Z",
-      "detectedAt": "2026-10-25T20:06:21.986Z"
     }
   ]
 }
