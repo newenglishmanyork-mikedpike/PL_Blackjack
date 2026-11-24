@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T16:44:09.294Z",
+  "updatedAt": "2026-11-24T03:33:57.001Z",
   "season": "2026",
   "scorersReturned": 154,
   "players": {
@@ -20,7 +20,7 @@
     "thiernobarry": {
       "name": "Thierno Barry",
       "goals": 6,
-      "playedMatches": 10,
+      "playedMatches": 11,
       "teamId": 62,
       "teamName": "Everton FC"
     },
@@ -65,6 +65,13 @@
       "playedMatches": 11,
       "teamId": 65,
       "teamName": "Manchester City FC"
+    },
+    "keanelewispotter": {
+      "name": "Keane Lewis-Potter",
+      "goals": 4,
+      "playedMatches": 11,
+      "teamId": 402,
+      "teamName": "Brentford FC"
     },
     "pascalgross": {
       "name": "Pascal Groß",
@@ -132,9 +139,16 @@
     "kiernandewsburyhall": {
       "name": "Kiernan Dewsbury Hall",
       "goals": 3,
-      "playedMatches": 10,
+      "playedMatches": 11,
       "teamId": 62,
       "teamName": "Everton FC"
+    },
+    "vitalyjanelt": {
+      "name": "Vitaly Janelt",
+      "goals": 3,
+      "playedMatches": 10,
+      "teamId": 402,
+      "teamName": "Brentford FC"
     },
     "jackhinshelwood": {
       "name": "Jack Hinshelwood",
@@ -167,7 +181,7 @@
     "kevinschade": {
       "name": "Kevin Schade",
       "goals": 3,
-      "playedMatches": 10,
+      "playedMatches": 11,
       "teamId": 402,
       "teamName": "Brentford FC"
     },
@@ -240,20 +254,6 @@
       "playedMatches": 11,
       "teamId": 349,
       "teamName": "Ipswich Town FC"
-    },
-    "keanelewispotter": {
-      "name": "Keane Lewis-Potter",
-      "goals": 2,
-      "playedMatches": 10,
-      "teamId": 402,
-      "teamName": "Brentford FC"
-    },
-    "vitalyjanelt": {
-      "name": "Vitaly Janelt",
-      "goals": 2,
-      "playedMatches": 9,
-      "teamId": 402,
-      "teamName": "Brentford FC"
     },
     "maximdecuyper": {
       "name": "Maxim De Cuyper",
@@ -364,6 +364,13 @@
       "name": "Thiago",
       "goals": 2,
       "playedMatches": 10,
+      "teamId": 402,
+      "teamName": "Brentford FC"
+    },
+    "fabiocarvalho": {
+      "name": "Fabio Carvalho",
+      "goals": 2,
+      "playedMatches": 7,
       "teamId": 402,
       "teamName": "Brentford FC"
     },
@@ -496,7 +503,7 @@
     "michaelkayode": {
       "name": "Michael Kayode",
       "goals": 1,
-      "playedMatches": 10,
+      "playedMatches": 11,
       "teamId": 402,
       "teamName": "Brentford FC"
     },
@@ -545,7 +552,7 @@
     "jamestarkowski": {
       "name": "James Tarkowski",
       "goals": 1,
-      "playedMatches": 10,
+      "playedMatches": 11,
       "teamId": 62,
       "teamName": "Everton FC"
     },
@@ -615,7 +622,7 @@
     "tyriquegeorge": {
       "name": "Tyrique George",
       "goals": 1,
-      "playedMatches": 10,
+      "playedMatches": 11,
       "teamId": 62,
       "teamName": "Everton FC"
     },
@@ -629,7 +636,7 @@
     "ainsleymaitlandniles": {
       "name": "Ainsley Maitland-Niles",
       "goals": 1,
-      "playedMatches": 8,
+      "playedMatches": 9,
       "teamId": 62,
       "teamName": "Everton FC"
     },
@@ -664,14 +671,7 @@
     "jaidonanthony": {
       "name": "Jaidon Anthony",
       "goals": 1,
-      "playedMatches": 10,
-      "teamId": 402,
-      "teamName": "Brentford FC"
-    },
-    "fabiocarvalho": {
-      "name": "Fabio Carvalho",
-      "goals": 1,
-      "playedMatches": 6,
+      "playedMatches": 11,
       "teamId": 402,
       "teamName": "Brentford FC"
     },
@@ -776,14 +776,14 @@
     "yegoryarmolyuk": {
       "name": "Yegor Yarmolyuk",
       "goals": 1,
-      "playedMatches": 8,
+      "playedMatches": 9,
       "teamId": 402,
       "teamName": "Brentford FC"
     },
     "kristofferajer": {
       "name": "Kristoffer Ajer",
       "goals": 1,
-      "playedMatches": 10,
+      "playedMatches": 11,
       "teamId": 402,
       "teamName": "Brentford FC"
     },
@@ -937,7 +937,7 @@
     "dangoouattara": {
       "name": "Dango Ouattara",
       "goals": 1,
-      "playedMatches": 10,
+      "playedMatches": 11,
       "teamId": 402,
       "teamName": "Brentford FC"
     },
@@ -1100,8 +1100,8 @@
     },
     "62": {
       "name": "Everton FC",
-      "playedGames": 10,
-      "gamesRemaining": 28
+      "playedGames": 11,
+      "gamesRemaining": 27
     },
     "63": {
       "name": "Fulham FC",
@@ -1170,8 +1170,8 @@
     },
     "402": {
       "name": "Brentford FC",
-      "playedGames": 10,
-      "gamesRemaining": 28
+      "playedGames": 11,
+      "gamesRemaining": 27
     },
     "1044": {
       "name": "AFC Bournemouth",
