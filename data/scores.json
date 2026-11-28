@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-28T00:47:51.540Z",
+  "updatedAt": "2026-11-28T14:41:31.958Z",
   "season": "2026",
   "scorersReturned": 154,
   "players": {
@@ -69,7 +69,7 @@
     "keanelewispotter": {
       "name": "Keane Lewis-Potter",
       "goals": 4,
-      "playedMatches": 11,
+      "playedMatches": 12,
       "teamId": 402,
       "teamName": "Brentford FC"
     },
@@ -83,28 +83,28 @@
     "dominiccalvertlewin": {
       "name": "Dominic Calvert-Lewin",
       "goals": 4,
-      "playedMatches": 11,
+      "playedMatches": 12,
       "teamId": 341,
       "teamName": "Leeds United FC"
     },
     "brunofernandes": {
       "name": "Bruno Fernandes",
       "goals": 4,
-      "playedMatches": 11,
+      "playedMatches": 12,
       "teamId": 66,
       "teamName": "Manchester United FC"
     },
     "bryanmbeumo": {
       "name": "Bryan Mbeumo",
       "goals": 4,
-      "playedMatches": 11,
+      "playedMatches": 12,
       "teamId": 66,
       "teamName": "Manchester United FC"
     },
     "noahokafor": {
       "name": "Noah Okafor",
       "goals": 4,
-      "playedMatches": 10,
+      "playedMatches": 11,
       "teamId": 341,
       "teamName": "Leeds United FC"
     },
@@ -146,7 +146,7 @@
     "vitalyjanelt": {
       "name": "Vitaly Janelt",
       "goals": 3,
-      "playedMatches": 10,
+      "playedMatches": 11,
       "teamId": 402,
       "teamName": "Brentford FC"
     },
@@ -188,7 +188,7 @@
     "kevinschade": {
       "name": "Kevin Schade",
       "goals": 3,
-      "playedMatches": 11,
+      "playedMatches": 12,
       "teamId": 402,
       "teamName": "Brentford FC"
     },
@@ -244,7 +244,7 @@
     "jackrudoni": {
       "name": "Jack Rudoni",
       "goals": 3,
-      "playedMatches": 11,
+      "playedMatches": 12,
       "teamId": 1076,
       "teamName": "Coventry City FC"
     },
@@ -328,7 +328,7 @@
     "jaydenbogle": {
       "name": "Jayden Bogle",
       "goals": 2,
-      "playedMatches": 11,
+      "playedMatches": 12,
       "teamId": 341,
       "teamName": "Leeds United FC"
     },
@@ -391,7 +391,7 @@
     "fabiocarvalho": {
       "name": "Fabio Carvalho",
       "goals": 2,
-      "playedMatches": 7,
+      "playedMatches": 8,
       "teamId": 402,
       "teamName": "Brentford FC"
     },
@@ -468,7 +468,7 @@
     "tatsuhirosakamoto": {
       "name": "Tatsuhiro Sakamoto",
       "goals": 2,
-      "playedMatches": 11,
+      "playedMatches": 12,
       "teamId": 1076,
       "teamName": "Coventry City FC"
     },
@@ -517,14 +517,14 @@
     "antonstach": {
       "name": "Anton Stach",
       "goals": 1,
-      "playedMatches": 10,
+      "playedMatches": 11,
       "teamId": 341,
       "teamName": "Leeds United FC"
     },
     "michaelkayode": {
       "name": "Michael Kayode",
       "goals": 1,
-      "playedMatches": 11,
+      "playedMatches": 12,
       "teamId": 402,
       "teamName": "Brentford FC"
     },
@@ -678,7 +678,7 @@
     "jaidonanthony": {
       "name": "Jaidon Anthony",
       "goals": 1,
-      "playedMatches": 11,
+      "playedMatches": 12,
       "teamId": 402,
       "teamName": "Brentford FC"
     },
@@ -720,7 +720,7 @@
     "jaydasilva": {
       "name": "Jay Dasilva",
       "goals": 1,
-      "playedMatches": 11,
+      "playedMatches": 12,
       "teamId": 1076,
       "teamName": "Coventry City FC"
     },
@@ -734,14 +734,14 @@
     "matheuscunha": {
       "name": "Matheus Cunha",
       "goals": 1,
-      "playedMatches": 11,
+      "playedMatches": 12,
       "teamId": 66,
       "teamName": "Manchester United FC"
     },
     "jamesjustin": {
       "name": "James Justin",
       "goals": 1,
-      "playedMatches": 11,
+      "playedMatches": 12,
       "teamId": 341,
       "teamName": "Leeds United FC"
     },
@@ -790,7 +790,7 @@
     "kristofferajer": {
       "name": "Kristoffer Ajer",
       "goals": 1,
-      "playedMatches": 11,
+      "playedMatches": 12,
       "teamId": 402,
       "teamName": "Brentford FC"
     },
@@ -825,7 +825,7 @@
     "sidikicherif": {
       "name": "Sidiki Cherif",
       "goals": 1,
-      "playedMatches": 8,
+      "playedMatches": 9,
       "teamId": 1076,
       "teamName": "Coventry City FC"
     },
@@ -839,14 +839,14 @@
     "ellissimms": {
       "name": "Ellis Simms",
       "goals": 1,
-      "playedMatches": 9,
+      "playedMatches": 10,
       "teamId": 1076,
       "teamName": "Coventry City FC"
     },
     "stephenmfuni": {
       "name": "Stephen Mfuni",
       "goals": 1,
-      "playedMatches": 8,
+      "playedMatches": 9,
       "teamId": 1076,
       "teamName": "Coventry City FC"
     },
@@ -944,7 +944,7 @@
     "dangoouattara": {
       "name": "Dango Ouattara",
       "goals": 1,
-      "playedMatches": 11,
+      "playedMatches": 12,
       "teamId": 402,
       "teamName": "Brentford FC"
     },
@@ -979,7 +979,7 @@
     "yanngboho": {
       "name": "Yann Gboho",
       "goals": 1,
-      "playedMatches": 6,
+      "playedMatches": 7,
       "teamId": 1076,
       "teamName": "Coventry City FC"
     },
@@ -1014,7 +1014,7 @@
     "youritielemans": {
       "name": "Youri Tielemans",
       "goals": 1,
-      "playedMatches": 11,
+      "playedMatches": 12,
       "teamId": 66,
       "teamName": "Manchester United FC"
     },
@@ -1028,14 +1028,14 @@
     "joshuazirkzee": {
       "name": "Joshua Zirkzee",
       "goals": 1,
-      "playedMatches": 11,
+      "playedMatches": 12,
       "teamId": 66,
       "teamName": "Manchester United FC"
     },
     "patrickdorgu": {
       "name": "Patrick Dorgu",
       "goals": 1,
-      "playedMatches": 7,
+      "playedMatches": 8,
       "teamId": 66,
       "teamName": "Manchester United FC"
     },
@@ -1049,7 +1049,7 @@
     "brendenaaronson": {
       "name": "Brenden Aaronson",
       "goals": 1,
-      "playedMatches": 11,
+      "playedMatches": 12,
       "teamId": 341,
       "teamName": "Leeds United FC"
     },
