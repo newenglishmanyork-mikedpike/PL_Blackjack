@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T15:45:18.026Z",
+  "updatedAt": "2026-11-28T00:47:51.540Z",
   "season": "2026",
   "scorersReturned": 154,
   "players": {
@@ -55,7 +55,7 @@
     "morganrogers": {
       "name": "Morgan Rogers",
       "goals": 5,
-      "playedMatches": 11,
+      "playedMatches": 12,
       "teamId": 61,
       "teamName": "Chelsea FC"
     },
@@ -160,9 +160,16 @@
     "colepalmer": {
       "name": "Cole Palmer",
       "goals": 3,
-      "playedMatches": 11,
+      "playedMatches": 12,
       "teamId": 61,
       "teamName": "Chelsea FC"
+    },
+    "morgangibbswhite": {
+      "name": "Morgan Gibbs-White",
+      "goals": 3,
+      "playedMatches": 11,
+      "teamId": 351,
+      "teamName": "Nottingham Forest FC"
     },
     "victormunoz": {
       "name": "Víctor Muñoz",
@@ -174,7 +181,7 @@
     "pedroneto": {
       "name": "Pedro Neto",
       "goals": 3,
-      "playedMatches": 11,
+      "playedMatches": 12,
       "teamId": 61,
       "teamName": "Chelsea FC"
     },
@@ -202,7 +209,7 @@
     "liamdelap": {
       "name": "Liam Delap",
       "goals": 3,
-      "playedMatches": 10,
+      "playedMatches": 11,
       "teamId": 351,
       "teamName": "Nottingham Forest FC"
     },
@@ -240,6 +247,13 @@
       "playedMatches": 11,
       "teamId": 1076,
       "teamName": "Coventry City FC"
+    },
+    "emanuelemegha": {
+      "name": "Emanuel Emegha",
+      "goals": 3,
+      "playedMatches": 4,
+      "teamId": 61,
+      "teamName": "Chelsea FC"
     },
     "emersonn": {
       "name": "Emersonn",
@@ -293,7 +307,7 @@
     "danndoye": {
       "name": "Dan Ndoye",
       "goals": 2,
-      "playedMatches": 11,
+      "playedMatches": 12,
       "teamId": 351,
       "teamName": "Nottingham Forest FC"
     },
@@ -345,6 +359,13 @@
       "playedMatches": 10,
       "teamId": 58,
       "teamName": "Aston Villa FC"
+    },
+    "igorjesus": {
+      "name": "Igor Jesus",
+      "goals": 2,
+      "playedMatches": 8,
+      "teamId": 351,
+      "teamName": "Nottingham Forest FC"
     },
     "justinkluivert": {
       "name": "Justin Kluivert",
@@ -398,7 +419,7 @@
     "jordanhenderson": {
       "name": "Jordan Henderson",
       "goals": 2,
-      "playedMatches": 6,
+      "playedMatches": 7,
       "teamId": 61,
       "teamName": "Chelsea FC"
     },
@@ -535,13 +556,6 @@
       "teamId": 63,
       "teamName": "Fulham FC"
     },
-    "morgangibbswhite": {
-      "name": "Morgan Gibbs-White",
-      "goals": 1,
-      "playedMatches": 10,
-      "teamId": 351,
-      "teamName": "Nottingham Forest FC"
-    },
     "alexscott": {
       "name": "Alex Scott",
       "goals": 1,
@@ -580,7 +594,7 @@
     "romeolavia": {
       "name": "Romeo Lavia",
       "goals": 1,
-      "playedMatches": 11,
+      "playedMatches": 12,
       "teamId": 61,
       "teamName": "Chelsea FC"
     },
@@ -646,13 +660,6 @@
       "playedMatches": 11,
       "teamId": 354,
       "teamName": "Crystal Palace FC"
-    },
-    "igorjesus": {
-      "name": "Igor Jesus",
-      "goals": 1,
-      "playedMatches": 7,
-      "teamId": 351,
-      "teamName": "Nottingham Forest FC"
     },
     "lewisdunk": {
       "name": "Lewis Dunk",
@@ -888,7 +895,7 @@
     "necowilliams": {
       "name": "Neco Williams",
       "goals": 1,
-      "playedMatches": 11,
+      "playedMatches": 12,
       "teamId": 351,
       "teamName": "Nottingham Forest FC"
     },
@@ -986,7 +993,7 @@
     "jairpaula": {
       "name": "Jair Paula",
       "goals": 1,
-      "playedMatches": 10,
+      "playedMatches": 11,
       "teamId": 351,
       "teamName": "Nottingham Forest FC"
     },
@@ -1039,13 +1046,6 @@
       "teamId": 65,
       "teamName": "Manchester City FC"
     },
-    "emanuelemegha": {
-      "name": "Emanuel Emegha",
-      "goals": 1,
-      "playedMatches": 3,
-      "teamId": 61,
-      "teamName": "Chelsea FC"
-    },
     "brendenaaronson": {
       "name": "Brenden Aaronson",
       "goals": 1,
@@ -1095,8 +1095,8 @@
     },
     "61": {
       "name": "Chelsea FC",
-      "playedGames": 11,
-      "gamesRemaining": 27
+      "playedGames": 12,
+      "gamesRemaining": 26
     },
     "62": {
       "name": "Everton FC",
@@ -1155,8 +1155,8 @@
     },
     "351": {
       "name": "Nottingham Forest FC",
-      "playedGames": 11,
-      "gamesRemaining": 27
+      "playedGames": 12,
+      "gamesRemaining": 26
     },
     "354": {
       "name": "Crystal Palace FC",
